@@ -1,0 +1,186 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Таргетинг<br>в социальных сетях`,
+    slogan: "Подготовим бесплатный прогноз продвижения в соцсетях ",
+    subtitle: `Настройка и развитие таргетированной рекламы, <span class="text-pink">комплексный подход для поиска клиентов в социальных сетях</span>`,
+  })
+
+  +page-banner("3d-target.png")
+    
+
+  .page-body
+    section.section
+      +section-head({
+        num: "01",
+        title: "Приносим бизнесу подписчиков, лиды и продажи "
+      })
+
+      .section__block
+        .container
+          .reasons__wrap
+            +reasons-item({
+              title:"Анализ",
+              text: "Анализируем рынок и аудиторию, текущие каналы, воронку привлечения аудитория"
+            })
+            +reasons-item({
+              title:"Разработка",
+              text: "Подбираем инструменты таргетированной рекламы с учетом стратегии продаж и маркетинга"
+            })
+            +reasons-item({
+              title:"Результат",
+              text: "Предлагаем конкретный план действий и прогноз результатов"
+            })
+
+
+
+    section.section
+      +section-head({
+        num: "02",
+        title: "Выстраиваем стратегию продвижения"
+      })
+      .section__block
+        .container
+          .block-cards-slider__wrap
+            .row
+              .col-lg-6
+                .block-cards-slider__items
+                  .block-cards-slider__item
+                    .block-cards-slider__title Выбираем каналы продвижения
+                    .block-cards-slider__text Работаем с основными соцсетями: VK, MyTarget, Telegram Ads, ОK и другими. Если ваша аудитория живет в других соцсетях, найдем их и там.
+                  .block-cards-slider__item
+                    .block-cards-slider__title Находим вашу ЦА
+                    .block-cards-slider__text Разбиваем ЦА на сегменты на основе географии, интересов, активностей в тематических пабликах и у конкурентов. Подбираем охваты и механики продвижения.
+
+              .col-lg-6
+                .number-slider__wrap
+                  .swiper.number-slider.runet-slider
+                    .swiper-wrapper
+                      - for(var i=0; i<3; i++)
+                        .swiper-slide
+                          +runet-slider-item("runet-img-1-ex.png")
+                    .number-slider__nav
+                      .number-slider__nav-inner
+                        .swiper-pagination
+                        .d-none.d-md-block
+                          .swiper-buttons__wrap
+                            .swiper-button-prev
+                            .swiper-button-next
+
+    section.section
+      +section-head({
+        num: "03",
+        title: "Запускаем таргетинг и развиваем кампании"
+      })
+
+      .section__block
+        .container
+          .reasons__wrap
+            +reasons-item({
+              title: "Ищем новое",
+              text: "Парсинг баз, динамический ремаркетинг, подбор пользователей на основе поисковых запросов, привычек и увлечений."
+            })
+            +reasons-item({
+              title: "Бережем бюджет",
+              text: "Ищем способы, как достигнуть целей легче и дешевле. Отключаем неэффективные кампании, находим новые инструменты."
+            })
+            +reasons-item({
+              title: "Отчитываемся",
+              text: "Показываем аналитику и даем рекомендации о форматах, площадках и сообщениях, которые больше всего приносят результат. "
+            })
+
+
+    section.section
+      +section-head({
+        num: "04",
+        title: "Достигаем результатов",
+        subtitle: "Некоторыми проектами делимся открыто, а часть — рассказываем на личной встрече, подбирая кейсы под вашу нишу и задачи."
+      })
+      .section__block
+        .container
+          +cases-block
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы
+
+    +section-callback({
+      img: "section-callback-bg.jpg",
+      title: "Сколько лидов могут приносить вам социальные сети?",
+      text: "Проведём бесплатный аудит и предложим стратегию продвижения с прогнозируемыми результатами"
+    })
+            
+
+    section.section
+      +section-head({
+        num: "05",
+        title: "Заслужили доверие",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+
+            .col-lg-6
+              +main-rating-wrap
+      .section__block
+        .container
+          .row
+            .col-12.offset-0.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+              +clients-slider
+
+    section.section
+      +section-head({
+        num: "06",
+        title: "Усиливаем маркетинг со всех сторон",
+        subtitle: "Объединяем инструменты performance и brandformance-маркетинга в работающую стратегию"
+      })
+      .section__block
+        .container
+          .departments__wrap
+            +departments-item({
+              title: `Performance-<br>маркетинг`,
+              text: "Запускаем и масштабируем стратегии продвижения. Тестируем и подбираем рекламные каналы и форматы. В результате — растим лиды и продажи.",
+              tag1: "Контекстная реклама",
+              tag2: "Таргетированная реклама",
+              tag3: "SEO"
+            })
+            +departments-item({
+              title: `Brandformance-<br>маркетинг`,
+              text: "Соединяем инструменты performance-маркетинга и брендинга и добиваемся долгосрочной лидогенерации за счет формирования узнаваемости бренда.",
+              tag1: "SMM",
+              tag2: "Работа с репутацией",
+              tag3: "Programmatic, media"
+            })
+            +departments-item({
+              title: `Веб-<br>разработка`,
+              text: "Создаем сайты и поддерживаем их работу: обновляем контент, дорабатываем функциональность, следим за метриками и быстро устраняем ошибки.",
+              tag1: "Создание сайтов",
+              tag2: "Разработка",
+              tag3: "Поддержка"
+            })
+            +departments-item({
+              title: `Консалтинг <br>и исследования`,
+              text: "Исследуем digital-среду, конкурентов и рынок, чтобы отстраиваться от конкурентов и выбирать инструменты маркетинга, которые дают результат.",
+              tag1: "SEO",
+              tag2: "Аудит контекстной рекламы",
+              tag3: "Анализ и исследования"
+            })
+
+

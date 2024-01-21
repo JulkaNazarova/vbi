@@ -1,0 +1,220 @@
+extends ../templates/template.pug
+block content
+  
+  section.section-main-top
+    .container
+      .row
+        .mb-2.mb-md-3.col-lg-6.d-flex.flex-column.align-items-lg-start.justify-content-lg-between.mb-lg-0
+          h1.main-title.wow.animate__fadeInLeft Digital-агентство<br>со стратегическим подходом
+          .d-none.d-lg-block
+            a(href="#section-form").btn.btn-yellow.btn-arrow.scroll-to Обсудить проект
+          
+        .col-lg-6
+          h2.h2.wow.animate__fadeInUp.pb-3.pb-lg-0 Создаем, реализуем и масштабируем стратегии продвижения <span class="text-pink">c учётом юнит-экономики бизнеса и маркетинга клиента</span>
+          .d-block.mt-3.mt-md-5.d-lg-none
+            a(href="#section-form").btn.btn-yellow.btn-arrow.scroll-to Обсудить проект
+          
+  #mainBanner.main-banner(style="background-image:url('./img/main-banner-bg.png')")
+    .container
+      .main-banner__scroll
+        a(href="#main-01").btn-scroll.scroll-to
+    
+  .page-body
+    section#main-01.section
+      +section-head({
+        num: "01",
+        title: "Помогаем формировать узнаваемость бренда, растить спрос и продажи",
+        subtitle: "Объединяем инструменты performance и brandformance-маркетинга в работающую стратегию"
+      })
+      .section__block
+        .container
+          .departments__wrap
+            +departments-item({
+              title: `Performance-<br>маркетинг`,
+              text: "Запускаем и масштабируем стратегии продвижения. Тестируем и подбираем рекламные каналы и форматы. В результате — растим лиды и продажи.",
+              tag1: "Контекстная реклама",
+              tag2: "Таргетированная реклама",
+              tag3: "SEO"
+            })            
+            +departments-item({
+              title: `Brandformance-<br>маркетинг`,
+              text: "Соединяем инструменты performance-маркетинга и брендинга и добиваемся долгосрочной лидогенерации за счет формирования узнаваемости бренда.",
+              tag1: "SMM",
+              tag2: "Работа с репутацией",
+              tag3: "Programmatic, media"
+            })
+            +departments-item({
+              title: `Веб-<br>разработка`,
+              text: "Создаем сайты и поддерживаем их работу: обновляем контент, дорабатываем функциональность, следим за метриками и быстро устраняем ошибки.",
+              tag1: "Создание сайтов",
+              tag2: "Разработка",
+              tag3: "Поддержка"
+            })
+            +departments-item({
+              title: `Консалтинг <br>и исследования`,
+              text: "Исследуем digital-среду, конкурентов и рынок, чтобы отстраиваться от конкурентов и выбирать инструменты маркетинга, которые дают результат.",
+              tag1: "SEO",
+              tag2: "Аудит контекстной рекламы",
+              tag3: "Анализ и исследования"
+            })
+                
+    section.section
+      +section-head({
+        num: "02",
+        title: "Работаем с крупными и небольшими брендами",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block   
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+                    
+            .col-lg-6
+              +main-rating-wrap
+              
+      .section__block
+        +clients-slider
+              
+    section.section
+      +section-head({
+        num: "03",
+        title: "Больше всего опыта в направлениях"
+      })
+      .section__block
+        .container
+          +directions-accord
+            
+
+    section.section
+      +section-head({
+        num: "04",
+        title: "Растим экспертизу в digital"
+      })
+      .section__block
+        .container
+          .digitals
+            +digitals-item-slider
+            .digitals-item
+              img(src='./img/digital-logo-1.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-2.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-3.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-4.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-5.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-6.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-7.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-8.png' alt='', title='')
+            .digitals-item
+              img(src='./img/digital-logo-9.png' alt='', title='')
+        
+      
+    section.section
+      +section-head({
+        num: "05",
+        title: "Получаем признание рынка"
+      })
+      .section__block
+        .container
+          .ratings__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Контекстная реклама
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Таргетированная реклама
+                .tabs-head__item(data-tab='tab-3')._js-tabs-title PR/SERM/ORM
+                .tabs-head__item(data-tab='tab-4')._js-tabs-title Нативная реклама
+                .tabs-head__item(data-tab='tab-5')._js-tabs-title SEO
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .ratings__list
+                  +rating-row("13", "по России", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "по Москве", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "AdIndex", "2022")
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                .ratings__list
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "Рейтинг Рунета", "2022")
+              .tabs-info__item(data-tab='tab-3')._js-tabs-info
+                .ratings__list
+                  | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-4')._js-tabs-info
+                .ratings__list
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-5')._js-tabs-info
+                .ratings__list
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+                  
+    section.section
+      +section-head({
+        num: "06",
+        title: "Рассказываем о результатах"
+      })
+      .section__block
+        .container
+          +cases-block
+                    
+      .section__block
+        .container     
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы
+                  
+
+    section.section
+      +section-head({
+        num: "07",
+        title: "Делимся знаниями",
+        subtitle: "Выступаем на профильных конференциях и создаем свои мероприятия."
+      })
+      .section__block
+        .container
+          .number-slider__wrap
+            .swiper.number-slider.events-slider
+              .swiper-wrapper
+                - for(var i=0; i<3; i++)
+                  .swiper-slide
+                    +events-slider-item({
+                      img: "event-img-1.jpg",
+                      sticker: "Недвижимость",
+                      title: "Calltouch. Dacha edition",
+                      text: "2018 – 2023, каждый год"
+                    })
+                  .swiper-slide
+                    +events-slider-item({
+                      img: "main-banner-bg.png",
+                      sticker: "Медицина",
+                      title: "Другое мероприятие. Dacha edition",
+                      text: "2015 – 2023, ежегодно"
+                    })
+              .number-slider__nav
+                .number-slider__nav-inner
+                  .swiper-pagination
+                  .d-none.d-md-block
+                    .swiper-buttons__wrap  
+                      .swiper-button-prev
+                      .swiper-button-next
+
+                    
+          
+          

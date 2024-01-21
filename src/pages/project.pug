@@ -1,0 +1,55 @@
+extends ../templates/template.pug
+block content
+
+  section.section-project-top
+    .project-item__bg.project-bg_desktop(style=`background-image:url('./img/project-bg-desktop.jpg')`)
+    .project-item__bg.project-bg_tablet(style=`background-image:url('./img/project-bg-tablet.jpg')`)
+    .project-item__bg.project-bg_mobile(style=`background-image:url('./img/project-bg-tablet.jpg')`)
+    .container.h-100.d-flex.flex-column.justify-content-between
+      .row.mb-lg-3
+        .col-lg-6
+          .project-item__date 2023
+        .col-lg-6
+          .project-item__stickers
+            .sticker.project-item__sticker.wow.animate__fadeInDown(data-wow-delay="0ms") Авто
+            .sticker.project-item__sticker.wow.animate__fadeInDown(data-wow-delay="200ms") Brandformance
+      .row
+        .col-lg-5
+          .project-item__logo.wow.animate__zoomIn
+            img(src='./img/project-name-logo.png' alt='', title='')
+          h1.project-item__title.wow.animate__fadeInUp Особенности продвижения ушедшего бренда через параллельный импорт
+          
+          
+      
+      
+      
+      
+  .page-body
+    section.section
+      +section-head({
+        num: "01",
+        title: "О компании клиента",
+        subtitle: "Автомобильная группа АВИЛОН (avilon.ru) — лидирующая, динамично развивающаяся автомобильная компания в России. На сегодня АГ АВИЛОН имеет в своем портфеле 44 автомобильных бренда"
+      })
+      .section__block
+        .container
+          .row
+            .col-lg-6.offset-lg-6
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text на рынке авто
+                .main-about__item
+                  .main-about__numbers 500 000+
+                  .main-about__text проданных авто
+
+                    
+    section.section
+      +section-head({
+        num: "01",
+        title: "О компании клиента",
+        colortext: "Успешный оперативный запуск рекламной кампании на расширенную пользовательскую воронку.",
+        subtitle: "Вместе с клиентом нам удалось в короткие сроки спланировать и реализовать масштабную рекламную кампанию, включая изменение в стратегии, тактике и даже на сайте. Использовали в рекламной кампании много новых инструментов, при этом нам удалось не только решить основную задачу клиента, но и снизить CPL в динамике!"
+      })
+      .section__block
+        .container

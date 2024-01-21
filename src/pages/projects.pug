@@ -1,0 +1,123 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Кейсы`,
+    slogan: "Digital-агентство со стратегическим подходом",
+    subtitle: `Клиенты и их результаты —<br> <span class="text-pink">наша ценность</span>`,
+    btn: false
+  })
+
+  .page-body.pt-0
+    .section
+      .section__block
+        .container
+          .projects-categories__wrap
+            .swiper.projects-categories-slider
+              .swiper-wrapper
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "Авто",
+                    text: "Внедряем собственную систему сквозной аналитики, чтобы эффективно управлять бюджетом. В результате растим количество лидов и снижаем их стоимость.",
+                    delay: "200"
+                  })
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "Мебель",
+                    text: "Увеличиваем охват, растим узнаваемость брендов и приводим клиентов в офлайн и онлайн-магазины.",
+                    delay: "400"
+                  })
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "Недвижимость",
+                    text: "Снижаем стоимость лида и повышаем количество заявок, просмотров.",
+                    delay: "600"
+                  })
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "Услуги",
+                    text: "Увеличиваем охваты и растим целевой трафик.",
+                    delay: "800"
+                  })
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "E-commerce",
+                    text: "Снижаем расходы на рекламу онлайн-брендов и растим продажи: оптимизируем и автоматизируем кампании, внедряем сквозную аналитику.",
+                    delay: "1000"
+                  })
+                .swiper-slide
+                  +projects-categories-item({
+                    title: "Медицина",
+                    text: "Увеличиваем число уникальных целевых посетителей и конвертируем их в звонки.",
+                    delay: "1200"
+                  })
+                    
+                    
+                  
+          
+      .section__block
+        .container
+          .row
+            .col-mb-6.col-lg-3.col-xl-2.mb-3.mb-lg-4.mb-xl-0
+              .projects-preview__select
+                select.select
+                  option(value="Все направления") Все направления
+                  option(value="Авто") Авто 
+                  option(value="Медицина") Медицина 
+                  option(value="Недвижимость") Недвижимость 
+                  option(value="Мебель") Мебель 
+                  option(value="E-commerce") E-commerce 
+                  option(value="Услуги") Услуги 
+            .col-lg-12.col-xl-10
+              .projects-preview__tags
+                .projects-preview__tags-inner
+                  .projects-preview__tag.tag-all._js-tag.active Все услуги
+                  .projects-preview__tag._js-tag  Performance
+                  .projects-preview__tag._js-tag  Brandformance
+                  .projects-preview__tag._js-tag  Контекст
+                  .projects-preview__tag._js-tag  Таргет
+                  .projects-preview__tag._js-tag  SMM
+                  .projects-preview__tag._js-tag  SEO
+                  .projects-preview__tag._js-tag  SERM
+
+
+
+      .section__block
+        .container
+          .projects-preview__wrap
+            -for(var i=0; i<3; i++)
+              +case-preview({
+                delay: "0",
+                sticker: "Медицина",
+                img: "case-preview-1.png",
+                title: "Снизили на 30% стоимость лидов за 3 месяца",
+                tag1: "Рerformance"
+              })
+              +case-preview({
+                delay: "200",
+                sticker: "Недвижимость",
+                img: "case-preview-2.png",
+                title: "Увеличение трафика на сайт при улучшении поведенческих показателей",
+                tag1: "Рerformance",
+                tag2: "Разработка"
+              })
+              +case-preview({
+                delay: "400",
+                sticker: "Услуги",
+                img: "case-preview-3.png",
+                title: "Увеличение целевого трафика на сайт, рост конверсии, поиск новых инструментов продвижения",
+                tag1: "Рerformance",
+                tag2: "Разработка"
+              })
+              +case-preview({
+                delay: "600",
+                sticker: "Медицина",
+                img: "case-preview-4.png",
+                title: "Снизили на 30% стоимость лидов за 3 месяца",
+                tag1: "Рerformance"
+              })
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Показать еще
+      

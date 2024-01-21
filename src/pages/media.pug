@@ -1,0 +1,275 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Медийная<br>реклама`,
+    slogan: "Подготовим бесплатный расчет и стратегию продвижения",
+    subtitle: `Растим продажи и знание <span class="space-nowrap">о бренде,</span>  <span class="text-pink">выбираем площадки для медийного охвата с лучшими условиями</span>`,
+  })
+  
+  +page-banner("3d-media.png")
+
+  .page-body
+    section.section
+      +section-head({
+        num: "01",
+        title: "Создаем и реализуем стратегии медийного продвижения"
+      })
+
+      .section__block
+        .container
+          .reasons__wrap
+            +reasons-item({
+              title:"Ловим потребителя на всех этапах воронки",
+              text: "Встраиваем медийную рекламу в воронку продаж, выбирая инструменты под задачи, будь то сформировать спрос с нуля, повысить знание о бренде, напомнить о себе и вернуть покупателя в воронку."
+            })
+            +reasons-item({
+              title:"Выбираем подходящие инструменты",
+              text: "Рекламные сети, прямые закупки на тематических площадках, автоматическая закупка — выбираем инструменты под задачи с учетом маркетинговой стратегии."
+            })
+            +reasons-item({
+              title:"Разрабатываем креативные концепции",
+              text: "Берем на себя разработку идей и продакшн контента для рекламной кампании, адаптируем креативы для разных сегментов ЦА, форматов рекламы и площадок."
+            })
+            +reasons-item({
+              title:"Ускоряем запуск медийной рекламы",
+              text: "Умеем работать в сжатые сроки, а еще тратим меньше времени на переговоры потому, что уже наладили контакты со многими площадками."
+            })
+            +reasons-item({
+              title:`Закупаем на лучших условиях`,
+              text: "Работаем с топ-ресурсами, имеем репутацию на рынке и всегда договариваемся о выгодных условиях."
+            })
+            +reasons-item({
+              title:`Замеряем результат`,
+              text: "Анализируем эффективность и корректируем стратегии. Используем инструменты: Search Lift (анализ брендовых запросов), Brand Lift, Sales Lift, анализ конверсий по показам и др."
+            })
+
+
+    section.section
+      +section-head({
+        num: "02",
+        title: "Когда нужна медийная реклама",
+        subtitle: "Медийная реклама работает как часть performance или brandformance-стратегии и решает задачи на всех этапах воронки продаж."
+      })
+      .section__block
+        //.container
+        .motives-slider__wrap
+          .swiper.motives-slider
+            .swiper-wrapper
+              -for(var i=0; i<2; i++)
+                +motives-slide('motive-icon-1.svg', 'Вывести новый продукт на рынок и сформировать спрос')
+                +motives-slide('motive-icon-2.svg', 'Привлечь внимание и стимулировать продажи')
+                +motives-slide('motive-icon-3.svg', 'Напомнить о бренде и подтолкнуть к повторной покупке')
+
+      .section__block
+        .container
+          .funnels__wrap
+            .funnels__item
+              .row
+                .col-lg-4
+                  +funnels-title("Brandformance")
+                .col-lg-8
+                  .funnels-steps
+                    +funnels-step-item("Знание", "формирование бренда, имиджа и спроса", "100", "#990033")
+                    +funnels-step-item("Вовлечение", "донесение уникальности предложения", "80", "#990033")
+            .funnels__item
+              .row
+                .col-lg-4
+                  +funnels-title("Performance")
+                .col-lg-8
+                  .funnels-steps
+                    +funnels-step-item("Покупка", "лидогенерация, стимулирование к покупке", "70", "#660022")
+                    +funnels-step-item("Лояльность", "Повторные конверсии", "50", "#660022")
+
+
+    section.section
+      +section-head({
+        num: "03",
+        title: "Помогаем захватить аудиторию рунета"
+      })
+      .section__block
+        .container 
+          .block-cards-slider__wrap
+            .row
+              .col-lg-6
+                .block-cards-slider__items
+                  .block-cards-slider__item
+                    .block-cards-slider__title Рекламными сетями
+                    .block-cards-slider__text О вашем продукте узнает аудитория 30 тыс. партнерских сайтов Яндекса и 2+ млн. сайтов Google.
+                  .block-cards-slider__item
+                    .block-cards-slider__title Прямыми закупками
+                    .block-cards-slider__text Подбираем вручную крупные медиаплощадки под задачи и сегменты аудитории.
+                  .block-cards-slider__item
+                    .block-cards-slider__title Через Programmatic
+                    .block-cards-slider__text Работаем со всеми крупными площадками для автоматизированной закупки медийной рекламы.
+                
+              .col-lg-6
+                .number-slider__wrap
+                  .swiper.number-slider.runet-slider
+                    .swiper-wrapper
+                      - for(var i=0; i<3; i++)
+                        .swiper-slide
+                          +runet-slider-item("runet-img-1.png")
+                    .number-slider__nav
+                      .number-slider__nav-inner
+                        .swiper-pagination
+                        .d-none.d-md-block
+                          .swiper-buttons__wrap
+                            .swiper-button-prev
+                            .swiper-button-next
+                  
+    section.section
+      +section-head({
+        num: "04",
+        title: "Тестируем форматы"
+      })
+      .section__block
+        .container 
+          .block-cards-slider__wrap
+            .row
+              .col-lg-6
+                .block-cards-slider__items
+                  .block-cards-slider__item
+                    .block-cards-slider__title Баннерная реклама
+                    .block-cards-slider__text Статичные баннры, анимированные, интерактивные, брендированные страницы. 
+                  .block-cards-slider__item
+                    .block-cards-slider__title Видео-реклама
+                    .block-cards-slider__text Потоковое видео (InStream), видео в контенте (InPage), внутри баннерных слотов и всплывающих окон на сайтах, видео за вознаграждение. 
+                
+              .col-lg-6
+                .number-slider__wrap
+                  .swiper.number-slider.format-slider
+                    .swiper-wrapper
+                      - for(var i=0; i<3; i++)
+                        .swiper-slide
+                          +format-slider-item("format-img-1.jpg")
+                    .number-slider__nav
+                      .number-slider__nav-inner
+                        .swiper-pagination
+                        .d-none.d-md-block
+                          .swiper-buttons__wrap
+                            .swiper-button-prev
+                            .swiper-button-next
+                  
+              
+          
+          
+    section.section
+      +section-head({
+        num: "05",
+        title: "Как мы работаем"
+      })
+      .section__block
+        .container
+          .steps-preparation__wrap
+            +step-preparation(`0`, '01','Брифинг','Определяем цели, задачи, KPI.')
+            +step-preparation(`200`, '02','Аудит','Анализируем текущие каналы и РК для более точного прогноза эффективности.')
+            +step-preparation(`400`, '03','Анализ конкурентов','Анализируем конкурентов, находим способы отстройки и позиционирования.')
+            +step-preparation(`600`, '04','Анализ рынка','Изучаем рынок и тренды: смотрим, какие каналы работают эффективнее.')
+            +step-preparation(`0`, '05','Концепция','Разрабатываем креативную концепцию, формируем ключевые сообщения для сегментов аудитории')
+            +step-preparation(`200`, '06','Медиаплан','Считаем затраты по всем каналам привлечения, прогнозируем эффективность')
+            +step-preparation(`400`, '07','Презентация','Показываем стратегию заказчику, корректируем стратегию и тактику при необходимости')
+
+
+    +section-callback({
+      img: "section-callback-bg.jpg",
+      title: `Какие результаты вы можете получить <span class=\"space-nowrap\">от медийной</span> рекламы?`,
+      text: `Оставьте заявку, и мы рассчитаем стоимость <span class=\"space-nowrap\">и эффективность</span> размещения`
+    })
+    //section.section.section-callback
+    //  .container
+    //    .callback-block
+    //      .row
+    //        .col-lg-6.offset-lg-3.text-center
+    //          .callback-block__title 
+    //          .callback-block__text Оставьте заявку, и мы рассчитаем стоимость <span class="space-nowrap">и эффективность</span> размещения
+    //          a(href="#section-form").btn.btn-yellow.scroll-to Отправить заявку
+          
+    section.section
+      +section-head({
+        num: "06",
+        title: "Работаем с крупными и небольшими брендами",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+
+            .col-lg-6
+              +main-rating-wrap
+
+                
+      .section__block
+        .container
+          .row
+            .col-12.offset-0.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+              +clients-slider
+
+    section.section
+      +section-head({
+        num: "07",
+        title: "Получаем признание рынка"
+      })
+      .section__block
+        .container
+          .ratings__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Контекстная реклама
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Таргетированная реклама
+                .tabs-head__item(data-tab='tab-3')._js-tabs-title PR/SERM/ORM
+                .tabs-head__item(data-tab='tab-4')._js-tabs-title Нативная реклама
+                .tabs-head__item(data-tab='tab-5')._js-tabs-title SEO
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .ratings__list
+                  +rating-row("13", "по России", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "по Москве", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "AdIndex", "2022")
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                .ratings__list
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "Рейтинг Рунета", "2022")
+              .tabs-info__item(data-tab='tab-3')._js-tabs-info
+                .ratings__list
+                  | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-4')._js-tabs-info
+                .ratings__list
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-5')._js-tabs-info
+                .ratings__list
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+
+
+    section.section
+      +section-head({
+        num: "08",
+        title: "Достигаем результатов"
+      })
+      .section__block
+        .container
+          +cases-block
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы
+

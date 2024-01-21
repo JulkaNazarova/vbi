@@ -1,0 +1,201 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `О компании`,
+    slogan: "Digital-агентство со стратегическим подходом",
+    subtitle: `Создаём, реализуем и масштабируем стратегии продвижения <span class="text-pink">с учётом юнит-экономики бизнеса и маркетинга клиента</span>`,
+    btn: false
+  })
+
+  section.section.section-color.position-relative
+    .section__head.section-color__head
+      .section-color__bg
+        img(src='./img/section-color-bg.png' alt='', title='')
+      .container
+        .row
+          .col-lg-6
+            .section__num 01
+          .col-lg-6
+            .section-h2__wrap
+              .h2__subtitle 
+                p VBI DIGITAL основано в 2012 году, как рекламное агентство полного цикла в digital услугах.
+                p Сегодня мы предоставляем комплексные услуги интернет-маркетинга, от разработки до создания и реализации сложных маркетинговых стратегий. Мы глубоко погружаемся в воронку клиента, предлагаем креативные и эффективные методы привлечения, работаем исключительно на бизнес-результат и долгосрочное сотрудничество.
+            h3.h3__subtitle Наши ценности
+        .row
+          .worth-slider__wrap
+            .swiper.worth-slider
+              .swiper-wrapper
+                -for(var i=0; i<3; i++)
+                  +worth-slide('worth-icon-1.svg', 'Люди и искренность')
+                  +worth-slide('worth-icon-2.svg', 'Клиент и отношения')
+                  +worth-slide('worth-icon-1.svg', 'Дела и результат')
+                  
+
+  .page-body
+
+    section.section
+      +section-head({
+        num: "02",
+        title: "Мы работаем с крупным и небольшими брендами",
+        subtitle: "Наши клиенты входят в рейтинги РБК, Forbes, Эксперт"
+      })
+      .section__block
+        .container
+          .brands__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Авто
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Медицина
+                .tabs-head__item(data-tab='tab-3')._js-tabs-title Недвижимость
+                .tabs-head__item(data-tab='tab-4')._js-tabs-title Мебель
+                .tabs-head__item(data-tab='tab-5')._js-tabs-title E-commerce
+                .tabs-head__item(data-tab='tab-6')._js-tabs-title Услуги
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .brands__list
+                  -for(var i=0; i<8; i++)
+                    .brands__item
+                      img(src=`./img/client-logo-${i}.png` alt='', title='')
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                | Lorem lectus orci gravida molestie proin 
+              .tabs-info__item(data-tab='tab-3')._js-tabs-info
+                | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-4')._js-tabs-info
+                | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-5')._js-tabs-info
+                | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+
+
+
+    section.section
+      +section-head({
+        num: "03",
+        title: "Отзывы"
+      })
+      .section__block
+        .container
+          .reviews-previews__wrap.popup-gallery
+            -for(var i=0; i<2; i++)
+              +reviews-previews-item({
+                img: "client-logo-3.png",
+                text: "Выражаеv благодарность агентству VBI за профессиональное и плодотворное в продвижении интернет-ресурсов Школ для английского языка для детей и подростков UFirst.",
+                company: "Название компании"
+              })
+              +reviews-previews-item({
+                img: "client-logo-4.png",
+                text: "Выражаем благодарность за оказываемые Вашей компанией услуги.",
+                company: "Название компании"
+              })
+              +reviews-previews-item({
+                img: "client-logo-6.png",
+                text: "Туроператор «Интурист» выражает благодарность агентству VBI за профессиональное и плодотворное сотрудничество по разработке платформы анкетирования и анализа по стандартам NPS.",
+                company: "Название компании"
+              })
+              +reviews-previews-item({
+                img: "client-logo-7.png",
+                text: "За все время сотрудничества компания зарекомендовала себя как специализированное агентство с высоким уровнем ответственности и отличными специалистами.",
+                company: "Название компании"
+              })
+            
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Показать еще
+      
+
+    
+    section.section
+      +section-head({
+        num: "04",
+        title: "Команда"
+      })
+      .section__block
+        .container
+          .team__wrap
+            +team-item(`0`, `Вадим<br>Юдин`, 'Генеральный директор', 'team-img-1.png')
+            +team-item(`200`, `Владислав<br>Лашин`, 'Генеральный директор', 'team-img-2.png')
+            +team-item(`400`, `Елизавета<br>Елизарова`, 'Директор по работе с клиентами', 'team-img-3.png')
+            +team-item(`600`, `Петр<br>Вельяминов`, 'Управляющий партнер', 'team-img-4.png')
+            +team-item(`0`, `Иван<br>Гладков`, 'Управляющий партнер', 'team-img-5.png')
+            +team-item(`200`, `Ирина<br>Петрова`, 'Управляющий партнер', 'team-img-6.png')
+            +team-item(`400`, `Ангелина<br>Иванова`, 'Управляющий партнер', 'team-img-7.png')
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Показать еще
+      
+    section.section
+      +section-head({
+        num: "05",
+        title: "Работаем на всех этапах маркетинговой воронки с учётом целей бизнеса и CJM потребителей, используем все современные аналитические решения"
+      })
+      .section__block
+        .container
+          .block-picture-text__wrap
+            .block-picture-text__item
+              .row
+                .col-6.col-lg-6.mb-0.mb-md-3.mb-lg-0
+                  .block-picture-text__img
+                    img(src='./img/3d-img.png' alt='', title='')
+                .col-12.col-lg-6
+                  .block-picture-text__info
+                    .block-picture-text__title BRAND-FORMANCE
+                    .block-picture-text__desc Соединяем инструменты performance-маркетинга и брендинга и добиваемся долгосрочной лидогенерации за счет формирования узнаваемости бренда
+            .block-picture-text__item
+              .row.flex-lg-row-reverse
+                .col-6.col-lg-6.mb-0.mb-md-3.mb-lg-0
+                  .block-picture-text__img.text-left.text-lg-right
+                    img(src='./img/3d-img.png' alt='', title='')
+                .col-12.col-lg-6
+                  .block-picture-text__info
+                    .block-picture-text__title PER-FORMANCE
+                    .block-picture-text__desc Запускаем и масштабируем стратегии продвижения. Тестируем и подбираем рекламные каналы и форматы. В результате — растим лиды и продажи
+                
+            
+          
+    
+    
+    section.section
+      +section-head({
+        num: "06",
+        title: "Получаем признание рынка"
+      })
+      .section__block
+        .container
+          .ratings__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Контекстная реклама
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Таргетированная реклама
+                .tabs-head__item(data-tab='tab-3')._js-tabs-title PR/SERM/ORM
+                .tabs-head__item(data-tab='tab-4')._js-tabs-title Нативная реклама
+                .tabs-head__item(data-tab='tab-5')._js-tabs-title SEO
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .rating__list
+                  +rating-row("13", "по России", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "по Москве", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "AdIndex", "2022")
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                .rating__list
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "Рейтинг Рунета", "2022")
+              .tabs-info__item(data-tab='tab-3')._js-tabs-info
+                .rating__list
+                  | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-4')._js-tabs-info
+                .rating__list
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-5')._js-tabs-info
+                .rating__list
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+    

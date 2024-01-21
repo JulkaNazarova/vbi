@@ -1,0 +1,24 @@
+extends ../templates/template.pug
+block content
+
+  section.section-top
+    .h1__wrap
+      .container
+        h1.h1.wow.animate__fadeInDown Контакты
+    .page-head
+      .container
+        .row
+          .col-12.col-md-4.col-lg-3.mb-3.mb-lg-0
+            .page-slogan.contact-address.wow.animate__fadeInLeft 119072, Москва, БЦ «Красный Октябрь», Берсеневский переулок, 5А, стр. 1, этаж 2, офис 3
+          .col-lg-6.offset-lg-3
+            .contact-info.wow.animate__fadeInUp
+              a(href="tel:+74951536418").contact-info__btn +7 (495) 153-64-18
+              a(href="https://wa.me/79779533200" target="_blank").contact-info__btn.contact-info__wt +7 (977) 953-32-00
+              a(href="mailto:info@vbi.ru").contact-info__btn info@vbi.ru
+                  
+  .section-map
+    .container
+      .map
+        iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ad031d1d63815d65deb666c133f7797c1033401be3d752835a15d44b188ba3efd&source=constructor')
+        
+      

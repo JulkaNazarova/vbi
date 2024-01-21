@@ -1,0 +1,31 @@
+#section-form.section-form
+  .container
+    .section-form__wrap
+      .row
+        .mb-4.col-lg-1.mb-lg-0
+          .contact-form__icon
+            svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M2 1C0.895431 1 0 1.89543 0 3V3.41355L7.51436 7.58819C7.81638 7.75598 8.18362 7.75598 8.48564 7.58819L16 3.41355V3C16 1.89543 15.1046 1 14 1H2ZM16 5.70147L9.45693 9.33651C8.55086 9.83988 7.44914 9.83988 6.54307 9.33651L0 5.70147V13C0 14.1046 0.895431 15 2 15H14C15.1046 15 16 14.1046 16 13V5.70147ZM2 12C2 11.4477 2.44772 11 3 11C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13C2.44772 13 2 12.5523 2 12Z' fill='white')
+  
+        .col-lg-3
+          .contact-form__title Давайте поговорим
+          .contact-form__subtitle Расскажите о своей задаче — мы ответим в течение 8 часов и предложим время встречи.  
+          
+        .col-lg-6.offset-lg-2
+          form#contact-form.contact-form
+            .input__wrap
+              label.input__label 
+                span Телефон
+              input(type='tel' placeholder='+7').input.input-phone 
+            .input__wrap
+              label.input__label             
+                span Ваше имя
+              input(type='text').input 
+            .input__wrap
+              label.input__label 
+                span Ссылка на сайт
+              input(type='url' placeholder='https://').input 
+            button(type="submit").btn.btn-yellow.btn-form Отправить
+            .agreement Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a>
+          
+  

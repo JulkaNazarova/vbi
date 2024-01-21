@@ -1,0 +1,25 @@
+doctype html
+html(lang='ru')
+  include ../_components/mixins
+  include ../templates/head
+
+
+  body.body
+    
+    //#upbutton
+    //  img(src='../img/upbutton.svg' alt='', title='').upbutton
+    include ../_components/header
+    
+
+    //include ../_components/footer-menu
+    //include ../_components/menu-mob
+      
+    .wrapper
+      .menu-dropdown__bg
+      block content
+
+    include ../_components/form
+    include ../_components/footer
+    include ../_components/modals  
+    include ../templates/scripts.pug
+      

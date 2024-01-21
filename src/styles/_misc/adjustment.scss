@@ -1,0 +1,134 @@
+@import 'mixins';
+
+
+@import 'global-fonts';
+
+
+:root{
+  --color-white: #FFFFFF;
+  --color-black-100: #1F1F1F;
+  --color-black-70: #636363;
+  --color-black-60: #797979;
+  --color-black-50: #8F8F8F;
+  --color-black-40: #A5A5A5;
+  --color-black-20: #D2D2D2;
+  --color-black-05: #F3F3F3;
+  --color-yellow-base: #FFB200;
+  --color-pink-base: #FF0099;
+  --color-brown: #80002A;
+  --color-brown-dark: #660022;
+  
+}
+
+$color-white: var(--color-white);
+$color-black-100: var(--color-black-100);
+$color-black-70: var(--color-black-70);
+$color-black-60: var(--color-black-60);
+$color-black-50: var(--color-black-50);
+$color-black-40: var(--color-black-40);
+$color-black-20: var(--color-black-20);
+$color-black-05: var(--color-black-05);
+$color-yellow-base: var(--color-yellow-base);
+$color-pink-base: var(--color-pink-base);
+$color-brown: var(--color-brown);
+$color-brown-dark: var(--color-brown-dark);
+
+
+
+$TTHovesProTrialRg:"TTHovesProTrial-Rg";
+$TTHovesProTrialMd:"TTHovesProTrial-Md";
+$TTHovesProTrialBd:"TTHovesProTrial-Bd";
+$TTHovesProTrialDmBd:"TTHovesProTrial-DmBd";
+
+
+
+
+
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+
+
+@function size-w($size, $vw) {
+  @return (100 / ($vw / $size)) * 1vw;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  font-family: $TTHovesProTrialRg, Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $color-black-100;
+  overflow-x: hidden;
+  font-size: rem(24px);
+  text-rendering: auto;
+  line-height: 133%;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  outline: none !important;
+}
+
+
+
+
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4{
+  margin: 0;
+  padding: 0;
+}
+
+
+ul, li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p{
+  margin: 0;
+}
+
+
+button, a, input{
+  outline: none;
+  &:focus, &:visited{
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+
+a{
+  text-decoration: none;
+  &:hover{
+    color: inherit;
+  }
+}
+
+label{
+  margin: 0;
+}
+
+body, html {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.space-nowrap{
+  white-space: nowrap;
+}
+

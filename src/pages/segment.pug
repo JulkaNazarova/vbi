@@ -1,0 +1,138 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Экспертиза<br>в&nbsp;автотематике`,
+    slogan: "Клиенты и их результаты — наша ценность",
+    subtitle: `Нам доверяют крупнейшие<br> <span class="text-pink">дилерские сети и автопроизводители</span>`,
+    btn: true
+  })
+
+  #segmentBanner.main-banner_segment(style="background-image:url('./img/segment-banner.jpg')")
+  
+  .page-body.page-segment
+    section.section
+      +section-head({
+        num: "01",
+        title: "Работаем над количеством лидов и снижением их стоимости"
+      })
+      .section__block
+        //.container
+        .motives-slider__wrap
+          .swiper.motives-slider
+            .swiper-wrapper
+              -for(var i=0; i<2; i++)
+                +motives-slide('motive-icon-1.svg', 'Комплексное продвижение в Интернете')
+                +motives-slide('motive-icon-2.svg', 'Performance')
+                +motives-slide('motive-icon-3.svg', 'Сквозная аналитика')
+                +motives-slide('motive-icon-4.svg', 'Техническая поддержка')
+    
+  
+    section.section
+      +section-head({
+        num: "02",
+        title: "Разрабатываем и поддерживаем проекты в разных нишах"
+      })
+      .section__block
+        .container
+          +cases-block
+  
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы
+                      
+    
+    section.section
+      +section-head({
+        num: "03",
+        title: "Заслужили доверие",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+  
+            .col-lg-6
+              +main-rating-wrap
+              +digitals-item-slider
+  
+      .section__block
+        +clients-slider
+
+        
+    section.section
+      +section-head({
+        num: "04",
+        title: "Заголовок",
+        subtitle: "Работаем на всех этапах маркетинговой воронки с учётом целей бизнеса и CJM потребителей. Используем все современные аналитические решения"
+      })
+      .section__block
+        .container
+          .ratings__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Дилеры
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Импортеры
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .funnels__wrap
+                  .funnels__item
+                    .row
+                      .col-lg-4
+                        +funnels-title("Brandformance")
+                      .col-lg-8
+                        .funnels-steps
+                          +funnels-step-item("Знание", "", "100", "#990033")
+                          +funnels-step-item("Вовлечение", "", "80", "#990033")
+                  .funnels__item
+                    .row
+                      .col-lg-4
+                        +funnels-title("Performance")
+                      .col-lg-8
+                        .funnels-steps
+                          +funnels-step-item("Заявка", "", "70", "#660022")
+                          +funnels-step-item("Визит в салон", "", "50", "#660022")
+                          +funnels-step-item("Продажа", "", "30", "#660022")
+                          +funnels-step-item("Лояльность", "", "50", "#660022")
+                          +funnels-step-item("Допродажа услуг", "", "70", "#660022")
+
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+
+
+     
+    section.section
+      +section-head({
+        num: "05",
+        title: "Что мы предлагаем"
+      })
+      .section__block
+        .container
+          .steps-preparation__wrap.mb-3
+            +step-preparation(`0`, '01','Брифинг','Провести встречу для подробного брифинга о целях и задачах.')
+            +step-preparation(`200`, '02','Аудит','Провести аудит текущей рекламной кампании.')
+            +step-preparation(`400`, '03','Планирование','Подробная стратегия и медиапланирование рекламной кампании с акцентом на достижение KPI')
+            +step-preparation(`600`, '04','Презентация','Провести повторную встречу с экспертной командой для презентации нашей стратегии.')
+          .row
+            .col-lg-6.mb-3.mb-lg-0
+              +color-block("color-block-img-1.svg", `Брифинг займет<br>не более 30 минут`)
+            .col-lg-6
+              +color-block("color-block-img-2.svg", `Стратегия будет готова<br>за 5 рабочих дней`)
+                

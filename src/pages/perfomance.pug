@@ -1,0 +1,124 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Performance<br>marketing`,
+    slogan: "Сделаем маркетинг системным",
+    subtitle: `Подбираем digital-инструменты <span class="text-pink">и достигаем KPI на всех уровнях маркетинговой воронки</span>`,
+  })
+          
+  +page-banner("3d-performance.png")
+  
+  .page-body
+    section.section
+      +section-head({
+        num: "01",
+        title: "Зачем бизнесу performance-маркетинг"
+      })
+      .section__block
+        .motives-slider__wrap
+          .swiper.motives-slider
+            .swiper-wrapper
+              -for(var i=0; i<2; i++)
+                +motives-slide('motive-icon-1.svg', 'Окупить вложения')
+                +motives-slide('motive-icon-2.svg', 'Увеличить средний чек')
+                +motives-slide('motive-icon-3.svg', 'Растить лиды и продажи')
+                +motives-slide('motive-icon-4.svg', 'Выдерживать оптимальный ROI и ДРР')
+                
+      .section__block
+        .container
+          .reasons__wrap
+            +reasons-item({
+              title:"Вложить деньги — получить результат",
+              text: "KPI в performance-marketing нацелены на поиск, привлечение и стимулирование потенциальных клиентов к совершению заказа или покупки."
+            })
+            +reasons-item({
+              title:"Знать, куда уходят деньги — оптимизировать расходы",
+              text: "Performance-подход — это постоянное отслеживание эффективности и оптимизация расходов между каналами и инструментами."
+            })
+            +reasons-item({
+              title:"Уйти от разрозненных каналов — объединить маркетинг в систему",
+              text: "Performance-marketing объединяет эффективные рекламные каналы в единую систему, заставляя их работать вместе на конкретный измеримый результат."
+            })
+            +reasons-item({
+              title:"Масштабировать маркетинг — растить спрос и продажи",
+              text: "Правильно выстроенные performance-стратегии практически не ограничены в масштабировании и позволяют увеличивать поток новых обращений, растить конверсию, возвращать лояльных покупателей."
+            })
+            +reasons-item({
+              title:`Находить <span class='space-nowrap'>клиентов —</span> доводить до покупки`,
+              text: "Используем инструменты performance маркетинга, чтобы  дотянуться до разных сегментов аудитории и показать максимально релевантные сообщения."
+            })
+
+            
+    section.section
+      +section-head({
+        num: "02",
+        title: "Как работает performance-marketing",
+        subtitle: "Выстраиваем полный цикл привлечения клиента на всех этапах воронки за счет микса инструментов performance-маркетинга."
+      })
+      .section__block
+        .container
+          .funnels__wrap
+            .funnels__item
+              .row
+                .col-lg-4
+                  +funnels-title("Brandformance", "inactive")
+                .col-lg-8
+                  .funnels-steps
+                    +funnels-step-item("Знание", "формирование бренда, имиджа и спроса", "100", "#990033", "inactive")
+                    +funnels-step-item("Вовлечение", "донесение уникальности предложения", "80", "#990033", "inactive")
+            .funnels__item
+              .row
+                .col-lg-4
+                  +funnels-title("Performance")
+                .col-lg-8
+                  .funnels-steps
+                    +funnels-step-item("Покупка", "лидогенерация, стимулирование к покупке", "70", "#660022")
+                    +funnels-step-item("Лояльность", "Повторные конверсии", "50", "#660022")
+                  
+              
+          
+    section.section
+      +section-head({
+        num: "03",
+        title: "Как мы работаем",
+      })
+      .section__block
+        .container
+          +stage-title("1 этап", "Начинаем со стратегии.")
+          .steps-preparation__wrap
+            +step-preparation(`0`, '01','Брифинг','Определяем цели, задачи, KPI.')    
+            +step-preparation(`200`, '02','Аудит','Анализируем текущие каналы и РК для более точного прогноза эффективности.')    
+            +step-preparation(`400`, '03','Анализ конкурентов','Анализируем конкурентов, находим способы отстройки и позиционирования.')    
+            +step-preparation(`600`, '04','Анализ рынка','Изучаем рынок и тренды: смотрим, какие каналы работают эффективнее.')    
+            +step-preparation(`0`, '05','Концепция','Разрабатываем креативную концепцию, формируем ключевые сообщения для сегментов аудитории')    
+            +step-preparation(`200`, '06','Медиаплан','Считаем затраты по всем каналам привлечения, прогнозируем эффективность')    
+            +step-preparation(`400`, '07','Презентация','Показываем стратегию заказчику, корректируем стратегию и тактику при необходимости')    
+      .section__block
+        .container
+          +stage-title("2 этап", "Запускаем рекламу. Делаем работу удобной: формируем еженедельные и ежемесячные отчеты в комфортном формате, регулярно синхронизируемся по целям и задачам.")
+          .steps-working__wrap
+            +step-working('01 месяц','Настройка','Настраиваем аналитику и рекламные кампании. ')    
+            +step-working('02 месяц','Оптимизация','Анализируем эффективность и оптимизируем кампании. Снова запускаем.')    
+            +step-working('03 месяц','Масштабирование','Смотрим результаты. Снова оптимизируем. Тестируем гипотезы для роста.')    
+              
+              
+    section.section
+      +section-head({
+        num: "04",
+        title: "Достигаем результатов",
+      })
+      .section__block
+        .container
+          +cases-block
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы
+                        
+      .section__block
+        .container
+          .row
+            .col-12.offset-0.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+              +clients-slider
