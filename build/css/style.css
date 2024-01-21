@@ -1,0 +1,3689 @@
+@charset "UTF-8";
+/* Стандартный transition для hover-анимаций */
+/* Миксин замены цвета placeholder у input.
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+@font-face {
+  font-family: 'TTHovesProTrial-Rg';
+  src: url("../fonts/TTHovesProTrial-Rg.eot");
+  src: url("../fonts/TTHovesProTrial-Rg.eot?#iefix") format("embedded-opentype"), url("../fonts/TTHovesProTrial-Rg.woff2") format("woff2"), url("../fonts/TTHovesProTrial-Rg.woff") format("woff"), url("../fonts/TTHovesProTrial-Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'TTHovesProTrial-Md';
+  src: url("../fonts/TTHovesProTrial-Md.eot");
+  src: url("../fonts/TTHovesProTrial-Md.eot?#iefix") format("embedded-opentype"), url("../fonts/TTHovesProTrial-Md.woff2") format("woff2"), url("../fonts/TTHovesProTrial-Md.woff") format("woff"), url("../fonts/TTHovesProTrial-Md.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'TTHovesProTrial-Bd';
+  src: url("../fonts/TTHovesProTrial-Bd.eot");
+  src: url("../fonts/TTHovesProTrial-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/TTHovesProTrial-Bd.woff2") format("woff2"), url("../fonts/TTHovesProTrial-Bd.woff") format("woff"), url("../fonts/TTHovesProTrial-Bd.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'TTHovesProTrial-DmBd';
+  src: url("../fonts/TTHovesProTrial-DmBd.eot");
+  src: url("../fonts/TTHovesProTrial-DmBd.eot?#iefix") format("embedded-opentype"), url("../fonts/TTHovesProTrial-DmBd.woff2") format("woff2"), url("../fonts/TTHovesProTrial-DmBd.woff") format("woff"), url("../fonts/TTHovesProTrial-DmBd.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black-100: #1F1F1F;
+  --color-black-70: #636363;
+  --color-black-60: #797979;
+  --color-black-50: #8F8F8F;
+  --color-black-40: #A5A5A5;
+  --color-black-20: #D2D2D2;
+  --color-black-05: #F3F3F3;
+  --color-yellow-base: #FFB200;
+  --color-pink-base: #FF0099;
+  --color-brown: #80002A;
+  --color-brown-dark: #660022; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-family: "TTHovesProTrial-Rg", Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--color-black-100);
+  overflow-x: hidden;
+  font-size: 1.5rem;
+  text-rendering: auto;
+  line-height: 133%;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  outline: none !important; }
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+p {
+  margin: 0; }
+
+button, a, input {
+  outline: none; }
+  button:focus, button:visited, a:focus, a:visited, input:focus, input:visited {
+    text-decoration: none;
+    outline: none; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    color: inherit; }
+
+label {
+  margin: 0; }
+
+body, html {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden; }
+
+.space-nowrap {
+  white-space: nowrap; }
+
+@media (min-width: 991px) {
+  .container {
+    max-width: 90rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+  .row {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; } }
+
+.wrapper {
+  position: relative;
+  margin-top: 120px; }
+
+.h1 {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 96px;
+  line-height: 96px; }
+
+.page-slogan {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-50);
+  margin: 8px 0; }
+
+.page-head__buttons {
+  position: relative;
+  z-index: 2;
+  background: var(--color-white); }
+
+.h2 {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px; }
+
+.page-subtitle__wrap {
+  display: grid;
+  gap: 56px;
+  justify-items: start; }
+
+.page-subtitle {
+  position: relative;
+  z-index: 1; }
+
+.section-h2__wrap {
+  display: grid;
+  gap: 32px; }
+
+.h2__subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  background: var(--color-white);
+  position: relative;
+  z-index: 2; }
+
+.h2__subtitle p {
+  margin-bottom: 32px; }
+  .h2__subtitle p:last-child {
+    margin-bottom: 0; }
+
+.h3__subtitle {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px; }
+
+.section-h2__wrap + .h3__subtitle {
+  margin-top: 96px; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: -17px;
+  z-index: 100;
+  padding: 32px 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+
+.header__wrap {
+  margin-bottom: 48px; }
+
+.header__inner {
+  background: var(--color-white); }
+
+.header.active {
+  position: fixed;
+  top: 24px;
+  z-index: 100;
+  background: transparent;
+  padding: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .header.active .header__wrap {
+    margin-bottom: 16px; }
+  .header.active .header__inner {
+    background: #80002A;
+    padding: 8px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    border-radius: 99px; }
+  .header.active .logo__icon {
+    width: 33px;
+    height: 24px; }
+  .header.active .logo__name {
+    width: 52px;
+    height: 24px; }
+  .header.active .logo__img {
+    margin-left: 20px; }
+  .header.active .logo__img svg path {
+    fill: var(--color-white); }
+  .header.active .logo__text {
+    display: inline-block; }
+  .header.active .header-menu__link {
+    color: var(--color-white); }
+  .header.active .header-menu__link:hover {
+    color: var(--color-yellow-base); }
+
+.logo__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.logo__img {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+  margin-right: 24px; }
+
+.logo__icon {
+  width: 44px;
+  height: 32px; }
+
+.logo__name {
+  width: 69px;
+  height: 32px; }
+
+.logo__text {
+  display: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 24px; }
+
+.header-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.header-menu__item {
+  margin-right: 24px; }
+  .header-menu__item:last-child {
+    margin-right: 0; }
+
+.header-menu__item.active .header-menu__link {
+  color: var(--color-pink-base); }
+  .header-menu__item.active .header-menu__link:hover {
+    color: var(--color-yellow-base); }
+
+.header-menu__link {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-100);
+  text-decoration: none; }
+  .header-menu__link:hover {
+    text-decoration: none;
+    color: var(--color-yellow-base); }
+
+.menu-humb {
+  display: none; }
+
+.menu-mob {
+  display: none; }
+
+.menu-dropdown {
+  display: none; }
+
+.menu-dropdown__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.menu-dropdown__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 40px;
+  background: var(--color-white);
+  padding: 40px;
+  min-height: 272px; }
+
+.menu-dropdown__bg {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(31, 31, 31, 0.3); }
+
+.menu-dropdown__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--color-black-100);
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px; }
+  .menu-dropdown__title:hover {
+    text-decoration: none;
+    color: #FF9000; }
+    .menu-dropdown__title:hover svg path {
+      fill: #FF9000; }
+
+.menu-dropdown__title svg {
+  margin-top: 8px;
+  margin-left: 16px;
+  width: 16px;
+  min-width: 16px;
+  height: 16px; }
+
+.menu-dropdown__item a {
+  color: var(--color-black-100);
+  font-size: 16px;
+  line-height: 24px; }
+  .menu-dropdown__item a:hover {
+    text-decoration: none;
+    color: #FF9000; }
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 22px;
+  white-space: nowrap;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-100);
+  border-radius: 99px;
+  border: 1px solid transparent; }
+
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+.btn-yellow {
+  background: var(--color-yellow-base);
+  border: 1px solid var(--color-yellow-base); }
+
+.btn-tr {
+  background: transparent;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  min-width: 272px; }
+
+.btn-phone span {
+  margin-left: 20px; }
+
+.btn-arrow:after {
+  content: "";
+  background-image: url("../img/icon-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  margin-left: 16px; }
+
+.sticker {
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  color: var(--color-black-100);
+  text-decoration: none; }
+  .sticker:hover {
+    text-decoration: none; }
+
+.section {
+  margin: 280px 0;
+  display: grid;
+  gap: 96px; }
+
+.page-body {
+  padding: 144px 0; }
+  .page-body .section:first-child {
+    margin-top: 0; }
+  .page-body .section:last-child {
+    margin-bottom: 0; }
+
+.section-main-top {
+  padding: 48px 0 80px;
+  overflow: hidden; }
+
+.main-title {
+  color: var(--color-black-50);
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 0; }
+
+.section-top {
+  padding: 48px 0 144px;
+  display: grid;
+  gap: 96px; }
+
+.text-pink {
+  color: var(--color-pink-base); }
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.main-banner.active {
+  height: 100vh; }
+
+.main-banner .container {
+  position: relative;
+  height: 100%; }
+
+.main-banner__scroll {
+  position: absolute;
+  left: 8px;
+  bottom: 64px; }
+
+.btn-scroll {
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--color-white);
+  border-radius: 50%; }
+  .btn-scroll:before {
+    content: "";
+    background-image: url("../img/icon-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+
+.section__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 104px;
+  height: 48px;
+  background: var(--color-pink-base);
+  font-family: "TTHovesProTrial-Md";
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-white);
+  border-radius: 99px; }
+
+.section__block {
+  min-width: 0; }
+
+.departments__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; }
+
+.departments-item {
+  position: relative;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.departments-item__top {
+  padding: 40px 118px 40px 40px; }
+
+.departments-item__link {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px; }
+
+.departments-item__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  border-radius: 50%; }
+  .departments-item__btn:before {
+    content: "";
+    background-image: url("../img/icon-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    min-width: 16px;
+    height: 16px; }
+
+.departments-item__link span {
+  display: none; }
+
+.departments-item__title {
+  display: block;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 32px;
+  color: var(--color-black-100); }
+  .departments-item__title:hover {
+    text-decoration: none; }
+
+.departments-item__text {
+  display: block;
+  color: var(--color-black-60);
+  font-size: 24px;
+  line-height: 32px; }
+  .departments-item__text:hover {
+    text-decoration: none;
+    color: var(--color-black-60); }
+
+.departments-item__bottom {
+  margin-top: 8px;
+  padding: 40px 40px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.departments-item__tag {
+  white-space: nowrap;
+  margin: 0 4px 8px 0; }
+
+.main-about__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+  background: var(--color-white); }
+
+.main-about__item {
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 344px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.main-about__numbers {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 20px;
+  font-variant-numeric: lining-nums tabular-nums; }
+
+.main-about__text {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-black-60); }
+
+.main-rating__wrap {
+  padding: 40px;
+  border-radius: 40px;
+  background: var(--color-pink-base);
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%; }
+
+.main-rating__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 16px;
+  font-variant-numeric: lining-nums tabular-nums; }
+
+.main-rating__text {
+  font-size: 24px;
+  line-height: 32px; }
+
+.main-rating__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-rating__sert {
+  width: 96px;
+  min-width: 96px;
+  height: 96px;
+  margin-right: 8px; }
+
+.main-rating__sert svg,
+.main-rating__sert svg {
+  width: 100%; }
+
+.clients-slider__wrap {
+  width: 100%; }
+
+.clients-slider {
+  overflow: visible; }
+
+.clients-slider .swiper-slide {
+  width: auto; }
+
+.clients-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear; }
+
+.clients-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  background: var(--color-white);
+  cursor: pointer;
+  width: 224px;
+  min-height: 240px;
+  margin: 0 8px; }
+
+.clients-slider__item img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.directions {
+  display: grid;
+  gap: 16px; }
+
+.directions-item {
+  position: relative;
+  border-radius: 40px;
+  background: #F3F3F3;
+  padding: 0 40px;
+  overflow: hidden; }
+
+.directions-item__bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.directions-item__bg.directions-bg_tablet,
+.directions-item.active .directions-item__bg.directions-bg_tablet,
+.directions-item__bg.directions-bg_mobile,
+.directions-item.active .directions-item__bg.directions-bg_mobile {
+  display: none; }
+
+.directions-item__title {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 36px 0;
+  cursor: pointer; }
+
+.directions-item__name {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px; }
+
+.directions-item__name-big {
+  display: block;
+  font-size: 32px;
+  line-height: 88px;
+  color: var(--color-white);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  min-height: 88px; }
+
+.directions-item__num-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.directions-item__num {
+  font-family: "TTHovesProTrial-Md";
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-black-40); }
+
+.directions-item__num-all {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "TTHovesProTrial-Md";
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 44px;
+  line-height: 48px;
+  color: var(--color-white);
+  opacity: 0.5; }
+  .directions-item__num-all:before {
+    content: "";
+    opacity: 0.2;
+    background: #FFF;
+    width: 64px;
+    height: 1px;
+    margin-right: 16px; }
+
+.directions-item__block {
+  display: none;
+  position: relative;
+  z-index: 1; }
+
+.directions-item__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; }
+
+.directions-item__text {
+  padding-right: 80px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-white);
+  margin-bottom: 42px; }
+
+.directions-item__btn {
+  position: absolute;
+  z-index: 2;
+  top: 34px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+.directions-item__close {
+  display: none; }
+
+.directions-item__desc .btn-arrow {
+  margin-bottom: 110px; }
+
+.directions-item.active {
+  padding: 40px; }
+  .directions-item.active .directions-item__btn {
+    display: none; }
+  .directions-item.active .directions-item__open {
+    display: none; }
+  .directions-item.active .directions-item__bg {
+    display: block; }
+  .directions-item.active .directions-item__title {
+    position: static;
+    padding: 0; }
+  .directions-item.active .directions-item__num-wrap {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .directions-item.active .directions-item__num {
+    min-width: 64px;
+    margin-right: 16px;
+    font-size: 44px;
+    line-height: 48px;
+    color: var(--color-white);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .directions-item.active .directions-item__title .directions-item__name {
+    display: none; }
+  .directions-item.active .directions-item__name-big {
+    font-size: 82px; }
+  .directions-item.active .directions-item__num-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.digitals {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px; }
+
+.digitals-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 240px; }
+
+.digitals-item img {
+  max-width: 100%; }
+
+.digitals-item.digital-big {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  grid-column: span 3;
+  padding: 0;
+  border: none; }
+
+.digital-big__inner {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+  background: var(--color-pink-base);
+  border-radius: 32px;
+  border: 1px solid var(--color-pink-base);
+  color: var(--color-white);
+  padding: 40px; }
+
+.digital-big__title {
+  font-family: "TTHovesProTrial-Md";
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 16px; }
+
+.digital-big__text {
+  font-size: 24px;
+  line-height: 32px; }
+
+.digital-big__img {
+  max-height: 100%;
+  width: 163px;
+  height: 160px; }
+
+._js-tabs-info {
+  display: none; }
+
+._js-tabs-info.active {
+  display: block; }
+
+.tabs-head {
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.tabs-head__item {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border-radius: 99px;
+  background: var(--color-black-05);
+  white-space: nowrap;
+  cursor: pointer;
+  margin-right: 5px; }
+
+.tabs-head__item.active {
+  background: var(--color-yellow-base); }
+
+.tabs-info__block {
+  margin-top: 40px; }
+
+.rating-row {
+  border-top: 1px solid var(--color-black-20);
+  padding: 23px 0 24px;
+  font-size: 24px;
+  line-height: 32px; }
+
+.rating-row__place {
+  font-family: "TTHovesProTrial-Md"; }
+
+.rating-row__num {
+  font-variant-numeric: lining-nums tabular-nums;
+  display: inline-block;
+  min-width: 64px; }
+
+.rating-row__position {
+  color: var(--color-black-60); }
+
+.rating-row__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.rating-row__name {
+  color: var(--color-black-60); }
+
+.rating-row__year {
+  font-family: "TTHovesProTrial-Md"; }
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 16px; }
+
+.case-preview__item {
+  position: relative; }
+
+.case-preview__item:hover {
+  text-decoration: none; }
+
+.case-preview__img {
+  width: 100%;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  margin-bottom: 16px; }
+
+.case-preview__sticker {
+  position: absolute;
+  top: 16px;
+  left: 16px; }
+
+.case-preview__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-black-100);
+  margin-bottom: 16px;
+  padding-right: 40px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
+
+.case-preview__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.case-preview__tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-black-50); }
+  .case-preview__tag:after {
+    content: "";
+    width: 2px;
+    height: 2px;
+    background: #BCBCBC;
+    border-radius: 50%;
+    margin: 0 6px; }
+  .case-preview__tag:last-child:after {
+    display: none; }
+
+.section-bottom {
+  text-align: center; }
+
+.number-slider__wrap {
+  min-width: 0; }
+
+.number-slider__item {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  padding-bottom: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: var(--color-black-05); }
+
+.events-slider__sticker {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px; }
+
+.number-slider__nav {
+  position: absolute;
+  z-index: 10;
+  top: auto;
+  left: 40px;
+  right: 40px;
+  bottom: 40px; }
+
+.events-slider .number-slider__nav {
+  left: auto; }
+
+.number-slider__nav-inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.swiper-buttons__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    content: "";
+    background-image: url("../img/icon-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    min-width: 16px;
+    height: 16px; }
+
+.swiper-button-prev:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.number-slider {
+  border-radius: 40px;
+  overflow: hidden; }
+  .number-slider .swiper-button-prev,
+  .number-slider .swiper-button-next {
+    position: static;
+    margin-top: 0;
+    margin-left: 8px;
+    border: 1px solid var(--color-black-20); }
+  .number-slider .swiper-pagination {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 136px;
+    min-width: 136px;
+    height: 56px;
+    border-radius: 99px;
+    background: var(--color-black-05);
+    margin-right: 8px; }
+  .number-slider .swiper-scrollbar {
+    width: 24px;
+    position: static;
+    overflow: hidden;
+    background: rgba(31, 31, 31, 0.2); }
+  .number-slider .swiper-scrollbar-drag {
+    background: var(--color-black-100); }
+
+.number-slider.events-slider .swiper-pagination {
+  background: var(--color-white); }
+
+.swiper-pagination-current {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 24px; }
+
+.swiper-pagination-total {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 24px; }
+
+.number-slider__gradient {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 208px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.slider-foto__gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%); }
+
+.number-slider__desc {
+  width: 55%;
+  color: var(--color-white); }
+
+.number-slider__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 8px; }
+
+.number-slider__text {
+  font-size: 16px;
+  line-height: 24px; }
+
+.footer__wrap {
+  background: var(--color-black-05);
+  padding: 80px 0;
+  font-size: 16px;
+  line-height: 24px; }
+
+.footer {
+  display: grid;
+  gap: 80px; }
+
+.footer-menu__list {
+  display: grid;
+  gap: 8px; }
+
+.footer-menu__item a {
+  color: var(--color-black-100); }
+
+.social__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.footer-social .social__wrap {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.social__item {
+  display: block;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 12px;
+  margin-right: 4px; }
+  .social__item:last-child {
+    margin-right: 0; }
+
+.footer-info__block {
+  margin-bottom: 16px; }
+  .footer-info__block:last-child {
+    margin-bottom: 0; }
+
+.footer-info__block span {
+  display: block; }
+
+.footer-info__block a {
+  color: var(--color-black-100); }
+
+.section-form {
+  background: var(--color-black-05); }
+
+.section-form__wrap {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--color-black-20); }
+
+.contact-form__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--color-pink-base); }
+
+.contact-form__title {
+  margin-top: 8px;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 32px; }
+
+.contact-form__subtitle {
+  font-size: 16px;
+  line-height: 24px; }
+
+.contact-form {
+  display: grid;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px; }
+  .contact-form .btn-form {
+    margin: 16px 0;
+    max-width: 344px; }
+
+.input__wrap {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 16px 20px 16px 24px;
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px; }
+  .input__wrap .input__label span {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px; }
+
+.input__label {
+  width: 100%;
+  border-right: 1px solid #E9E9E9;
+  padding-right: 16px;
+  margin-right: 16px; }
+
+.input {
+  width: 100%;
+  border: none; }
+
+.agreement {
+  font-size: 16px;
+  line-height: 24px; }
+  .agreement a {
+    color: var(--color-black-100); }
+
+.page-banner img {
+  display: block;
+  margin: 0 auto;
+  max-height: 464px; }
+
+.reasons__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px; }
+
+.reasons__item {
+  padding: 40px;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  min-height: 344px; }
+
+.reasons__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 32px; }
+
+.reasons__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.motives-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear; }
+
+.motives-slider .swiper-slide {
+  width: auto; }
+
+.motives-slide__item {
+  padding: 32px 40px;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  font-family: "TTHovesProTrial-Md";
+  margin: 0 8px; }
+
+.motives-slide__icon {
+  max-height: 16px;
+  margin-right: 16px; }
+
+.stage__title {
+  margin-bottom: 48px; }
+
+.stage__num {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--color-white);
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  background: var(--color-pink-base);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 224px;
+  height: 224px;
+  margin: 0 auto 40px; }
+
+.stage__name {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px; }
+
+.steps-preparation__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.steps-preparation__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  padding: 40px;
+  min-height: 344px; }
+
+.steps-preparation__top {
+  margin-bottom: 16px; }
+
+.steps-preparation__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.steps-preparation__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 24px; }
+
+.steps-preparation__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.steps-preparation__num {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 82px;
+  line-height: 88px;
+  color: var(--color-black-20);
+  margin-right: 8px; }
+
+.steps-preparation__arrow {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: var(--color-black-20); }
+  .steps-preparation__arrow:after {
+    position: absolute;
+    top: -7px;
+    right: -1px;
+    content: '';
+    background-image: url("../img/step-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px; }
+
+.steps-preparation__item:first-child .steps-preparation__arrow:before {
+  position: absolute;
+  top: -7px;
+  left: -1px;
+  content: '';
+  background-image: url("../img/step-point.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px; }
+
+.steps-preparation__item:last-child .steps-preparation__arrow:after {
+  position: absolute;
+  top: -7px;
+  right: -1px;
+  content: '';
+  background-image: url("../img/step-point.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px; }
+
+.steps-working__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; }
+
+.steps-working__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  padding: 40px;
+  min-height: 344px; }
+
+.steps-working__top {
+  margin-bottom: 24px; }
+
+.steps-working__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 24px; }
+
+.steps-working__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.steps-working__num {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 82px;
+  line-height: 88px;
+  color: var(--color-black-20); }
+
+.runet-slider .number-slider__item {
+  padding-bottom: 100%; }
+
+.format-slider .number-slider__item {
+  padding-bottom: 100%; }
+
+.block-cards-slider__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; }
+
+.block-cards-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 344px; }
+  .block-cards-slider__item:last-child {
+    grid-column: span 1 / -1; }
+
+.block-cards-slider__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px; }
+
+.block-cards-slider__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.callback-block {
+  position: relative;
+  padding: 144px 40px;
+  border-radius: 40px;
+  color: var(--color-white);
+  background-image: url("../img/section-callback-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.callback-block__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  margin-bottom: 32px;
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.callback-block__text {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 56px;
+  padding: 0 100px; }
+
+.steps-simple__wrap {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.steps-simple__item {
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 344px; }
+
+.steps-simple__item.steps-simple__chapter {
+  background: var(--color-black-05);
+  border: 1px solid var(--color-black-05); }
+
+.steps-simple__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  display: none; }
+
+.steps-simple__chapter .steps-simple__num,
+.steps-simple__chapter .steps-simple__text {
+  display: none; }
+
+.steps-simple__chapter .steps-simple__title {
+  display: block; }
+
+.steps-simple__num {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px; }
+
+.steps-simple__text {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--color-black-60); }
+
+.cards-simple__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.cards-simple__item {
+  border-radius: 40px;
+  padding: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 344px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.cards-simple__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 24px; }
+
+.cards-simple__text {
+  font-size: 16px;
+  line-height: 24px; }
+
+.cards-number__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.cards-number__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  padding: 40px;
+  min-height: 344px; }
+
+.cards-number__top {
+  margin-bottom: 16px; }
+
+.cards-number__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.cards-number__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 24px; }
+
+.cards-number__text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.cards-number__num {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 82px;
+  line-height: 88px;
+  color: var(--color-black-20);
+  margin-right: 8px; }
+
+.text-simple {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px; }
+
+.text-simple p {
+  margin-bottom: 32px; }
+  .text-simple p:last-child {
+    margin-bottom: 0; }
+
+.work-directions__wrap {
+  display: grid;
+  gap: 16px; }
+
+.work-directions__item {
+  position: relative;
+  border-radius: 40px;
+  background: #F3F3F3;
+  padding: 0 40px;
+  overflow: hidden; }
+
+.work-directions__bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.work-directions__title {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 36px 0;
+  cursor: pointer; }
+
+.work-directions__name {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  padding-right: 60px; }
+
+.work-directions__num-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.work-directions__num {
+  font-family: "TTHovesProTrial-Md";
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-black-40); }
+
+.work-directions__num-all {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "TTHovesProTrial-Md";
+  font-variant-numeric: lining-nums tabular-nums;
+  font-size: 44px;
+  line-height: 48px;
+  opacity: 0.5; }
+  .work-directions__num-all:before {
+    content: "";
+    opacity: 0.2;
+    background: var(--color-black-100);
+    width: 64px;
+    height: 1px;
+    margin-right: 16px; }
+
+.work-directions__block {
+  display: none;
+  position: relative;
+  z-index: 1; }
+
+.work-directions__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px; }
+
+.work-directions__subtitle {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 16px; }
+
+.work-directions__text {
+  padding-right: 40px;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-black-50); }
+
+.work-directions__btn {
+  position: absolute;
+  z-index: 2;
+  top: 34px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer; }
+
+.work-directions__close {
+  display: none; }
+
+.work-directions__item.active {
+  padding: 160px 40px 32px; }
+  .work-directions__item.active .work-directions__btn {
+    top: 40px; }
+  .work-directions__item.active .work-directions__close {
+    display: block; }
+  .work-directions__item.active .work-directions__open {
+    display: none; }
+  .work-directions__item.active .work-directions__bg {
+    display: block; }
+  .work-directions__item.active .work-directions__title {
+    position: static;
+    padding: 0; }
+  .work-directions__item.active .work-directions__num-wrap {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    pointer-events: none; }
+  .work-directions__item.active .work-directions__num {
+    min-width: 64px;
+    margin-right: 16px;
+    font-size: 44px;
+    line-height: 48px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+  .work-directions__item.active .work-directions__title .work-directions__name {
+    display: none; }
+  .work-directions__item.active .work-directions__block .work-directions__name {
+    display: block;
+    font-size: 82px;
+    line-height: 88px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s; }
+  .work-directions__item.active .work-directions__num-all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.section-color {
+  margin: 0;
+  color: var(--color-white);
+  background: var(--color-brown);
+  padding: 144px 0;
+  overflow: hidden; }
+
+.section-color__head {
+  min-width: 0; }
+  .section-color__head .h2__subtitle {
+    background: transparent; }
+
+.section-color__bg {
+  position: absolute;
+  right: 45%;
+  bottom: -124px;
+  height: 779px; }
+
+.section-color__bg img {
+  height: 100%; }
+
+.worth-slider__wrap {
+  padding: 8px 0;
+  margin-top: 32px; }
+
+.swiper.worth-slider {
+  overflow: visible; }
+
+.worth-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear; }
+
+.worth-slide__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.worth-slider .swiper-slide {
+  width: auto; }
+
+.worth-slide__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 96px;
+  line-height: 96px;
+  margin: 0 48px; }
+
+.brands__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px; }
+
+.brands__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 240px; }
+
+.brands__item img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.reviews-previews__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.reviews-previews__item {
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid var(--color-black-20);
+  min-height: 416px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  color: var(--color-black-100); }
+
+.reviews-previews__item:hover {
+  text-decoration: none; }
+
+.reviews-previews__img {
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 16px; }
+
+.reviews-previews__img img {
+  max-height: 100%;
+  max-width: 100%; }
+
+.reviews-previews__head {
+  margin-bottom: 16px; }
+
+.reviews-previews__text {
+  font-size: 16px;
+  line-height: 24px; }
+
+.reviews-previews__text p {
+  margin-bottom: 16px; }
+  .reviews-previews__text p:last-child {
+    margin-bottom: 0; }
+
+.reviews-previews__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.reviews-previews__company {
+  color: var(--color-black-50);
+  font-size: 12px;
+  line-height: 16px; }
+
+.reviews-previews__icon {
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  border-radius: 50%;
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.team__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; }
+
+.team__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  min-height: 528px;
+  text-decoration: none;
+  overflow: hidden; }
+  .team__item:hover {
+    text-decoration: none; }
+
+.team__foto {
+  height: 344px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.team__info {
+  padding: 40px;
+  margin-bottom: 8px; }
+
+.team__name {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 8px;
+  color: var(--color-black-100); }
+
+.team__post {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black-60); }
+
+.team__foto img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.block-picture-text__wrap {
+  display: grid;
+  gap: 16px; }
+
+.block-picture-text__item {
+  border-radius: 40px;
+  padding: 40px;
+  border: 1px solid var(--color-black-20); }
+
+.block-picture-text__img {
+  height: 424px;
+  max-width: 100%; }
+
+.block-picture-text__img img {
+  max-height: 100%;
+  max-width: 100%; }
+
+.block-picture-text__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%; }
+
+.block-picture-text__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 96px;
+  line-height: 96px; }
+
+.block-picture-text__desc {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 32px; }
+
+.contact-info__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--color-black-100); }
+
+.contact-info__wt:after {
+  content: "WhatsApp";
+  border-radius: 99px;
+  background: var(--color-black-05);
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none !important;
+  margin-left: 8px; }
+
+.section-map {
+  margin-bottom: 144px; }
+
+.map {
+  width: 100%;
+  aspect-ratio: 2/1; }
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+.projects-preview__tags {
+  overflow-x: auto; }
+
+.projects-preview__tags-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.projects-preview__tag {
+  padding: 12px 20px;
+  background: var(--color-black-05);
+  border-radius: 999px;
+  margin-right: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px; }
+
+.projects-preview__tag.active {
+  background: var(--color-yellow-base); }
+
+.projects-preview__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 16px; }
+
+button.mfp-arrow {
+  border-radius: 50%;
+  background: #FFFFFF;
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.mfp-arrow:before {
+  position: static;
+  display: block;
+  background-image: url("../img/icon-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  border: none;
+  margin: 0; }
+
+.mfp-arrow.mfp-arrow-left:before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.mfp-arrow:after {
+  display: none; }
+
+.mfp-arrow-right {
+  right: 20%; }
+
+.mfp-arrow-left {
+  left: 20%; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.mfp-open .mfp-figure {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+.wow {
+  opacity: 0; }
+
+.wow[style*="visibility: visible;"] {
+  opacity: 1; }
+
+.funnels__wrap {
+  border: 1px solid var(--color-black-20);
+  border-radius: 40px;
+  display: grid;
+  gap: 1px;
+  background: var(--color-black-20);
+  overflow: hidden; }
+
+.funnels-steps {
+  display: grid;
+  gap: 16px;
+  justify-items: center; }
+
+.funnels__item {
+  padding: 40px;
+  background: var(--color-white); }
+
+.funnels-title {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .funnels-title.inactive .funnels-title__more {
+    display: none; }
+
+.btn.btn-primary {
+  border: none;
+  outline: none; }
+
+.btn.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn.btn-primary:not(:disabled):not(.disabled):active,
+.btn.btn-primary:active,
+.btn.btn-primary:focus,
+.btn.btn-primary:hover {
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+  background: var(--color-black-05);
+  color: var(--color-black-100); }
+
+.funnels-title__name {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 36px;
+  line-height: 40px; }
+
+.funnels-title__more {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 16px;
+  background: var(--color-black-05);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 20px;
+  cursor: pointer; }
+  .funnels-title__more span {
+    display: block;
+    margin-right: 16px; }
+  .funnels-title__more:after {
+    content: '';
+    background-image: url("../img/icon-info.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    min-width: 16px;
+    height: 16px; }
+
+.funnels-step__item {
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+  color: var(--color-white);
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content; }
+  .funnels-step__item.inactive {
+    background: #E9E9E9 !important; }
+  .funnels-step__item.inactive .funnels-step__title,
+  .funnels-step__item.inactive .funnels-step__text {
+    color: var(--color-black-40); }
+
+.funnels-step__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 36px;
+  line-height: 40px; }
+
+.funnels-step__text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  line-height: 24px; }
+
+.funnels-modal__content {
+  display: none; }
+
+.funnels-modal__lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px; }
+
+.funnels-modal__list-title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 24px; }
+
+.funnels-modal__list-items {
+  display: grid;
+  gap: 4px;
+  color: var(--color-black-70);
+  font-size: 16px;
+  line-height: 24px; }
+
+.modal-more .modal-dialog {
+  max-width: 784px; }
+
+.modal-more .modal-content {
+  border-radius: 40px;
+  background: var(--color-white); }
+
+.modal-header {
+  padding: 40px 40px 24px;
+  border-bottom: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .modal-header .close {
+    padding: 0 14px; }
+  .modal-header .close span {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px; }
+
+.modal-title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 36px;
+  line-height: 40px; }
+
+.modal-body {
+  padding: 24px 40px 40px; }
+
+.projects-preview__select {
+  height: 48px;
+  padding: 0 17px;
+  background: var(--color-black-05);
+  border-radius: 16px; }
+
+.select {
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: var(--color-black-05);
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "TTHovesProTrial-Rg"; }
+
+.select:after {
+  content: "▼";
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.projects-categories__wrap {
+  margin-bottom: 48px; }
+
+.projects-categories-slider.swiper {
+  overflow: visible; }
+
+.projects-categories-slider .swiper-slide {
+  height: auto;
+  min-height: 344px; }
+
+.projects-categories__item {
+  position: relative;
+  border-radius: 40px;
+  background: var(--color-black-05);
+  padding: 40px 40px 128px;
+  height: 100%; }
+
+.projects-categories__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  z-index: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  width: 56px;
+  height: 56px; }
+  .projects-categories__link:after {
+    content: "";
+    background-image: url("../img/icon-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    min-width: 16px;
+    height: 16px; }
+
+.projects-categories__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 16px; }
+
+.projects-categories__desc {
+  font-size: 16px;
+  line-height: 24px; }
+
+.main-banner_segment {
+  position: relative;
+  width: 100%;
+  height: 326px;
+  background-position: top -180px center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.main-banner_segment.active {
+  height: 500px; }
+
+.page-segment .main-rating__wrap {
+  height: 448px;
+  margin-bottom: 16px; }
+
+.color-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 32px;
+  background: var(--color-pink-base);
+  padding: 40px;
+  color: var(--color-white);
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px; }
+
+.color-block__img {
+  width: 96px;
+  min-width: 96px;
+  height: 96px;
+  margin-right: 40px; }
+
+.color-block__img img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.section-project-top {
+  position: relative;
+  padding: 48px 0 96px;
+  aspect-ratio: 3/1;
+  color: var(--color-white); }
+
+.project-item__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.project-item__date {
+  font-size: 16px;
+  line-height: 24px; }
+
+.project-item__bg.project-bg_tablet,
+.project-item__bg.project-bg_mobile {
+  display: none; }
+
+.project-item__stickers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.project-item__sticker {
+  padding: 12px 24px;
+  font-family: "TTHovesProTrial-Md";
+  margin-left: 8px; }
+
+.project-item__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px;
+  border-radius: 50%;
+  background: var(--color-white);
+  width: 224px;
+  height: 224px;
+  margin-bottom: 16px; }
+
+.project-item__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 28px;
+  line-height: 32px; }
+
+.h2__color-text {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 44px;
+  line-height: 48px;
+  color: var(--color-pink-base); }
+
+@media screen and (max-width: 1199px) {
+  .projects-preview__tags-inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 16px; }
+  .container {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+  .row {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+  .header__wrap {
+    margin-bottom: 25px; }
+  .header {
+    right: 0; }
+  .header.active .icon-humb__line {
+    background: var(--color-white); }
+  .header.active .menu-humb__wrap {
+    margin-right: 10px; }
+  .header.active .menu-mob {
+    top: 112px; }
+  .header.active .btn-phone {
+    border-radius: 50%;
+    padding: 20px; }
+  .header.active .btn-phone span {
+    display: none; }
+  .header.active .header__inner {
+    padding: 8px 20px 8px 12px; }
+  .header.active .logo__text {
+    margin-top: 5px; }
+  .header-menu {
+    display: none; }
+  .header-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .menu-humb__wrap {
+    margin-left: 32px; }
+  .menu-humb {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .menu-humb.active {
+    padding-right: 6px; }
+  .icon-humb {
+    width: 24px;
+    height: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .menu-humb.active .icon-humb {
+    width: 19px; }
+  .icon-humb__line {
+    background: var(--color-black-100);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    transition: -webkit-transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out; }
+  .icon-humb__line:first-child {
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+  .icon-humb__line:last-child {
+    width: 14px;
+    -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+  .menu-humb.active .icon-humb__line {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0); }
+  .menu-humb.active .icon-humb__line:first-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 114%; }
+  .menu-humb.active .icon-humb__line:last-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 114%; }
+  .menu-mob {
+    display: block;
+    position: fixed;
+    top: 136px;
+    right: -1000px;
+    overflow-y: auto;
+    width: 100%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    height: 100vh; }
+  .menu-mob.active {
+    z-index: 80;
+    right: 0; }
+  .menu-mob__inner {
+    background: var(--color-white);
+    border-radius: 40px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px); }
+  .menu-mob__nav {
+    overflow-y: hidden; }
+  .menu-mob__item {
+    padding: 40px;
+    border: 1px solid var(--color-black-20); }
+  .menu-mob__item .menu-dropdown__list {
+    margin-top: 24px; }
+  .section-main-top {
+    padding: 32px 0 48px; }
+  .main-banner {
+    height: 328px; }
+  .main-banner__scroll {
+    bottom: 32px; }
+  .page-body {
+    padding: 80px 0; }
+  .section__num {
+    margin-bottom: 32px; }
+  .departments__wrap {
+    grid-template-columns: 1fr;
+    gap: 16px; }
+  .section {
+    margin: 160px 0;
+    gap: 64px; }
+  .main-rating__wrap {
+    min-height: 704px; }
+  .directions-item__info {
+    grid-template-columns: 1fr; }
+  .directions-item__desc {
+    margin-top: 286px; }
+  .directions-item__text {
+    padding-right: 0; }
+  .directions-item__desc .btn-arrow {
+    margin-bottom: 40px; }
+  .digitals {
+    grid-template-columns: repeat(3, 1fr); }
+  .tabs__overflow {
+    overflow-y: auto;
+    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width))/2 * (-1)); }
+  .rating-row__num {
+    display: block; }
+  .rating-row__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .tabs-info__block {
+    margin-top: 24px; }
+  .cases {
+    grid-template-columns: repeat(2, 1fr); }
+  .btn-tr {
+    min-width: 224px; }
+  .number-slider__item {
+    padding-bottom: 100%; }
+  .number-slider__nav {
+    left: 40px;
+    top: auto; }
+  .number-slider__nav-inner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .events-slider .number-slider__nav {
+    left: 40px; }
+  .number-slider__desc {
+    width: 100%;
+    margin-bottom: 88px; }
+  .contact-form__subtitle {
+    margin-bottom: 32px; }
+  .footer__wrap {
+    padding: 40px 0; }
+  .footer-menu {
+    margin-bottom: 64px; }
+  .footer {
+    gap: 64px; }
+  .section-top {
+    padding: 32px 0 80px;
+    gap: 64px; }
+  .page-subtitle__wrap {
+    gap: 64px; }
+  .reasons__wrap {
+    grid-template-columns: 1fr 1fr; }
+  .reasons__item {
+    min-height: 424px; }
+  .steps-preparation__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .steps-working__wrap {
+    grid-template-columns: 1fr; }
+  .steps-working__item {
+    min-height: 304px; }
+  .block-cards-slider__item:last-child {
+    grid-column: auto; }
+  .block-cards-slider__items {
+    margin-bottom: 16px; }
+  .callback-block__title {
+    padding: 0 30px; }
+  .callback-block__text {
+    padding: 0; }
+  .callback-block {
+    padding: 175px 40px; }
+  .steps-simple__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .cards-simple__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .cards-number__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .work-directions__info {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px; }
+  .work-directions__text {
+    padding-right: 0; }
+  .work-directions__title {
+    padding: 32px 0; }
+  .section-color {
+    margin: 0;
+    padding: 80px 0; }
+  .section-color__bg {
+    display: none; }
+  .section-h2__wrap + .h3__subtitle {
+    margin-top: 248px; }
+  .brands__list {
+    grid-template-columns: repeat(3, 1fr); }
+  .reviews-previews__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .team__wrap {
+    grid-template-columns: repeat(2, 1fr); }
+  .block-picture-text__item {
+    padding: 0; }
+  .block-picture-text__img {
+    padding: 40px 0 40px 40px;
+    height: auto; }
+  .block-picture-text__info {
+    padding: 40px; }
+  .section-map {
+    margin-bottom: 80px; }
+  .projects-preview__wrap {
+    grid-template-columns: 1fr 1fr; }
+  .directions-item.active .directions-item__bg.directions-bg_tablet {
+    display: block; }
+  .directions-item__bg.directions-bg_desktop,
+  .directions-item.active .directions-item__bg.directions-bg_desktop,
+  .directions-item__bg.directions-bg_mobile,
+  .directions-item.active .directions-item__bg.directions-bg_mobile {
+    display: none; }
+  .funnels-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: auto;
+    margin-bottom: 40px; }
+  .projects-preview__tags {
+    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width))/2 * (-1) - 1.5rem); }
+  .main-banner_segment {
+    background-position: top center; }
+  .page-segment .main-rating__wrap {
+    height: 448px;
+    min-height: 0; } }
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem; }
+  .row {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem; }
+  .wrapper {
+    margin-top: 50px; }
+  .header {
+    padding: 16px 0; }
+  .header.active {
+    top: 8px;
+    margin-left: -16px;
+    margin-right: -16px; }
+  .header.active .logo__text {
+    display: none; }
+  .logo__icon {
+    width: 28px;
+    height: 28px; }
+  .logo__name {
+    width: 43px;
+    height: 28px; }
+  .btn-phone {
+    border-radius: 50%;
+    padding: 16px; }
+  .btn-phone span {
+    display: none; }
+  .btn-phone:before {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 0; }
+  .menu-humb__wrap {
+    margin-left: 16px; }
+  .section-main-top {
+    padding: 24px 0 40px; }
+  .h2 {
+    font-size: 26px;
+    line-height: 32px; }
+  .btn {
+    width: 100%; }
+  .btn-arrow {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .main-banner {
+    height: 72px; }
+  .main-banner__scroll {
+    display: none; }
+  .page-body {
+    padding: 40px 0; }
+  .section {
+    margin: 80px 0;
+    gap: 40px; }
+  .section__num {
+    width: 56px; }
+  .section__num {
+    margin-bottom: 24px; }
+  .departments-item {
+    border-radius: 24px; }
+  .departments-item__top {
+    padding: 24px; }
+  .departments-item__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 24px; }
+  .departments-item__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .departments-item__link {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-top: 1px solid var(--color-black-20);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--color-black-100);
+    font-family: "TTHovesProTrial-Md";
+    font-size: 16px;
+    line-height: 24px; }
+  .departments-item__bottom {
+    margin-top: 0;
+    padding: 0 8px 20px 24px; }
+  .departments-item__tag {
+    margin: 0 4px 4px 0; }
+  .departments-item__link span {
+    display: block; }
+  .departments-item__btn {
+    width: auto;
+    height: auto;
+    border: none; }
+  .section-h2__wrap {
+    gap: 24px; }
+  .h2__subtitle {
+    font-size: 18px;
+    line-height: 24px; }
+  .main-about__wrap {
+    grid-template-columns: 1fr; }
+  .main-about__item {
+    border-radius: 24px;
+    padding: 24px;
+    min-height: 150px; }
+  .main-about__numbers {
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal; }
+  .main-about__text {
+    font-size: 18px;
+    line-height: 26px; }
+  .main-rating__wrap {
+    min-height: 0;
+    padding: 24px 23px 24px 24px;
+    border-radius: 24px; }
+  .main-rating__title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 14px;
+    font-variant-numeric: normal; }
+  .main-rating__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .main-rating__bottom {
+    margin-top: 40px; }
+  .main-rating__sert {
+    width: 56px;
+    min-width: 56px;
+    height: 56px; }
+  .clients-slider__item {
+    min-height: 136px;
+    padding: 16px;
+    border-radius: 24px; }
+  .directions-item {
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 24px; }
+  .directions-item.active {
+    padding: 24px; }
+  .directions-item__title {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 0; }
+  .directions-item__name {
+    font-size: 22px;
+    line-height: 24px; }
+  .directions-item__name-big {
+    font-size: 22px;
+    line-height: 24px;
+    min-height: 24px; }
+  .directions-item.active .directions-item__num-wrap {
+    top: 20px;
+    left: 24px; }
+  .directions-item.active .directions-item__num {
+    min-width: 40px;
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal;
+    margin-right: 8px; }
+  .directions-item.active .directions-item__num-all {
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal; }
+  .directions-item__btn {
+    top: 18px;
+    right: 24px; }
+  .directions-item.active .directions-item__btn {
+    top: 24px; }
+  .directions-item__num-all:before {
+    width: 32px; }
+  .directions-item__desc {
+    margin-top: 150px; }
+  .directions-item__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 22px; }
+  .directions-item.active .directions-item__info .directions-item__name-big {
+    font-size: 32px;
+    line-height: 36px; }
+  .directions-item__desc .btn-arrow {
+    margin-bottom: 24px; }
+  .digitals {
+    grid-template-columns: repeat(2, 1fr); }
+  .digitals-item {
+    min-height: 136px;
+    padding: 16px; }
+  .digital-big__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px;
+    border-radius: 24px; }
+  .digitals-item.digital-big {
+    grid-column: span 2; }
+  .digital-big__title {
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal; }
+  .digital-big__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .digital-big__img {
+    max-width: 100%;
+    width: 104px;
+    height: 102px; }
+  .rating-row {
+    font-size: 18px;
+    line-height: 24px; }
+  .rating-row__position {
+    margin-bottom: 8px; }
+  .cases {
+    grid-template-columns: 1fr; }
+  .case-preview__img {
+    border-radius: 24px; }
+  .case-preview__title {
+    padding-right: 0; }
+  .number-slider .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  .number-slider .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    margin: 0; }
+  .number-slider .swiper-pagination {
+    height: auto;
+    background: transparent;
+    min-width: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .swiper-pagination-bullet {
+    background: var(--color-yellow-base);
+    width: 10px;
+    min-width: 10px;
+    height: 10px; }
+  .number-slider__nav {
+    left: 24px;
+    right: auto;
+    bottom: auto;
+    top: calc(var(--js-img-event-height) - 34px); }
+  .number-slider__item {
+    border-radius: 24px; }
+  .number-slider {
+    border-radius: 0; }
+  .number-slider__desc {
+    margin-top: 8px;
+    color: var(--color-black-100);
+    margin-bottom: 0; }
+  .number-slider__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 8px; }
+  .section-form__wrap {
+    padding: 40px 0; }
+  .contact-form__icon {
+    width: 48px;
+    height: 48px; }
+  .contact-form__title {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 24px; }
+  .input__wrap {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 14px; }
+  .input__label {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0; }
+  .input__wrap .input__label span {
+    margin: 0; }
+  .footer-menu {
+    margin-bottom: 32px; }
+  .footer-social .social__wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 32px; }
+  .footer {
+    gap: 32px; }
+  .contact-form .btn-form {
+    max-width: 100%; }
+  .h1 {
+    font-size: 38px;
+    line-height: 40px; }
+  .section-top {
+    padding: 32px 0 40px;
+    gap: 32px; }
+  .page-slogan {
+    margin: 0; }
+  .page-subtitle__wrap {
+    gap: 32px; }
+  .page-banner img {
+    max-height: 272px; }
+  .motives-slide__item {
+    padding: 16px 24px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 24px; }
+  .reasons__wrap {
+    grid-template-columns: 1fr; }
+  .reasons__item {
+    padding: 24px;
+    border-radius: 24px;
+    min-height: 360px; }
+  .reasons__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 24px; }
+  .stage__title {
+    margin-bottom: 40px; }
+  .stage__num {
+    margin-bottom: 24px; }
+  .stage__name {
+    font-size: 18px;
+    line-height: 24px; }
+  .steps-preparation__wrap {
+    grid-template-columns: 1fr; }
+  .steps-preparation__item {
+    padding: 24px;
+    border-radius: 24px;
+    min-height: 248px; }
+  .steps-preparation__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 16px; }
+  .steps-preparation__num {
+    min-width: 56px;
+    font-size: 32px;
+    line-height: 36px;
+    font-variant-numeric: normal; }
+  .steps-working__item {
+    padding: 24px;
+    border-radius: 24px;
+    min-height: 224px; }
+  .steps-working__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 16px; }
+  .steps-working__num {
+    font-variant-numeric: normal;
+    font-size: 32px;
+    line-height: 36px; }
+  .block-cards-slider__item {
+    border-radius: 24px;
+    padding: 24px;
+    min-height: 272px; }
+  .block-cards-slider__items {
+    grid-template-columns: 1fr; }
+  .block-cards-slider__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .callback-block__title {
+    padding: 0;
+    font-size: 26px;
+    line-height: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 24px; }
+  .callback-block {
+    padding: 125px 0;
+    border-radius: 0;
+    background: none; }
+  .section-callback {
+    background: -webkit-gradient(linear, left bottom, left top, from(#602), to(#602)), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url(<path-to-image>), lightgray -60.449px -297.33px/122.261% 196.028% no-repeat;
+    background: -o-linear-gradient(bottom, #602 0%, #602 100%), -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url(<path-to-image>), lightgray -60.449px -297.33px/122.261% 196.028% no-repeat;
+    background: linear-gradient(0deg, #602 0%, #602 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url(<path-to-image>), lightgray -60.449px -297.33px/122.261% 196.028% no-repeat; }
+  .callback-block__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    padding: 0; }
+  .cards-number__wrap {
+    grid-template-columns: 1fr; }
+  .cards-number__item {
+    padding: 24px;
+    border-radius: 24px;
+    min-height: 216px; }
+  .cards-number__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 16px; }
+  .cards-number__num {
+    min-width: 56px;
+    font-size: 32px;
+    line-height: 36px;
+    font-variant-numeric: normal; }
+  .steps-simple__wrap {
+    grid-template-columns: 1fr; }
+  .steps-simple__item {
+    border-radius: 24px;
+    padding: 24px;
+    min-height: 192px; }
+  .steps-simple__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .steps-simple__num {
+    font-size: 26px;
+    font-variant-numeric: normal;
+    line-height: 32px;
+    margin-bottom: 16px; }
+  .steps-simple__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .cards-simple__wrap {
+    grid-template-columns: 1fr; }
+  .cards-simple__item {
+    border-radius: 24px;
+    padding: 24px;
+    min-height: 272px; }
+  .cards-simple__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .cards-simple__text {
+    font-size: 16px;
+    line-height: 24px; }
+  .text-simple {
+    font-size: 18px;
+    line-height: 24px; }
+  .text-simple p {
+    margin-bottom: 24px; }
+  .work-directions__item {
+    padding: 0 24px;
+    border-radius: 24px; }
+  .work-directions__title {
+    padding: 24px 0;
+    grid-template-columns: 1fr;
+    gap: 8px; }
+  .work-directions__item.active {
+    padding: 96px 24px 24px; }
+  .work-directions__name {
+    font-size: 22px;
+    line-height: 24px;
+    padding-right: 0; }
+  .work-directions__btn {
+    right: 24px;
+    top: 18px; }
+  .work-directions__item.active .work-directions__btn {
+    top: 24px; }
+  .work-directions__item.active .work-directions__num-wrap {
+    top: 20px;
+    left: 24px; }
+  .work-directions__item.active .work-directions__num {
+    min-width: 40px;
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal;
+    margin-right: 8px; }
+  .work-directions__item.active .work-directions__num-all {
+    font-size: 26px;
+    line-height: 32px;
+    min-width: 40px; }
+    .work-directions__item.active .work-directions__num-all:before {
+      width: 32px; }
+  .work-directions__subtitle {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 8px; }
+  .work-directions__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .work-directions__info {
+    gap: 24px;
+    margin-bottom: 24px; }
+  .work-directions__item.active .work-directions__block .work-directions__name {
+    font-size: 32px;
+    line-height: 36px; }
+  .section-color {
+    margin: 0;
+    padding: 40px 0; }
+  .brands__list {
+    grid-template-columns: repeat(2, 1fr); }
+  .brands__item {
+    min-height: 136px;
+    border-radius: 24px; }
+  .h3__subtitle {
+    font-size: 26px;
+    line-height: 32px; }
+  .worth-slide__title {
+    font-size: 38px;
+    line-height: 40px; }
+  .reviews-previews__wrap {
+    grid-template-columns: repeat(1, 1fr); }
+  .reviews-previews__item {
+    padding: 24px;
+    border-radius: 24px; }
+  .team__wrap {
+    grid-template-columns: repeat(1, 1fr); }
+  .team__item {
+    border-radius: 24px;
+    min-height: 424px; }
+  .team__info {
+    padding: 24px;
+    margin-bottom: 0; }
+  .team__name {
+    font-size: 22px;
+    line-height: 24px; }
+  .team__foto {
+    height: auto; }
+  .block-picture-text__item {
+    border-radius: 24px; }
+  .block-picture-text__img {
+    padding: 24px 0 24px 24px; }
+  .block-picture-text__title {
+    font-size: 38px;
+    line-height: 40px; }
+  .block-picture-text__info {
+    padding: 24px; }
+  .block-picture-text__desc {
+    font-size: 18px;
+    line-height: 24px; }
+  .h2__subtitle p {
+    margin-bottom: 24px; }
+  .section-h2__wrap + .h3__subtitle {
+    margin-top: 96px; }
+  .worth-slider__wrap {
+    margin-top: 24px; }
+  .reviews-previews__head {
+    margin-bottom: 8px; }
+  .contact-info__btn {
+    font-size: 26px;
+    line-height: 32px;
+    font-variant-numeric: normal;
+    margin-bottom: 4px; }
+    .contact-info__btn:last-child {
+      margin-bottom: 0; }
+  .contact-info__wt:after {
+    content: "";
+    background: none;
+    padding: 0;
+    background-image: url("../img/icon-wt.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 32px;
+    min-width: 32px;
+    height: 32px; }
+  .map {
+    width: calc(100% + 24px + 24px);
+    margin-right: -24px;
+    margin-left: -24px;
+    aspect-ratio: 1; }
+  .section-map {
+    margin-bottom: 0; }
+  .projects-preview__wrap {
+    grid-template-columns: 1fr; }
+  .menu-dropdown__bg {
+    top: 24px; }
+  .header.active .menu-mob {
+    top: 86px; }
+  .menu-mob {
+    top: 86px; }
+  .header.active .btn-phone {
+    padding: 16px; }
+  .menu-mob__inner {
+    max-height: calc(100vh - 120px); }
+  .menu-dropdown__title svg {
+    margin-top: 4px; }
+  .menu-mob__item {
+    padding: 24px 24px 20px; }
+  .menu-dropdown__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .menu-mob__item .menu-dropdown__list {
+    margin-top: 20px; }
+  .funnels__wrap {
+    border-radius: 24px; }
+  .funnels__item {
+    padding: 24px; }
+  .funnels-title__name {
+    font-size: 22px;
+    line-height: 24px; }
+  .funnels-title {
+    margin-bottom: 24px; }
+  .funnels-step__item {
+    border-radius: 16px;
+    padding: 12px; }
+  .funnels-step__text {
+    display: none; }
+  .funnels-step__title {
+    font-size: 16px;
+    line-height: 24px; }
+  .funnels-steps {
+    gap: 8px; }
+  .funnels-title__more span {
+    display: none; }
+  .funnels-title__more {
+    width: auto;
+    background: transparent;
+    padding: 0; }
+  .page-head__buttons {
+    width: 100%; } }
+
+@media screen and (max-width: 575px) {
+  .tabs__overflow {
+    margin-right: -24px; }
+  .mfp-arrow {
+    top: auto;
+    bottom: 0; }
+  .btn-phone {
+    background: transparent;
+    border: none;
+    padding: 2px 10px; }
+  .header.active .btn-phone svg path {
+    fill: var(--color-white); }
+  .header.active .logo__img svg.logo__icon path {
+    fill: revert-layer; }
+  .header.active .btn-phone {
+    padding: 2px; }
+  .clients-slider__item {
+    width: 128px; }
+  .btn-phone svg {
+    width: 28px;
+    height: 20px; }
+  .menu-dropdown__bg {
+    top: 10px; }
+  .menu-mob {
+    top: 70px; }
+  .menu-mob__inner {
+    max-height: calc(100vh - 100px);
+    margin-left: -8px;
+    margin-right: -8px;
+    border-radius: 24px; }
+  .header.active .header__inner {
+    padding: 8px 16px 8px 4px; }
+  .header.active .logo__icon {
+    width: 28px; }
+  .header.active .logo__name {
+    width: 42px; }
+  .header.active .menu-mob {
+    top: 62px; }
+  .funnels-modal__lists {
+    grid-template-columns: 1fr;
+    gap: 24px; }
+  .modal-more .modal-content {
+    border-radius: 0; }
+  .modal-header {
+    padding: 24px 24px 14px;
+    border-bottom: none; }
+  .modal-title {
+    font-size: 22px;
+    line-height: 24px; }
+  .modal-body {
+    padding: 16px 24px 24px; }
+  .funnels-modal__list-title {
+    margin-bottom: 16px; }
+  .projects-categories__wrap {
+    margin-bottom: 0; }
+  .projects-categories__item {
+    border-radius: 24px;
+    padding: 24px 24px 136px; }
+  .projects-categories__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .projects-categories__link {
+    left: 24px;
+    bottom: 24px; }
+  .main-banner_segment {
+    height: 100px; }
+  .main-banner_segment.active {
+    height: 200px; }
+  .page-segment .main-rating__wrap {
+    height: auto;
+    min-height: 304px; }
+  .main-rating__sert {
+    width: 48px;
+    min-width: 48px;
+    height: 48px; }
+  .color-block {
+    border-radius: 24px;
+    padding: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: 192px; }
+  .color-block__img {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    margin-right: 0;
+    margin-bottom: 24px; }
+  .color-block__text {
+    font-size: 22px;
+    line-height: 24px; } }
+
+@media screen and (max-width: 360px) {
+  .directions-item.active .directions-item__bg.directions-bg_mobile {
+    display: block; }
+  .directions-item__bg.directions-bg_desktop,
+  .directions-item.active .directions-item__bg.directions-bg_desktop,
+  .directions-item__bg.directions-bg_tablet,
+  .directions-item.active .directions-item__bg.directions-bg_tablet {
+    display: none; } }
