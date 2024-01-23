@@ -8,8 +8,10 @@ block content
     btn: true
   })
 
-  #segmentBanner.main-banner_segment(style="background-image:url('./img/segment-banner.jpg')")
-  
+  .main-banner_segment.segment-bg__desktop(style="background-image:url('./img/segment-banner-desktop.webp')")
+  .main-banner_segment.segment-bg__tablet(style="background-image:url('./img/segment-banner-tablet.webp')")
+  .main-banner_segment.segment-bg__mobile(style="background-image:url('./img/segment-banner-mobile.webp')")
+    
   .page-body.page-segment
     section.section
       +section-head({
@@ -17,7 +19,6 @@ block content
         title: "Работаем над количеством лидов и снижением их стоимости"
       })
       .section__block
-        //.container
         .motives-slider__wrap
           .swiper.motives-slider
             .swiper-wrapper

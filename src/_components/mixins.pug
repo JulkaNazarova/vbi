@@ -31,7 +31,7 @@ mixin section-head(data)
             if(data.title)
               h2.h2.wow.animate__fadeInUp=data.title
             if(data.colortext)
-              .h2__color-text !{data.colortext}
+              .h2__color-text.wow.animate__fadeInRight !{data.colortext}
             if(data.subtitle)
               .h2__subtitle !{data.subtitle}
 
@@ -86,54 +86,54 @@ mixin directions-accord
     +directions-item({
       mod: "active",
       style: "display: block;",
-      desktop: "accord-bg-1-desktop.jpg",
-      tablet: "accord-bg-1-tablet.jpg",
-      mobile: "accord-bg-1-mobile.jpg",
+      desktop: "accord-bg-1-desktop.webp",
+      tablet: "accord-bg-1-tablet.webp",
+      mobile: "accord-bg-1-mobile.webp",
       num: "01",
       name: "Авто",
       text: "Внедряем собственную систему сквозной аналитики, чтобы эффективно управлять бюджетом. В результате растим количество лидов и снижаем их стоимость."
     })
     +directions-item({
       mod: " ",
-      desktop: "accord-bg-2-desktop.jpg",
-      tablet: "accord-bg-2-tablet.jpg",
-      mobile: "accord-bg-2-mobile.jpg",
+      desktop: "accord-bg-2-desktop.webp",
+      tablet: "accord-bg-2-tablet.webp",
+      mobile: "accord-bg-2-mobile.webp",
       num: "02",
       name: "Мебель",
       text: "Увеличиваем охват, растим узнаваемость брендов и приводим клиентов в офлайн и онлайн-магазины."
     })
     +directions-item({
       mod: " ",
-      desktop: "accord-bg-3-desktop.jpg",
-      tablet: "accord-bg-3-tablet.jpg",
-      mobile: "accord-bg-3-mobile.jpg",
+      desktop: "accord-bg-3-desktop.webp",
+      tablet: "accord-bg-3-tablet.webp",
+      mobile: "accord-bg-3-mobile.webp",
       num: "03",
       name: "Недвижимость",
       text: "Снижаем стоимость лида и повышаем количество заявок, просмотров."
     })
     +directions-item({
       mod: " ",
-      desktop: "accord-bg-4-desktop.jpg",
-      tablet: "accord-bg-4-tablet.jpg",
-      mobile: "accord-bg-4-mobile.jpg",
+      desktop: "accord-bg-4-desktop.webp",
+      tablet: "accord-bg-4-tablet.webp",
+      mobile: "accord-bg-4-mobile.webp",
       num: "04",
       name: "Услуги",
       text: "Увеличиваем охваты и растим целевой трафик. "
     })
     +directions-item({
       mod: " ",
-      desktop: "accord-bg-5-desktop.jpg",
-      tablet: "accord-bg-5-tablet.jpg",
-      mobile: "accord-bg-5-mobile.jpg",
+      desktop: "accord-bg-5-desktop.webp",
+      tablet: "accord-bg-5-tablet.webp",
+      mobile: "accord-bg-5-mobile.webp",
       num: "05",
       name: "E-commerce",
       text: "Снижаем расходы на рекламу онлайн-брендов и растим продажи: оптимизируем и автоматизируем кампании, внедряем сквозную аналитику."
     })
     +directions-item({
       mod: " ",
-      desktop: "accord-bg-6-desktop.jpg",
-      tablet: "accord-bg-6-tablet.jpg",
-      mobile: "accord-bg-6-mobile.jpg",
+      desktop: "accord-bg-6-desktop.webp",
+      tablet: "accord-bg-6-tablet.webp",
+      mobile: "accord-bg-6-mobile.webp",
       num: "06",
       name: "Медицина",
       text: "Увеличиваем число уникальных целевых посетителей и конвертируем их в звонки. "
@@ -249,14 +249,14 @@ mixin cases-block
     +case-preview({
       delay: "0",
       sticker: "Медицина",
-      img: "case-preview-1.png",
+      img: "case-preview-1.webp",
       title: "Снизили на 30% стоимость лидов за 3 месяца",
       tag1: "Рerformance"
     })
     +case-preview({
       delay: "200",
       sticker: "Недвижимость",
-      img: "case-preview-2.png",
+      img: "case-preview-2.webp",
       title: "Увеличение трафика на сайт при улучшении поведенческих показателей",
       tag1: "Рerformance",
       tag2: "Разработка"
@@ -264,7 +264,7 @@ mixin cases-block
     +case-preview({
       delay: "400",
       sticker: "Услуги",
-      img: "case-preview-3.png",
+      img: "case-preview-3.webp",
       title: "Увеличение целевого трафика на сайт, рост конверсии, поиск новых инструментов продвижения",
       tag1: "Рerformance",
       tag2: "Разработка"
@@ -272,7 +272,7 @@ mixin cases-block
     +case-preview({
       delay: "600",
       sticker: "Медицина",
-      img: "case-preview-4.png",
+      img: "case-preview-4.webp",
       title: "Снизили на 30% стоимость лидов за 3 месяца",
       tag1: "Рerformance"
     })
@@ -285,28 +285,28 @@ mixin clients-slider
         - for(var i=0; i<2; i++)
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-0.png' alt='', title='')
+              img(src='./img/client-logo-0.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-1.png' alt='', title='')
+              img(src='./img/client-logo-1.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-2.png' alt='', title='')
+              img(src='./img/client-logo-2.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-3.png' alt='', title='')
+              img(src='./img/client-logo-3.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-4.png' alt='', title='')
+              img(src='./img/client-logo-4.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-5.png' alt='', title='')
+              img(src='./img/client-logo-5.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-6.png' alt='', title='')
+              img(src='./img/client-logo-6.webp' alt='', title='')
           .swiper-slide
             .clients-slider__item
-              img(src='./img/client-logo-7.png' alt='', title='')
+              img(src='./img/client-logo-7.webp' alt='', title='')
           
 mixin runet-slider-item(img)
   .number-slider__slide
@@ -360,7 +360,7 @@ mixin work-directions-item(data)
 
         
 mixin reviews-previews-item(data)
-  a(href="./img/feedback-img.jpg" title="Название Компании" target="_blank").reviews-previews__item
+  a(href="./img/feedback-img.jpg" title=`${data.company}` target="_blank").reviews-previews__item
     .reviews-previews__head
       .reviews-previews__img
         img(src=`./img/${data.img}` alt='', title='')
@@ -538,10 +538,10 @@ mixin funnels-step-item(title, text, width, bgcolor, mod)
         .funnels-step__text !{text}
 
 mixin projects-categories-item(data)
-  .projects-categories__item.wow.animate__zoomIn(data-wow-delay=`${data.delay}ms`)
+  a.projects-categories__item.wow.animate__zoomIn(href="javascript:void(0);" data-wow-delay=`${data.delay}ms`)
     .projects-categories__title=data.title
     .projects-categories__desc !{data.text}
-    a(href="javascript:void(0);").projects-categories__link
+    .projects-categories__link
                       
 mixin digitals-item-slider
   .digitals-item.digital-big.wow.animate__zoomIn

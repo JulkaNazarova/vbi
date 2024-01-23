@@ -13,18 +13,21 @@
           
         .col-lg-6.offset-lg-2
           form#contact-form.contact-form
-            .input__wrap
+            .input__wrap.active
               label.input__label 
                 span Телефон
-              input(type='tel' placeholder='+7').input.input-phone 
-            .input__wrap
+              input(type='tel' placeholder='+7').input.input-phone
+              .input__error Error message
+            .input__wrap.invalid
               label.input__label             
                 span Ваше имя
-              input(type='text').input 
+              input(type='text' value="jq").input
+              .input__error Error message
             .input__wrap
               label.input__label 
                 span Ссылка на сайт
-              input(type='url' placeholder='https://').input 
+              input(type='url' placeholder='https://').input
+              .input__error Error message
             button(type="submit").btn.btn-yellow.btn-form Отправить
             .agreement Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a>
           

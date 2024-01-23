@@ -7,7 +7,7 @@ block content
     subtitle: `Растим продажи и знание <span class="space-nowrap">о бренде,</span>  <span class="text-pink">выбираем площадки для медийного охвата с лучшими условиями</span>`,
   })
   
-  +page-banner("3d-media.png")
+  +page-banner("3d-media.webp")
 
   .page-body
     section.section
@@ -52,7 +52,6 @@ block content
         subtitle: "Медийная реклама работает как часть performance или brandformance-стратегии и решает задачи на всех этапах воронки продаж."
       })
       .section__block
-        //.container
         .motives-slider__wrap
           .swiper.motives-slider
             .swiper-wrapper
@@ -109,7 +108,7 @@ block content
                     .swiper-wrapper
                       - for(var i=0; i<3; i++)
                         .swiper-slide
-                          +runet-slider-item("runet-img-1.png")
+                          +runet-slider-item("runet-img-1.webp")
                     .number-slider__nav
                       .number-slider__nav-inner
                         .swiper-pagination
@@ -142,7 +141,7 @@ block content
                     .swiper-wrapper
                       - for(var i=0; i<3; i++)
                         .swiper-slide
-                          +format-slider-item("format-img-1.jpg")
+                          +format-slider-item("format-img-1.webp")
                     .number-slider__nav
                       .number-slider__nav-inner
                         .swiper-pagination
@@ -172,18 +171,10 @@ block content
 
 
     +section-callback({
-      img: "section-callback-bg.jpg",
+      img: "section-callback-bg.webp",
       title: `Какие результаты вы можете получить <span class=\"space-nowrap\">от медийной</span> рекламы?`,
       text: `Оставьте заявку, и мы рассчитаем стоимость <span class=\"space-nowrap\">и эффективность</span> размещения`
     })
-    //section.section.section-callback
-    //  .container
-    //    .callback-block
-    //      .row
-    //        .col-lg-6.offset-lg-3.text-center
-    //          .callback-block__title 
-    //          .callback-block__text Оставьте заявку, и мы рассчитаем стоимость <span class="space-nowrap">и эффективность</span> размещения
-    //          a(href="#section-form").btn.btn-yellow.scroll-to Отправить заявку
           
     section.section
       +section-head({

@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 jQuery(document).ready(function () {
-   
-
+    
+  //навешиваем модификатор на плавающий хедер
   let pageStartTop =$(window).scrollTop();
   if(pageStartTop > 0 ) {
     $(".header").addClass("active");
@@ -49,15 +49,9 @@ jQuery(document).ready(function () {
     if( scrolled > 400 &&  scrolled < 1000) {
       $("#mainBanner").addClass("active");
     }
-    // else 
-    // {
-    //   if (windowWidth > 767){
-    //     $("#mainBanner").removeClass("active");
-    //   }
-    // }
     // растяжка баннера на странице Сегмент
     if( scrolled > 400 &&  scrolled < 1000) {
-      $("#segmentBanner").addClass("active");
+      $(".main-banner_segment").addClass("active");
     }
     
   });
@@ -153,11 +147,9 @@ jQuery(document).ready(function () {
 
   // слайдер с нумерацией слайдов
   const swiperNumber = new Swiper(".number-slider", {
-    //slidesPerView: 1,
     spaceBetween: 16,
     loop: true,
     speed: 1000,
-    //autoplay: true,
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
@@ -221,14 +213,6 @@ jQuery(document).ready(function () {
   const swiperProjectsCategories = new Swiper(".projects-categories-slider", {
     slidesPerView: 1,
     spaceBetween: 16,
-    //loop: true,
-    //speed: 1000,
-    //autoplay: true,
-    // autoplay: {
-    //   delay: 4000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true
-    // },
     breakpoints: {
       // when window width is >= 768px
       768: {
@@ -247,11 +231,9 @@ jQuery(document).ready(function () {
   // слайдер Растим экспертизу в digital
   const swiperSert = new Swiper(".digital-big__slider", {
     grabCursor: true,
-    //effect: "flip",
     effect: "creative",
     loop: true,
     speed: 1000,
-    //autoplay: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -262,11 +244,9 @@ jQuery(document).ready(function () {
       prev: {
         shadow: true,
         translate: ["-120%", 0, -400],
-        //translate: [0, 0, -400],
       },
       next: {
         translate: [0, 0, -400],
-        //translate: ["100%", 0, 0],
       },
     },
   });
@@ -275,9 +255,9 @@ jQuery(document).ready(function () {
   $('._js-accord-title, .directions-item__btn, .work-directions__btn').on('click', function () {
     let parents = $(this).closest('._js-accord-wrap');
     let targetBlock = parents.find('._js-accord-block');
-    // Свернуть все соседние ._js-accord-block
+    // Свернуть все соседние _js-accord-block
     parents.siblings().find('._js-accord-block').slideUp(500);
-    // Свернуть/развернуть текущий ._js-accord-block
+    // Свернуть/развернуть текущий _js-accord-block
     targetBlock.slideToggle(500);
     parents.siblings().removeClass('active');
     parents.toggleClass('active');
@@ -321,7 +301,7 @@ jQuery(document).ready(function () {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0,1] 
     },
     image: {
       tError: '<a href="%url%">Отзыв #%curr%</a> временно недоступен.',
@@ -349,16 +329,7 @@ jQuery(document).ready(function () {
     // }
   });
 
-
-  // import PhotoSwipeLightbox from 'js/plugins/photoswipe-lightbox.esm.js';
-  // import PhotoSwipe from 'js/plugins/photoswipe.esm.js';
-  // const lightbox = new PhotoSwipeLightbox({
-  //   gallery: '#popup-gallery',
-  //   children: 'a',
-  //   pswpModule: PhotoSwipe
-  // });
-  // lightbox.init();
-
+  
   // свайпы в галерее отзывов
   $('.reviews-previews__item').on('click', function () {
     handleTouchStart = function(e) {
@@ -401,7 +372,7 @@ jQuery(document).ready(function () {
     document.addEventListener('touchmove', handleTouchMove, false);
   });
 
-  
+  //инициализируем плагин для запуска анимации
   const wow = new WOW({
     boxClass: 'wow', /* класс, который необходим для работы wow.js */
     animateClass: 'animate__animated', /* класс, который будет автоматически добавляться анимируемым элементам при прокрутке страницы */
@@ -411,54 +382,27 @@ jQuery(document).ready(function () {
   });
   wow.init(); /* Инициализация плагина с установленными выше свойствами */
 
-  // // анимация при прокрутке страницы (старая)
-  // var sections = $('section');
-  // var pageTop = $(".wrapper").scrollTop();
-  // console.log(pageTop);
-  // if(pageTop >= 0){
-  //   $(".section-main-top, .section-top").addClass("section-animated");
-  // }
-  // $(window).on('scroll', function () {
-  //   var curPos = $(this).scrollTop();
-  //   sections.each(function() {
-  //     var top = $(this).offset().top - 565;
-  //       //bottom = top + $(this).outerHeight();
-  //     //if (curPos >= top && curPos <= bottom) {
-  //     if(curPos >= top){
-  //       $(this).addClass("section-animated");
-  //       // if ($('body').find('.case-preview__item')) {
-  //       //   var caseRreviews = $(".case-preview__item");
-  //       //   console.log(caseRreviews);
-  //       //   caseRreviews.each(function() {
-  //       //     setTimeout(function ()  {
-  //       //       caseRreviews.addClass("test")
-  //       //     }, 2000)
-  //       //   });
-  //       // }
-  //     }
-  //   });
-  // });
 
-
+  //динамическое формирование модалки для воронки
   $('.funnels-title__more').on('click', function () {
     const modal = $("#modalMoreInfo");
     const modalTitle = $(this).siblings('.funnels-title__name').html();
     const modalContent = $(this).siblings('.funnels-modal__content').html();
-    // console.log(modalTitle);
-    // console.log(modalContent);
     modal.find("#modalMoreInfoTitle").html(modalTitle);
     modal.find("#modalMoreInfoList").html(modalContent);
   });
 
-  // $('.select').select2({
-  //   minimumResultsForSearch: -1
+  
+  // обработка инпутов
+  // $(".input").on('focus', function () {
+  //   $(this).closest(".input__wrap").addClass('active');
   // });
-
+  //
+  // $(".input").on('blur', function () {
+  //   $(this).closest(".input__wrap").removeClass('active');
+  //  
+  // });
   
-
-  
-
-
 
 });
 

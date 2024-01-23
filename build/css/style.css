@@ -44,9 +44,11 @@
   --color-black-20: #D2D2D2;
   --color-black-05: #F3F3F3;
   --color-yellow-base: #FFB200;
+  --color-yellow-md: #FF9000;
   --color-pink-base: #FF0099;
   --color-brown: #80002A;
-  --color-brown-dark: #660022; }
+  --color-brown-dark: #660022;
+  --color-alert: #FF5A13; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -119,18 +121,18 @@ body, html {
 
 .wrapper {
   position: relative;
-  margin-top: 120px; }
+  margin-top: 7.5rem; }
 
 .h1 {
   font-family: "TTHovesProTrial-Md";
-  font-size: 96px;
-  line-height: 96px; }
+  font-size: 6rem;
+  line-height: 6rem; }
 
 .page-slogan {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-50);
-  margin: 8px 0; }
+  margin: 0.5rem 0; }
 
 .page-head__buttons {
   position: relative;
@@ -139,12 +141,12 @@ body, html {
 
 .h2 {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px; }
+  font-size: 2.75rem;
+  line-height: 3rem; }
 
 .page-subtitle__wrap {
   display: grid;
-  gap: 56px;
+  gap: 3.5rem;
   justify-items: start; }
 
 .page-subtitle {
@@ -153,48 +155,48 @@ body, html {
 
 .section-h2__wrap {
   display: grid;
-  gap: 32px; }
+  gap: 2rem; }
 
 .h2__subtitle {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   background: var(--color-white);
   position: relative;
   z-index: 2; }
 
 .h2__subtitle p {
-  margin-bottom: 32px; }
+  margin-bottom: 2rem; }
   .h2__subtitle p:last-child {
     margin-bottom: 0; }
 
 .h3__subtitle {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px; }
+  font-size: 2.75rem;
+  line-height: 3rem; }
 
 .section-h2__wrap + .h3__subtitle {
-  margin-top: 96px; }
+  margin-top: 6rem; }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  right: -17px;
+  right: -1.0625rem;
   z-index: 100;
-  padding: 32px 0;
+  padding: 2rem 0;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
 
 .header__wrap {
-  margin-bottom: 48px; }
+  margin-bottom: 3rem; }
 
 .header__inner {
   background: var(--color-white); }
 
 .header.active {
   position: fixed;
-  top: 24px;
+  top: 1.5rem;
   z-index: 100;
   background: transparent;
   padding: 0;
@@ -202,22 +204,22 @@ body, html {
   -o-transition: .5s;
   transition: .5s; }
   .header.active .header__wrap {
-    margin-bottom: 16px; }
+    margin-bottom: 1rem; }
   .header.active .header__inner {
     background: #80002A;
-    padding: 8px;
+    padding: 0.5rem;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
-    border-radius: 99px; }
+    border-radius: 6.1875rem; }
   .header.active .logo__icon {
-    width: 33px;
-    height: 24px; }
+    width: 2.0625rem;
+    height: 1.5rem; }
   .header.active .logo__name {
-    width: 52px;
-    height: 24px; }
+    width: 3.25rem;
+    height: 1.5rem; }
   .header.active .logo__img {
-    margin-left: 20px; }
+    margin-left: 1.25rem; }
   .header.active .logo__img svg path {
     fill: var(--color-white); }
   .header.active .logo__text {
@@ -238,22 +240,22 @@ body, html {
 .logo__img {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 8px;
-  margin-right: 24px; }
+  gap: 0.5rem;
+  margin-right: 1.5rem; }
 
 .logo__icon {
-  width: 44px;
-  height: 32px; }
+  width: 2.75rem;
+  height: 2rem; }
 
 .logo__name {
-  width: 69px;
-  height: 32px; }
+  width: 4.3125rem;
+  height: 2rem; }
 
 .logo__text {
   display: none;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .header-menu__list {
   display: -webkit-box;
@@ -264,7 +266,7 @@ body, html {
           align-items: center; }
 
 .header-menu__item {
-  margin-right: 24px; }
+  margin-right: 1.5rem; }
   .header-menu__item:last-child {
     margin-right: 0; }
 
@@ -275,8 +277,8 @@ body, html {
 
 .header-menu__link {
   font-family: "TTHovesProTrial-Md";
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-100);
   text-decoration: none; }
   .header-menu__link:hover {
@@ -295,7 +297,7 @@ body, html {
 .menu-dropdown__inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .menu-dropdown__block {
   display: -webkit-box;
@@ -308,10 +310,10 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-white);
-  padding: 40px;
-  min-height: 272px; }
+  padding: 2.5rem;
+  min-height: 17rem; }
 
 .menu-dropdown__bg {
   display: none;
@@ -332,8 +334,8 @@ body, html {
           justify-content: space-between;
   color: var(--color-black-100);
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
   .menu-dropdown__title:hover {
     text-decoration: none;
     color: #FF9000; }
@@ -341,16 +343,16 @@ body, html {
       fill: #FF9000; }
 
 .menu-dropdown__title svg {
-  margin-top: 8px;
-  margin-left: 16px;
-  width: 16px;
-  min-width: 16px;
-  height: 16px; }
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem; }
 
 .menu-dropdown__item a {
   color: var(--color-black-100);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
   .menu-dropdown__item a:hover {
     text-decoration: none;
     color: #FF9000; }
@@ -365,14 +367,17 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px 22px;
+  padding: 0.9375rem 1.375rem;
   white-space: nowrap;
   font-family: "TTHovesProTrial-Md";
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-100);
-  border-radius: 99px;
+  border-radius: 6.1875rem;
   border: 1px solid transparent; }
+  .btn:hover {
+    background: var(--color-yellow-md);
+    border: 1px solid var(--color-yellow-md); }
 
 .btn:focus {
   outline: none;
@@ -386,10 +391,10 @@ body, html {
 .btn-tr {
   background: transparent;
   border: 1px solid rgba(31, 31, 31, 0.2);
-  min-width: 272px; }
+  min-width: 17rem; }
 
 .btn-phone span {
-  margin-left: 20px; }
+  margin-left: 1.25rem; }
 
 .btn-arrow:after {
   content: "";
@@ -397,48 +402,48 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
-  margin-left: 16px; }
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  margin-left: 1rem; }
 
 .sticker {
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   background: var(--color-white);
-  font-size: 16px;
-  line-height: 24px;
-  padding: 8px 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
   color: var(--color-black-100);
   text-decoration: none; }
   .sticker:hover {
     text-decoration: none; }
 
 .section {
-  margin: 280px 0;
+  margin: 17.5rem 0;
   display: grid;
-  gap: 96px; }
+  gap: 6rem; }
 
 .page-body {
-  padding: 144px 0; }
+  padding: 9rem 0; }
   .page-body .section:first-child {
     margin-top: 0; }
   .page-body .section:last-child {
     margin-bottom: 0; }
 
 .section-main-top {
-  padding: 48px 0 80px;
+  padding: 3rem 0 5rem;
   overflow: hidden; }
 
 .main-title {
   color: var(--color-black-50);
-  font-size: 16px;
-  line-height: 24px;
-  margin: 8px 0; }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0.5rem 0; }
 
 .section-top {
-  padding: 48px 0 144px;
+  padding: 3rem 0 9rem;
   display: grid;
-  gap: 96px; }
+  gap: 6rem; }
 
 .text-pink {
   color: var(--color-pink-base); }
@@ -446,7 +451,7 @@ body, html {
 .main-banner {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 31.25rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -464,12 +469,12 @@ body, html {
 
 .main-banner__scroll {
   position: absolute;
-  left: 8px;
-  bottom: 64px; }
+  left: 0.5rem;
+  bottom: 4rem; }
 
 .btn-scroll {
-  width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,9 +492,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    min-width: 16px;
-    height: 16px;
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
@@ -504,14 +509,14 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 104px;
-  height: 48px;
+  width: 6.5rem;
+  height: 3rem;
   background: var(--color-pink-base);
   font-family: "TTHovesProTrial-Md";
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-white);
-  border-radius: 99px; }
+  border-radius: 6.1875rem; }
 
 .section__block {
   min-width: 0; }
@@ -519,11 +524,11 @@ body, html {
 .departments__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; }
+  gap: 1rem; }
 
 .departments-item {
   position: relative;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -537,13 +542,19 @@ body, html {
           justify-content: space-between; }
 
 .departments-item__top {
-  padding: 40px 118px 40px 40px; }
+  padding: 2.5rem 7.375rem 2.5rem 2.5rem; }
 
 .departments-item__link {
   display: block;
   position: absolute;
-  top: 40px;
-  right: 40px; }
+  top: 2.5rem;
+  right: 2.5rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 2.5rem; }
+  .departments-item__link:hover {
+    background: var(--color-yellow-md); }
 
 .departments-item__btn {
   display: -webkit-box;
@@ -555,8 +566,8 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  height: 3.5rem;
   border: 1px solid rgba(31, 31, 31, 0.2);
   border-radius: 50%; }
   .departments-item__btn:before {
@@ -565,9 +576,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    min-width: 16px;
-    height: 16px; }
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem; }
 
 .departments-item__link span {
   display: none; }
@@ -575,9 +586,9 @@ body, html {
 .departments-item__title {
   display: block;
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 32px;
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
   color: var(--color-black-100); }
   .departments-item__title:hover {
     text-decoration: none; }
@@ -585,15 +596,15 @@ body, html {
 .departments-item__text {
   display: block;
   color: var(--color-black-60);
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 1.5rem;
+  line-height: 2rem; }
   .departments-item__text:hover {
     text-decoration: none;
     color: var(--color-black-60); }
 
 .departments-item__bottom {
-  margin-top: 8px;
-  padding: 40px 40px 32px;
+  margin-top: 0.5rem;
+  padding: 2.5rem 2.5rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -602,21 +613,21 @@ body, html {
 
 .departments-item__tag {
   white-space: nowrap;
-  margin: 0 4px 8px 0; }
+  margin: 0 0.25rem 0.5rem 0; }
 
 .main-about__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 1rem;
   position: relative;
   z-index: 1;
   background: var(--color-white); }
 
 .main-about__item {
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 344px;
+  min-height: 21.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -630,19 +641,19 @@ body, html {
 
 .main-about__numbers {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 20px;
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 1.25rem;
   font-variant-numeric: lining-nums tabular-nums; }
 
 .main-about__text {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: var(--color-black-60); }
 
 .main-rating__wrap {
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   background: var(--color-pink-base);
   color: var(--color-white);
   display: -webkit-box;
@@ -659,14 +670,14 @@ body, html {
 
 .main-rating__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 16px;
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
   font-variant-numeric: lining-nums tabular-nums; }
 
 .main-rating__text {
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .main-rating__bottom {
   display: -webkit-box;
@@ -674,10 +685,10 @@ body, html {
   display: flex; }
 
 .main-rating__sert {
-  width: 96px;
-  min-width: 96px;
-  height: 96px;
-  margin-right: 8px; }
+  width: 6rem;
+  min-width: 6rem;
+  height: 6rem;
+  margin-right: 0.5rem; }
 
 .main-rating__sert svg,
 .main-rating__sert svg {
@@ -707,14 +718,14 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
   background: var(--color-white);
   cursor: pointer;
-  width: 224px;
-  min-height: 240px;
-  margin: 0 8px; }
+  width: 14rem;
+  min-height: 15rem;
+  margin: 0 0.5rem; }
 
 .clients-slider__item img {
   max-width: 100%;
@@ -722,13 +733,13 @@ body, html {
 
 .directions {
   display: grid;
-  gap: 16px; }
+  gap: 1rem; }
 
 .directions-item {
   position: relative;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: #F3F3F3;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   overflow: hidden; }
 
 .directions-item__bg {
@@ -753,19 +764,19 @@ body, html {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 36px 0;
+  gap: 1rem;
+  padding: 2.25rem 0;
   cursor: pointer; }
 
 .directions-item__name {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
 
 .directions-item__name-big {
   display: block;
-  font-size: 32px;
-  line-height: 88px;
+  font-size: 2rem;
+  line-height: 5.5rem;
   color: var(--color-white);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -773,7 +784,7 @@ body, html {
   -webkit-transition-delay: 0.3s;
        -o-transition-delay: 0.3s;
           transition-delay: 0.3s;
-  min-height: 88px; }
+  min-height: 5.5rem; }
 
 .directions-item__num-wrap {
   display: -webkit-box;
@@ -786,8 +797,8 @@ body, html {
 .directions-item__num {
   font-family: "TTHovesProTrial-Md";
   font-variant-numeric: lining-nums tabular-nums;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: var(--color-black-40); }
 
 .directions-item__num-all {
@@ -797,17 +808,17 @@ body, html {
           align-items: center;
   font-family: "TTHovesProTrial-Md";
   font-variant-numeric: lining-nums tabular-nums;
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 2.75rem;
+  line-height: 3rem;
   color: var(--color-white);
   opacity: 0.5; }
   .directions-item__num-all:before {
     content: "";
     opacity: 0.2;
     background: #FFF;
-    width: 64px;
+    width: 4rem;
     height: 1px;
-    margin-right: 16px; }
+    margin-right: 1rem; }
 
 .directions-item__block {
   display: none;
@@ -817,32 +828,32 @@ body, html {
 .directions-item__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; }
+  gap: 1rem; }
 
 .directions-item__text {
-  padding-right: 80px;
-  font-size: 24px;
-  line-height: 32px;
+  padding-right: 5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: var(--color-white);
-  margin-bottom: 42px; }
+  margin-bottom: 2.625rem; }
 
 .directions-item__btn {
   position: absolute;
   z-index: 2;
-  top: 34px;
-  right: 40px;
-  width: 24px;
-  height: 24px;
+  top: 2.125rem;
+  right: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer; }
 
 .directions-item__close {
   display: none; }
 
 .directions-item__desc .btn-arrow {
-  margin-bottom: 110px; }
+  margin-bottom: 6.875rem; }
 
 .directions-item.active {
-  padding: 40px; }
+  padding: 2.5rem; }
   .directions-item.active .directions-item__btn {
     display: none; }
   .directions-item.active .directions-item__open {
@@ -854,13 +865,13 @@ body, html {
     padding: 0; }
   .directions-item.active .directions-item__num-wrap {
     position: absolute;
-    top: 40px;
-    left: 40px; }
+    top: 2.5rem;
+    left: 2.5rem; }
   .directions-item.active .directions-item__num {
-    min-width: 64px;
-    margin-right: 16px;
-    font-size: 44px;
-    line-height: 48px;
+    min-width: 4rem;
+    margin-right: 1rem;
+    font-size: 2.75rem;
+    line-height: 3rem;
     color: var(--color-white);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -868,7 +879,7 @@ body, html {
   .directions-item.active .directions-item__title .directions-item__name {
     display: none; }
   .directions-item.active .directions-item__name-big {
-    font-size: 82px; }
+    font-size: 5.125rem; }
   .directions-item.active .directions-item__num-all {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -877,7 +888,7 @@ body, html {
 .digitals {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .digitals-item {
   display: -webkit-box;
@@ -889,10 +900,10 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 240px; }
+  min-height: 15rem; }
 
 .digitals-item img {
   max-width: 100%; }
@@ -908,28 +919,28 @@ body, html {
 .digital-big__inner {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 40px;
+  gap: 2.5rem;
   background: var(--color-pink-base);
-  border-radius: 32px;
+  border-radius: 2rem;
   border: 1px solid var(--color-pink-base);
   color: var(--color-white);
-  padding: 40px; }
+  padding: 2.5rem; }
 
 .digital-big__title {
   font-family: "TTHovesProTrial-Md";
   font-variant-numeric: lining-nums tabular-nums;
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 16px; }
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 1rem; }
 
 .digital-big__text {
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .digital-big__img {
   max-height: 100%;
-  width: 163px;
-  height: 160px; }
+  width: 10.1875rem;
+  height: 10rem; }
 
 ._js-tabs-info {
   display: none; }
@@ -938,32 +949,37 @@ body, html {
   display: block; }
 
 .tabs-head {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
 .tabs-head__item {
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 20px;
-  border-radius: 99px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6.1875rem;
   background: var(--color-black-05);
   white-space: nowrap;
   cursor: pointer;
-  margin-right: 5px; }
+  margin-right: 0.3125rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .tabs-head__item:hover {
+    background: var(--color-yellow-md); }
 
 .tabs-head__item.active {
   background: var(--color-yellow-base); }
 
 .tabs-info__block {
-  margin-top: 40px; }
+  margin-top: 2.5rem; }
 
 .rating-row {
   border-top: 1px solid var(--color-black-20);
-  padding: 23px 0 24px;
-  font-size: 24px;
-  line-height: 32px; }
+  padding: 1.4375rem 0 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .rating-row__place {
   font-family: "TTHovesProTrial-Md"; }
@@ -971,7 +987,7 @@ body, html {
 .rating-row__num {
   font-variant-numeric: lining-nums tabular-nums;
   display: inline-block;
-  min-width: 64px; }
+  min-width: 4rem; }
 
 .rating-row__position {
   color: var(--color-black-60); }
@@ -993,7 +1009,7 @@ body, html {
 .cases {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 16px; }
+  gap: 2.5rem 1rem; }
 
 .case-preview__item {
   position: relative; }
@@ -1007,21 +1023,21 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 40px;
-  margin-bottom: 16px; }
+  border-radius: 2.5rem;
+  margin-bottom: 1rem; }
 
 .case-preview__sticker {
   position: absolute;
-  top: 16px;
-  left: 16px; }
+  top: 1rem;
+  left: 1rem; }
 
 .case-preview__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: var(--color-black-100);
-  margin-bottom: 16px;
-  padding-right: 40px;
+  margin-bottom: 1rem;
+  padding-right: 2.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -1046,16 +1062,16 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   color: var(--color-black-50); }
   .case-preview__tag:after {
     content: "";
-    width: 2px;
-    height: 2px;
+    width: 0.125rem;
+    height: 0.125rem;
     background: #BCBCBC;
     border-radius: 50%;
-    margin: 0 6px; }
+    margin: 0 0.375rem; }
   .case-preview__tag:last-child:after {
     display: none; }
 
@@ -1073,23 +1089,23 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   overflow: hidden;
   background-color: var(--color-black-05); }
 
 .events-slider__sticker {
   position: absolute;
   z-index: 1;
-  top: 16px;
-  left: 16px; }
+  top: 1rem;
+  left: 1rem; }
 
 .number-slider__nav {
   position: absolute;
   z-index: 10;
   top: auto;
-  left: 40px;
-  right: 40px;
-  bottom: 40px; }
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: 2.5rem; }
 
 .events-slider .number-slider__nav {
   left: auto; }
@@ -1113,9 +1129,9 @@ body, html {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: 56px;
-  min-width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   background: var(--color-white);
   display: -webkit-box;
@@ -1134,9 +1150,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    min-width: 16px;
-    height: 16px; }
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem; }
 
 .swiper-button-prev:after {
   -webkit-transform: rotate(180deg);
@@ -1144,13 +1160,13 @@ body, html {
           transform: rotate(180deg); }
 
 .number-slider {
-  border-radius: 40px;
+  border-radius: 2.5rem;
   overflow: hidden; }
   .number-slider .swiper-button-prev,
   .number-slider .swiper-button-next {
     position: static;
     margin-top: 0;
-    margin-left: 8px;
+    margin-left: 0.5rem;
     border: 1px solid var(--color-black-20); }
   .number-slider .swiper-pagination {
     position: static;
@@ -1163,14 +1179,14 @@ body, html {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 136px;
-    min-width: 136px;
-    height: 56px;
-    border-radius: 99px;
+    width: 8.5rem;
+    min-width: 8.5rem;
+    height: 3.5rem;
+    border-radius: 6.1875rem;
     background: var(--color-black-05);
-    margin-right: 8px; }
+    margin-right: 0.5rem; }
   .number-slider .swiper-scrollbar {
-    width: 24px;
+    width: 1.5rem;
     position: static;
     overflow: hidden;
     background: rgba(31, 31, 31, 0.2); }
@@ -1182,15 +1198,15 @@ body, html {
 
 .swiper-pagination-current {
   font-family: "TTHovesProTrial-Md";
-  font-size: 16px;
-  line-height: 24px;
-  margin-left: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-left: 1.5rem; }
 
 .swiper-pagination-total {
   font-family: "TTHovesProTrial-Md";
-  font-size: 16px;
-  line-height: 24px;
-  margin-right: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-right: 1.5rem; }
 
 .number-slider__gradient {
   position: absolute;
@@ -1199,8 +1215,8 @@ body, html {
   left: 0;
   bottom: 0;
   right: 0;
-  min-height: 208px;
-  padding: 40px;
+  min-height: 13rem;
+  padding: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1219,27 +1235,27 @@ body, html {
 
 .number-slider__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 8px; }
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 0.5rem; }
 
 .number-slider__text {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .footer__wrap {
   background: var(--color-black-05);
-  padding: 80px 0;
-  font-size: 16px;
-  line-height: 24px; }
+  padding: 5rem 0;
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .footer {
   display: grid;
-  gap: 80px; }
+  gap: 5rem; }
 
 .footer-menu__list {
   display: grid;
-  gap: 8px; }
+  gap: 0.5rem; }
 
 .footer-menu__item a {
   color: var(--color-black-100); }
@@ -1261,13 +1277,13 @@ body, html {
   display: block;
   background: var(--color-white);
   border-radius: 50%;
-  padding: 12px;
-  margin-right: 4px; }
+  padding: 0.75rem;
+  margin-right: 0.25rem; }
   .social__item:last-child {
     margin-right: 0; }
 
 .footer-info__block {
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
   .footer-info__block:last-child {
     margin-bottom: 0; }
 
@@ -1281,12 +1297,12 @@ body, html {
   background: var(--color-black-05); }
 
 .section-form__wrap {
-  padding: 80px 0;
+  padding: 5rem 0;
   border-bottom: 1px solid var(--color-black-20); }
 
 .contact-form__icon {
-  width: 64px;
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1300,80 +1316,117 @@ body, html {
   background: var(--color-pink-base); }
 
 .contact-form__title {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   font-family: "TTHovesProTrial-Md";
-  font-size: 36px;
-  line-height: 40px;
-  margin-bottom: 32px; }
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem; }
 
 .contact-form__subtitle {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .contact-form {
   display: grid;
-  gap: 8px;
-  font-size: 16px;
-  line-height: 24px; }
+  gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem; }
   .contact-form .btn-form {
-    margin: 16px 0;
-    max-width: 344px; }
+    margin: 1rem 0;
+    max-width: 21.5rem; }
 
 .input__wrap {
+  position: relative;
   background: var(--color-white);
-  border-radius: 16px;
-  padding: 16px 20px 16px 24px;
+  border-radius: 1rem;
+  padding: 0.9375rem 1.25rem 0.9375rem 1.5rem;
   display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 16px;
-  font-size: 16px;
-  line-height: 24px; }
+  grid-template-columns: 10.625rem 1fr;
+  gap: 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: 1px solid var(--color-white);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
   .input__wrap .input__label span {
     display: block;
-    margin-top: 4px;
-    margin-bottom: 4px; }
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem; }
+  .input__wrap.active {
+    border: 1px solid var(--color-pink-base); }
+
+.input__error {
+  display: none;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  color: var(--color-alert);
+  font-size: 0.75rem;
+  line-height: 1rem; }
+
+.input__wrap.invalid {
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color-alert); }
+  .input__wrap.invalid:after {
+    display: block;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.25rem;
+    z-index: 2;
+    content: "";
+    background-image: url("../img/icon-alert.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem; }
+  .input__wrap.invalid .input {
+    color: var(--color-alert); }
+  .input__wrap.invalid .input__error {
+    display: inline-block; }
 
 .input__label {
   width: 100%;
   border-right: 1px solid #E9E9E9;
-  padding-right: 16px;
-  margin-right: 16px; }
+  padding-right: 1rem;
+  margin-right: 1rem; }
 
 .input {
   width: 100%;
   border: none; }
 
 .agreement {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
   .agreement a {
     color: var(--color-black-100); }
 
 .page-banner img {
   display: block;
   margin: 0 auto;
-  max-height: 464px; }
+  max-height: 29rem; }
 
 .reasons__wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px; }
+  gap: 1rem; }
 
 .reasons__item {
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  min-height: 344px; }
+  min-height: 21.5rem; }
 
 .reasons__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 2rem; }
 
 .reasons__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .motives-slider .swiper-wrapper {
@@ -1385,8 +1438,8 @@ body, html {
   width: auto; }
 
 .motives-slide__item {
-  padding: 32px 40px;
-  border-radius: 40px;
+  padding: 2rem 2.5rem;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1396,19 +1449,19 @@ body, html {
           align-items: center;
   width: auto;
   font-family: "TTHovesProTrial-Md";
-  margin: 0 8px; }
+  margin: 0 0.5rem; }
 
 .motives-slide__icon {
-  max-height: 16px;
-  margin-right: 16px; }
+  max-height: 1rem;
+  margin-right: 1rem; }
 
 .stage__title {
-  margin-bottom: 48px; }
+  margin-bottom: 3rem; }
 
 .stage__num {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.75rem;
+  line-height: 2rem;
   color: var(--color-white);
   letter-spacing: 0.84px;
   text-transform: uppercase;
@@ -1423,19 +1476,19 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 224px;
-  height: 224px;
-  margin: 0 auto 40px; }
+  width: 14rem;
+  height: 14rem;
+  margin: 0 auto 2.5rem; }
 
 .stage__name {
   text-align: center;
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .steps-preparation__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .steps-preparation__item {
   display: -webkit-box;
@@ -1448,13 +1501,13 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  padding: 40px;
-  min-height: 344px; }
+  padding: 2.5rem;
+  min-height: 21.5rem; }
 
 .steps-preparation__top {
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
 
 .steps-preparation__bottom {
   display: -webkit-box;
@@ -1466,22 +1519,22 @@ body, html {
 
 .steps-preparation__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 24px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem; }
 
 .steps-preparation__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .steps-preparation__num {
   font-variant-numeric: lining-nums tabular-nums;
   font-family: "TTHovesProTrial-Md";
-  font-size: 82px;
-  line-height: 88px;
+  font-size: 5.125rem;
+  line-height: 5.5rem;
   color: var(--color-black-20);
-  margin-right: 8px; }
+  margin-right: 0.5rem; }
 
 .steps-preparation__arrow {
   position: relative;
@@ -1490,44 +1543,44 @@ body, html {
   background: var(--color-black-20); }
   .steps-preparation__arrow:after {
     position: absolute;
-    top: -7px;
+    top: -0.4375rem;
     right: -1px;
     content: '';
     background-image: url("../img/step-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    height: 16px; }
+    width: 1rem;
+    height: 1rem; }
 
 .steps-preparation__item:first-child .steps-preparation__arrow:before {
   position: absolute;
-  top: -7px;
+  top: -0.4375rem;
   left: -1px;
   content: '';
   background-image: url("../img/step-point.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16px;
-  height: 16px; }
+  width: 1rem;
+  height: 1rem; }
 
 .steps-preparation__item:last-child .steps-preparation__arrow:after {
   position: absolute;
-  top: -7px;
+  top: -0.4375rem;
   right: -1px;
   content: '';
   background-image: url("../img/step-point.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16px;
-  height: 16px; }
+  width: 1rem;
+  height: 1rem; }
 
 .steps-working__wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .steps-working__item {
   display: -webkit-box;
@@ -1540,30 +1593,30 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  padding: 40px;
-  min-height: 344px; }
+  padding: 2.5rem;
+  min-height: 21.5rem; }
 
 .steps-working__top {
-  margin-bottom: 24px; }
+  margin-bottom: 1.5rem; }
 
 .steps-working__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 24px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem; }
 
 .steps-working__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .steps-working__num {
   font-variant-numeric: lining-nums tabular-nums;
   font-family: "TTHovesProTrial-Md";
-  font-size: 82px;
-  line-height: 88px;
+  font-size: 5.125rem;
+  line-height: 5.5rem;
   color: var(--color-black-20); }
 
 .runet-slider .number-slider__item {
@@ -1575,7 +1628,7 @@ body, html {
 .block-cards-slider__items {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; }
+  gap: 1rem; }
 
 .block-cards-slider__item {
   display: -webkit-box;
@@ -1588,56 +1641,56 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 344px; }
+  min-height: 21.5rem; }
   .block-cards-slider__item:last-child {
     grid-column: span 1 / -1; }
 
 .block-cards-slider__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
 
 .block-cards-slider__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .callback-block {
   position: relative;
-  padding: 144px 40px;
-  border-radius: 40px;
+  padding: 9rem 2.5rem;
+  border-radius: 2.5rem;
   color: var(--color-white);
-  background-image: url("../img/section-callback-bg.jpg");
+  background-image: url("../img/section-callback-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .callback-block__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
-  margin-bottom: 32px;
-  margin-left: -10px;
-  margin-right: -10px; }
+  font-size: 2.75rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem; }
 
 .callback-block__text {
-  font-size: 24px;
-  line-height: 32px;
-  margin-bottom: 56px;
-  padding: 0 100px; }
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 3.5rem;
+  padding: 0 6.25rem; }
 
 .steps-simple__wrap {
-  margin-top: 48px;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .steps-simple__item {
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1649,7 +1702,7 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 344px; }
+  min-height: 21.5rem; }
 
 .steps-simple__item.steps-simple__chapter {
   background: var(--color-black-05);
@@ -1657,8 +1710,8 @@ body, html {
 
 .steps-simple__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.75rem;
+  line-height: 2rem;
   display: none; }
 
 .steps-simple__chapter .steps-simple__num,
@@ -1671,26 +1724,26 @@ body, html {
 .steps-simple__num {
   font-variant-numeric: lining-nums tabular-nums;
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px; }
+  font-size: 2.75rem;
+  line-height: 3rem; }
 
 .steps-simple__text {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 2rem;
   color: var(--color-black-60); }
 
 .cards-simple__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .cards-simple__item {
-  border-radius: 40px;
-  padding: 40px;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 344px;
+  min-height: 21.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1704,18 +1757,18 @@ body, html {
 
 .cards-simple__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 24px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem; }
 
 .cards-simple__text {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .cards-number__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .cards-number__item {
   display: -webkit-box;
@@ -1728,13 +1781,13 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  padding: 40px;
-  min-height: 344px; }
+  padding: 2.5rem;
+  min-height: 21.5rem; }
 
 .cards-number__top {
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
 
 .cards-number__bottom {
   display: -webkit-box;
@@ -1746,42 +1799,42 @@ body, html {
 
 .cards-number__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 24px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem; }
 
 .cards-number__text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .cards-number__num {
   font-variant-numeric: lining-nums tabular-nums;
   font-family: "TTHovesProTrial-Md";
-  font-size: 82px;
-  line-height: 88px;
+  font-size: 5.125rem;
+  line-height: 5.5rem;
   color: var(--color-black-20);
-  margin-right: 8px; }
+  margin-right: 0.5rem; }
 
 .text-simple {
   text-align: center;
-  font-size: 24px;
-  line-height: 32px; }
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .text-simple p {
-  margin-bottom: 32px; }
+  margin-bottom: 2rem; }
   .text-simple p:last-child {
     margin-bottom: 0; }
 
 .work-directions__wrap {
   display: grid;
-  gap: 16px; }
+  gap: 1rem; }
 
 .work-directions__item {
   position: relative;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: #F3F3F3;
-  padding: 0 40px;
+  padding: 0 2.5rem;
   overflow: hidden; }
 
 .work-directions__bg {
@@ -1800,15 +1853,15 @@ body, html {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 36px 0;
+  gap: 1rem;
+  padding: 2.25rem 0;
   cursor: pointer; }
 
 .work-directions__name {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  padding-right: 60px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  padding-right: 3.75rem; }
 
 .work-directions__num-wrap {
   display: -webkit-box;
@@ -1821,8 +1874,8 @@ body, html {
 .work-directions__num {
   font-family: "TTHovesProTrial-Md";
   font-variant-numeric: lining-nums tabular-nums;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: var(--color-black-40); }
 
 .work-directions__num-all {
@@ -1832,16 +1885,16 @@ body, html {
           align-items: center;
   font-family: "TTHovesProTrial-Md";
   font-variant-numeric: lining-nums tabular-nums;
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 2.75rem;
+  line-height: 3rem;
   opacity: 0.5; }
   .work-directions__num-all:before {
     content: "";
     opacity: 0.2;
     background: var(--color-black-100);
-    width: 64px;
+    width: 4rem;
     height: 1px;
-    margin-right: 16px; }
+    margin-right: 1rem; }
 
 .work-directions__block {
   display: none;
@@ -1851,37 +1904,37 @@ body, html {
 .work-directions__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 48px; }
+  gap: 1rem;
+  margin-bottom: 3rem; }
 
 .work-directions__subtitle {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 16px; }
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 1rem; }
 
 .work-directions__text {
-  padding-right: 40px;
-  font-size: 24px;
-  line-height: 32px;
+  padding-right: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: var(--color-black-50); }
 
 .work-directions__btn {
   position: absolute;
   z-index: 2;
-  top: 34px;
-  right: 40px;
-  width: 24px;
-  height: 24px;
+  top: 2.125rem;
+  right: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer; }
 
 .work-directions__close {
   display: none; }
 
 .work-directions__item.active {
-  padding: 160px 40px 32px; }
+  padding: 10rem 2.5rem 2rem; }
   .work-directions__item.active .work-directions__btn {
-    top: 40px; }
+    top: 2.5rem; }
   .work-directions__item.active .work-directions__close {
     display: block; }
   .work-directions__item.active .work-directions__open {
@@ -1893,14 +1946,14 @@ body, html {
     padding: 0; }
   .work-directions__item.active .work-directions__num-wrap {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 2.5rem;
+    left: 2.5rem;
     pointer-events: none; }
   .work-directions__item.active .work-directions__num {
-    min-width: 64px;
-    margin-right: 16px;
-    font-size: 44px;
-    line-height: 48px;
+    min-width: 4rem;
+    margin-right: 1rem;
+    font-size: 2.75rem;
+    line-height: 3rem;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s; }
@@ -1908,8 +1961,8 @@ body, html {
     display: none; }
   .work-directions__item.active .work-directions__block .work-directions__name {
     display: block;
-    font-size: 82px;
-    line-height: 88px;
+    font-size: 5.125rem;
+    line-height: 5.5rem;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -1925,7 +1978,7 @@ body, html {
   margin: 0;
   color: var(--color-white);
   background: var(--color-brown);
-  padding: 144px 0;
+  padding: 9rem 0;
   overflow: hidden; }
 
 .section-color__head {
@@ -1935,16 +1988,16 @@ body, html {
 
 .section-color__bg {
   position: absolute;
-  right: 45%;
-  bottom: -124px;
-  height: 779px; }
+  right: 57%;
+  bottom: 0;
+  height: 41rem; }
 
 .section-color__bg img {
   height: 100%; }
 
 .worth-slider__wrap {
-  padding: 8px 0;
-  margin-top: 32px; }
+  padding: 0.5rem 0;
+  margin-top: 2rem; }
 
 .swiper.worth-slider {
   overflow: visible; }
@@ -1967,14 +2020,14 @@ body, html {
 
 .worth-slide__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 96px;
-  line-height: 96px;
-  margin: 0 48px; }
+  font-size: 6rem;
+  line-height: 6rem;
+  margin: 0 3rem; }
 
 .brands__list {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .brands__item {
   display: -webkit-box;
@@ -1986,10 +2039,10 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 240px; }
+  min-height: 15rem; }
 
 .brands__item img {
   max-width: 100%;
@@ -1998,13 +2051,13 @@ body, html {
 .reviews-previews__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .reviews-previews__item {
-  padding: 40px;
-  border-radius: 40px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
   border: 1px solid var(--color-black-20);
-  min-height: 416px;
+  min-height: 26rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2017,13 +2070,16 @@ body, html {
           justify-content: space-between;
   text-decoration: none;
   color: var(--color-black-100); }
+  .reviews-previews__item:hover .reviews-previews__icon {
+    background: var(--color-yellow-md);
+    border: 1px solid var(--color-yellow-md); }
 
 .reviews-previews__item:hover {
   text-decoration: none; }
 
 .reviews-previews__img {
-  height: 80px;
-  width: 80px;
+  height: 5rem;
+  width: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2033,21 +2089,21 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
 
 .reviews-previews__img img {
   max-height: 100%;
   max-width: 100%; }
 
 .reviews-previews__head {
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
 
 .reviews-previews__text {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .reviews-previews__text p {
-  margin-bottom: 16px; }
+  margin-bottom: 1rem; }
   .reviews-previews__text p:last-child {
     margin-bottom: 0; }
 
@@ -2064,15 +2120,15 @@ body, html {
 
 .reviews-previews__company {
   color: var(--color-black-50);
-  font-size: 12px;
-  line-height: 16px; }
+  font-size: 0.75rem;
+  line-height: 1rem; }
 
 .reviews-previews__icon {
   border: 1px solid rgba(31, 31, 31, 0.2);
   border-radius: 50%;
-  width: 56px;
-  min-width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2086,7 +2142,7 @@ body, html {
 .team__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; }
+  gap: 1rem; }
 
 .team__item {
   display: -webkit-box;
@@ -2099,16 +2155,16 @@ body, html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  min-height: 528px;
+  min-height: 33rem;
   text-decoration: none;
   overflow: hidden; }
   .team__item:hover {
     text-decoration: none; }
 
 .team__foto {
-  height: 344px;
+  height: 21.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2120,19 +2176,19 @@ body, html {
           justify-content: center; }
 
 .team__info {
-  padding: 40px;
-  margin-bottom: 8px; }
+  padding: 2.5rem;
+  margin-bottom: 0.5rem; }
 
 .team__name {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px;
-  margin-bottom: 8px;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
   color: var(--color-black-100); }
 
 .team__post {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: var(--color-black-60); }
 
 .team__foto img {
@@ -2141,15 +2197,15 @@ body, html {
 
 .block-picture-text__wrap {
   display: grid;
-  gap: 16px; }
+  gap: 1rem; }
 
 .block-picture-text__item {
-  border-radius: 40px;
-  padding: 40px;
+  border-radius: 2.5rem;
+  padding: 2.5rem;
   border: 1px solid var(--color-black-20); }
 
 .block-picture-text__img {
-  height: 424px;
+  height: 26.5rem;
   max-width: 100%; }
 
 .block-picture-text__img img {
@@ -2171,13 +2227,13 @@ body, html {
 
 .block-picture-text__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 96px;
-  line-height: 96px; }
+  font-size: 6rem;
+  line-height: 6rem; }
 
 .block-picture-text__desc {
-  margin-top: 32px;
-  font-size: 24px;
-  line-height: 32px; }
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem; }
 
 .contact-info__btn {
   display: -webkit-box;
@@ -2187,23 +2243,26 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 2.75rem;
+  line-height: 3rem;
   font-variant-numeric: lining-nums tabular-nums;
-  color: var(--color-black-100); }
+  color: var(--color-black-100);
+  text-decoration: none; }
+  .contact-info__btn:hover {
+    text-decoration: none;
+    color: var(--color-yellow-md); }
 
 .contact-info__wt:after {
   content: "WhatsApp";
-  border-radius: 99px;
+  border-radius: 6.1875rem;
   background: var(--color-black-05);
-  padding: 12px 24px;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none !important;
-  margin-left: 8px; }
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-left: 0.5rem; }
 
 .section-map {
-  margin-bottom: 144px; }
+  margin-bottom: 9rem; }
 
 .map {
   width: 100%;
@@ -2226,29 +2285,36 @@ body, html {
           justify-content: flex-end; }
 
 .projects-preview__tag {
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   background: var(--color-black-05);
-  border-radius: 999px;
-  margin-right: 4px;
+  border-radius: 62.4375rem;
+  margin-right: 0.25rem;
   cursor: pointer;
   white-space: nowrap;
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .projects-preview__tag:hover {
+    background: var(--color-yellow-md); }
 
 .projects-preview__tag.active {
   background: var(--color-yellow-base); }
+  .projects-preview__tag.active:hover {
+    background: var(--color-yellow-md); }
 
 .projects-preview__wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 16px; }
+  gap: 2.5rem 1rem; }
 
 button.mfp-arrow {
   border-radius: 50%;
   background: #FFFFFF;
-  width: 56px;
-  min-width: 56px;
-  height: 56px;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2266,9 +2332,9 @@ button.mfp-arrow {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
   border: none;
   margin: 0; }
 
@@ -2317,7 +2383,7 @@ button.mfp-arrow {
 
 .funnels__wrap {
   border: 1px solid var(--color-black-20);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   display: grid;
   gap: 1px;
   background: var(--color-black-20);
@@ -2325,11 +2391,11 @@ button.mfp-arrow {
 
 .funnels-steps {
   display: grid;
-  gap: 16px;
+  gap: 1rem;
   justify-items: center; }
 
 .funnels__item {
-  padding: 40px;
+  padding: 2.5rem;
   background: var(--color-white); }
 
 .funnels-title {
@@ -2370,8 +2436,8 @@ button.mfp-arrow {
 
 .funnels-title__name {
   font-family: "TTHovesProTrial-Md";
-  font-size: 36px;
-  line-height: 40px; }
+  font-size: 2.25rem;
+  line-height: 2.5rem; }
 
 .funnels-title__more {
   display: -webkit-inline-box;
@@ -2380,28 +2446,28 @@ button.mfp-arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 16px;
+  border-radius: 1rem;
   background: var(--color-black-05);
-  font-size: 16px;
-  line-height: 24px;
-  padding: 12px 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.75rem 1.25rem;
   cursor: pointer; }
   .funnels-title__more span {
     display: block;
-    margin-right: 16px; }
+    margin-right: 1rem; }
   .funnels-title__more:after {
     content: '';
     background-image: url("../img/icon-info.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    min-width: 16px;
-    height: 16px; }
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem; }
 
 .funnels-step__item {
-  border-radius: 24px;
-  padding: 32px;
+  border-radius: 1.5rem;
+  padding: 2rem;
   text-align: center;
   color: var(--color-white);
   min-width: -webkit-fit-content;
@@ -2415,13 +2481,13 @@ button.mfp-arrow {
 
 .funnels-step__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 36px;
-  line-height: 40px; }
+  font-size: 2.25rem;
+  line-height: 2.5rem; }
 
 .funnels-step__text {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .funnels-modal__content {
   display: none; }
@@ -2429,74 +2495,80 @@ button.mfp-arrow {
 .funnels-modal__lists {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px; }
+  gap: 1rem; }
 
 .funnels-modal__list-title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 24px; }
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 .funnels-modal__list-items {
   display: grid;
-  gap: 4px;
+  gap: 0.25rem;
   color: var(--color-black-70);
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .modal-more .modal-dialog {
-  max-width: 784px; }
+  max-width: 49rem; }
 
 .modal-more .modal-content {
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-white); }
 
 .modal-header {
-  padding: 40px 40px 24px;
+  padding: 2.5rem 2.5rem 1.5rem;
   border-bottom: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
   .modal-header .close {
-    padding: 0 14px; }
+    padding: 0 0.875rem; }
   .modal-header .close span {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 400;
-    line-height: 48px; }
+    line-height: 3rem; }
 
 .modal-title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 36px;
-  line-height: 40px; }
+  font-size: 2.25rem;
+  line-height: 2.5rem; }
 
 .modal-body {
-  padding: 24px 40px 40px; }
+  padding: 1.5rem 2.5rem 2.5rem; }
 
 .projects-preview__select {
-  height: 48px;
-  padding: 0 17px;
+  height: 3rem;
+  padding: 0 1.0625rem;
   background: var(--color-black-05);
-  border-radius: 16px; }
+  border-radius: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .projects-preview__select:hover {
+    background: var(--color-yellow-md); }
 
 .select {
   position: relative;
   display: inline-block;
   border: none;
   outline: none;
-  background: var(--color-black-05);
+  background: transparent;
   height: 100%;
   width: 100%;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-family: "TTHovesProTrial-Rg"; }
 
 .select:after {
   content: "▼";
-  padding: 0 8px;
-  font-size: 12px;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
   position: absolute;
-  right: 8px;
-  top: 4px;
+  right: 0.5rem;
+  top: 0.25rem;
   z-index: 1;
   text-align: center;
   width: 10%;
@@ -2506,21 +2578,29 @@ button.mfp-arrow {
           box-sizing: border-box; }
 
 .projects-categories__wrap {
-  margin-bottom: 48px; }
+  margin-bottom: 3rem; }
 
 .projects-categories-slider.swiper {
   overflow: visible; }
 
 .projects-categories-slider .swiper-slide {
   height: auto;
-  min-height: 344px; }
+  min-height: 21.5rem; }
 
 .projects-categories__item {
+  display: block;
   position: relative;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   background: var(--color-black-05);
-  padding: 40px 40px 128px;
-  height: 100%; }
+  padding: 2.5rem 2.5rem 8rem;
+  height: 100%;
+  color: var(--color-black-100); }
+  .projects-categories__item:hover {
+    text-decoration: none;
+    color: var(--color-black-100); }
+    .projects-categories__item:hover .projects-categories__link {
+      background: var(--color-yellow-md);
+      border: 1px solid var(--color-yellow-md); }
 
 .projects-categories__link {
   display: -webkit-box;
@@ -2533,38 +2613,41 @@ button.mfp-arrow {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 40px;
-  bottom: 40px;
+  left: 2.5rem;
+  bottom: 2.5rem;
   z-index: 1;
   border-radius: 50%;
   border: 1px solid rgba(31, 31, 31, 0.2);
-  width: 56px;
-  height: 56px; }
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
   .projects-categories__link:after {
     content: "";
     background-image: url("../img/icon-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 16px;
-    min-width: 16px;
-    height: 16px; }
+    width: 1rem;
+    min-width: 1rem;
+    height: 1rem; }
 
 .projects-categories__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 36px;
-  line-height: 40px;
-  margin-bottom: 16px; }
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem; }
 
 .projects-categories__desc {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .main-banner_segment {
   position: relative;
   width: 100%;
-  height: 326px;
-  background-position: top -180px center;
+  height: 20.375rem;
+  background-position: top -5rem center;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transition: 1s;
@@ -2572,11 +2655,15 @@ button.mfp-arrow {
   transition: 1s; }
 
 .main-banner_segment.active {
-  height: 500px; }
+  height: 31.25rem; }
+
+.segment-bg__tablet,
+.segment-bg__mobile {
+  display: none; }
 
 .page-segment .main-rating__wrap {
-  height: 448px;
-  margin-bottom: 16px; }
+  height: 28rem;
+  margin-bottom: 1rem; }
 
 .color-block {
   display: -webkit-box;
@@ -2585,19 +2672,23 @@ button.mfp-arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 32px;
+  border-radius: 2rem;
   background: var(--color-pink-base);
-  padding: 40px;
+  padding: 2.5rem;
   color: var(--color-white);
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
+
+a.color-block:hover {
+  text-decoration: none;
+  color: var(--color-white); }
 
 .color-block__img {
-  width: 96px;
-  min-width: 96px;
-  height: 96px;
-  margin-right: 40px; }
+  width: 6rem;
+  min-width: 6rem;
+  height: 6rem;
+  margin-right: 2.5rem; }
 
 .color-block__img img {
   max-width: 100%;
@@ -2605,7 +2696,7 @@ button.mfp-arrow {
 
 .section-project-top {
   position: relative;
-  padding: 48px 0 96px;
+  padding: 3rem 0 6rem;
   aspect-ratio: 3/1;
   color: var(--color-white); }
 
@@ -2620,8 +2711,9 @@ button.mfp-arrow {
   background-size: cover; }
 
 .project-item__date {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 0; }
 
 .project-item__bg.project-bg_tablet,
 .project-item__bg.project-bg_mobile {
@@ -2633,12 +2725,15 @@ button.mfp-arrow {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .project-item__sticker {
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   font-family: "TTHovesProTrial-Md";
-  margin-left: 8px; }
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem; }
 
 .project-item__logo {
   display: -webkit-box;
@@ -2650,29 +2745,79 @@ button.mfp-arrow {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 50%;
   background: var(--color-white);
-  width: 224px;
-  height: 224px;
-  margin-bottom: 16px; }
+  width: 100%;
+  max-width: 14rem;
+  margin-bottom: 1rem;
+  aspect-ratio: 1/1; }
+
+.project-item__logo img {
+  max-width: 100%; }
 
 .project-item__title {
   font-family: "TTHovesProTrial-Md";
-  font-size: 28px;
-  line-height: 32px; }
+  font-size: 1.75rem;
+  line-height: 2rem; }
 
 .h2__color-text {
   font-family: "TTHovesProTrial-Md";
-  font-size: 44px;
-  line-height: 48px;
+  font-size: 2.75rem;
+  line-height: 3rem;
   color: var(--color-pink-base); }
 
+.project-item__scheme-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; }
+
+.project-item__scheme {
+  border-radius: 2.5rem;
+  overflow: hidden; }
+  .project-item__scheme:first-child {
+    grid-column: 1/3; }
+
+.project-item__scheme img {
+  width: 100%; }
+
+.project-scheme__tablet,
+.project-scheme__mobile {
+  display: none; }
+
+.project-item__reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; }
+
+.page-project-item .section-h2__wrap {
+  gap: 3rem; }
+
+@media screen and (max-width: 1450px) {
+  html {
+    font-size: 15px; } }
+
+@media screen and (max-width: 1350px) {
+  html {
+    font-size: 14px; }
+  .section-project-top {
+    aspect-ratio: 2/1; } }
+
+@media screen and (max-width: 1250px) {
+  html {
+    font-size: 13px; } }
+
 @media screen and (max-width: 1199px) {
+  html {
+    font-size: 12px; }
   .projects-preview__tags-inner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; } }
+
+@media screen and (max-width: 1050px) {
+  html {
+    font-size: 11px; } }
 
 @media screen and (max-width: 991px) {
   html {
@@ -2849,7 +2994,7 @@ button.mfp-arrow {
     grid-template-columns: repeat(3, 1fr); }
   .tabs__overflow {
     overflow-y: auto;
-    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width))/2 * (-1)); }
+    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width)) / 2 * (-1)); }
   .rating-row__num {
     display: block; }
   .rating-row__title {
@@ -2928,7 +3073,9 @@ button.mfp-arrow {
     margin: 0;
     padding: 80px 0; }
   .section-color__bg {
-    display: none; }
+    height: 524px;
+    right: 20%;
+    bottom: -30px; }
   .section-h2__wrap + .h3__subtitle {
     margin-top: 248px; }
   .brands__list {
@@ -2972,12 +3119,43 @@ button.mfp-arrow {
     height: auto;
     margin-bottom: 40px; }
   .projects-preview__tags {
-    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width))/2 * (-1) - 1.5rem); }
+    margin-right: calc((var(--js-wrapper-width) - var(--js-container-width)) / 2 * (-1) - 1.5rem); }
   .main-banner_segment {
     background-position: top center; }
   .page-segment .main-rating__wrap {
     height: 448px;
-    min-height: 0; } }
+    min-height: 0; }
+  .section-project-top {
+    aspect-ratio: 1/1; }
+  .project-item__bg.project-bg_tablet {
+    display: block; }
+  .project-item__bg.project-bg_desktop,
+  .project-item__bg.project-bg_mobile {
+    display: none; }
+  .project-item__logo {
+    margin-bottom: 32px; }
+  .page-project-item .section {
+    margin: 80px 0; }
+  .section-project-top {
+    padding: 32px 0 40px; }
+  .project-item__date {
+    padding: 12px 0; }
+  .project-scheme__tablet {
+    display: block; }
+  .project-scheme__desktop,
+  .project-scheme__mobile {
+    display: none; }
+  .project-item__scheme-wrap {
+    grid-template-columns: 1fr; }
+  .project-item__scheme:first-child {
+    grid-column: auto; }
+  .segment-bg__tablet {
+    display: block; }
+  .segment-bg__desktop,
+  .segment-bg__mobile {
+    display: none; }
+  .main-banner_segment.active {
+    height: 375px; } }
 
 @media screen and (max-width: 767px) {
   .container {
@@ -3069,7 +3247,8 @@ button.mfp-arrow {
     color: var(--color-black-100);
     font-family: "TTHovesProTrial-Md";
     font-size: 16px;
-    line-height: 24px; }
+    line-height: 24px;
+    border-radius: 0 0 24px 24px; }
   .departments-item__bottom {
     margin-top: 0;
     padding: 0 8px 20px 24px; }
@@ -3501,7 +3680,11 @@ button.mfp-arrow {
   .h2__subtitle p {
     margin-bottom: 24px; }
   .section-h2__wrap + .h3__subtitle {
-    margin-top: 96px; }
+    margin-top: 142px; }
+  .section-color__bg {
+    height: 306px;
+    right: 7%;
+    bottom: -20px; }
   .worth-slider__wrap {
     margin-top: 24px; }
   .reviews-previews__head {
@@ -3578,7 +3761,11 @@ button.mfp-arrow {
     background: transparent;
     padding: 0; }
   .page-head__buttons {
-    width: 100%; } }
+    width: 100%; }
+  .section-project-top {
+    margin-top: 80px; }
+  .input__wrap.invalid:after {
+    bottom: 20px; } }
 
 @media screen and (max-width: 575px) {
   .tabs__overflow {
@@ -3677,7 +3864,53 @@ button.mfp-arrow {
     margin-bottom: 24px; }
   .color-block__text {
     font-size: 22px;
-    line-height: 24px; } }
+    line-height: 24px; }
+  .project-item__bg.project-bg_mobile {
+    display: block; }
+  .project-item__bg.project-bg_desktop,
+  .project-item__bg.project-bg_tablet {
+    display: none; }
+  .project-item__stickers {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .section-project-top {
+    margin-top: 60px; }
+  .project-item__sticker {
+    margin-left: 0;
+    margin-right: 8px;
+    margin-bottom: 0;
+    margin-top: 8px; }
+  .section-project-mob {
+    padding: 40px 0;
+    background: var(--color-black-05); }
+  .project-item__title {
+    font-size: 22px;
+    line-height: 24px; }
+  .project-item__logo {
+    padding: 24px; }
+  .project-item__date {
+    padding: 0; }
+  .section-project-top {
+    padding: 24px 0 24px; }
+  .page-project-item .section-h2__wrap {
+    gap: 24px; }
+  .page-project-item .section {
+    margin: 40px 0; }
+  .h2__color-text {
+    font-size: 26px;
+    line-height: 32px; }
+  .project-item__scheme {
+    border-radius: 24px; }
+  .project-item__reviews {
+    grid-template-columns: 1fr; }
+  .segment-bg__mobile {
+    display: block; }
+  .segment-bg__desktop,
+  .segment-bg__tablet {
+    display: none; }
+  .main-banner_segment.active {
+    height: 200px; } }
 
 @media screen and (max-width: 360px) {
   .directions-item.active .directions-item__bg.directions-bg_mobile {

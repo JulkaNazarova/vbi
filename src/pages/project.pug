@@ -2,54 +2,131 @@ extends ../templates/template.pug
 block content
 
   section.section-project-top
-    .project-item__bg.project-bg_desktop(style=`background-image:url('./img/project-bg-desktop.jpg')`)
-    .project-item__bg.project-bg_tablet(style=`background-image:url('./img/project-bg-tablet.jpg')`)
-    .project-item__bg.project-bg_mobile(style=`background-image:url('./img/project-bg-tablet.jpg')`)
+    .project-item__bg.project-bg_desktop(style=`background-image:url('./img/project-bg-desktop.webp')`)
+    .project-item__bg.project-bg_tablet(style=`background-image:url('./img/project-bg-tablet.webp')`)
+    .project-item__bg.project-bg_mobile(style=`background-image:url('./img/project-bg-tablet.webp')`)
     .container.h-100.d-flex.flex-column.justify-content-between
-      .row.mb-lg-3
-        .col-lg-6
-          .project-item__date 2023
-        .col-lg-6
+      .row.mb-lg-3.justify-content-between.h-100
+        .col-12.col-sm-2
+          h5.project-item__date 2023
+        .col-12.col-sm-10.d-flex.d-sm-block.align-items-end
           .project-item__stickers
             .sticker.project-item__sticker.wow.animate__fadeInDown(data-wow-delay="0ms") Авто
             .sticker.project-item__sticker.wow.animate__fadeInDown(data-wow-delay="200ms") Brandformance
-      .row
+      .row.d-none.d-sm-flex
         .col-lg-5
           .project-item__logo.wow.animate__zoomIn
-            img(src='./img/project-name-logo.png' alt='', title='')
+            img(src='./img/project-name-logo.webp' alt='', title='')
           h1.project-item__title.wow.animate__fadeInUp Особенности продвижения ушедшего бренда через параллельный импорт
           
-          
-      
-      
-      
-      
-  .page-body
+  section.section-project-mob.d-block.d-sm-none
+    .container
+      .row
+        .col-6
+          .project-item__logo.wow.animate__zoomIn
+            img(src='./img/project-name-logo.webp' alt='', title='')
+        .col-12
+          h1.project-item__title.wow.animate__fadeInUp Особенности продвижения ушедшего бренда через параллельный импорт
+
+
+
+
+
+
+
+
+
+
+  .page-body.page-project-item
     section.section
-      +section-head({
-        num: "01",
-        title: "О компании клиента",
-        subtitle: "Автомобильная группа АВИЛОН (avilon.ru) — лидирующая, динамично развивающаяся автомобильная компания в России. На сегодня АГ АВИЛОН имеет в своем портфеле 44 автомобильных бренда"
-      })
-      .section__block
+      .section__head
         .container
           .row
-            .col-lg-6.offset-lg-6
-              .main-about__wrap
-                .main-about__item
-                  .main-about__numbers 10 лет
-                  .main-about__text на рынке авто
-                .main-about__item
-                  .main-about__numbers 500 000+
-                  .main-about__text проданных авто
+            .col-lg-6
+              .section__num.wow.animate__fadeInLeft 01
+            .col-lg-6
+              .section-h2__wrap
+                h2.h2.wow.animate__fadeInUp О компании клиента
+                .h2__subtitle Автомобильная группа АВИЛОН (avilon.ru) — лидирующая, динамично развивающаяся автомобильная компания в России. На сегодня АГ АВИЛОН имеет в своем портфеле 44 автомобильных бренда
+                .main-about__wrap
+                  .main-about__item
+                    .main-about__numbers 10 лет
+                    .main-about__text на рынке авто
+                  .main-about__item
+                    .main-about__numbers 500 000+
+                    .main-about__text проданных авто
 
                     
     section.section
       +section-head({
-        num: "01",
-        title: "О компании клиента",
-        colortext: "Успешный оперативный запуск рекламной кампании на расширенную пользовательскую воронку.",
-        subtitle: "Вместе с клиентом нам удалось в короткие сроки спланировать и реализовать масштабную рекламную кампанию, включая изменение в стратегии, тактике и даже на сайте. Использовали в рекламной кампании много новых инструментов, при этом нам удалось не только решить основную задачу клиента, но и снизить CPL в динамике!"
+        num: "02",
+        title: "Задачи",
+        colortext: "Запуск продажи автомобилей ушедшего бренда по параллельному импорту",
+        subtitle: `<p>Проблема: отсутствие медийной поддержки со стороны Европейского партнёра-завода. Модель раньше не продавалась в РФ.</p><p>Наша задача: оперативно спланировать и запустить рекламную кампанию, под запуск параллельного импорта для бренда, который никогда не был представлен до этого на нашем рынке.</p>`
+      })
+      
+    section.section
+      +section-head({
+        num: "03",
+        title: "Решение",
+        colortext: "Переход на Brandformance стратегию. Расширение маркетинг-микса в стретегии",
+        subtitle: `<p>С клиентом приняли решение расширять маркетинг-микс в рекламной стратегии. Добавить охватные каналы и инструменты, для повышения знания о новой модели от бренда.</p>`
       })
       .section__block
         .container
+          .project-item__scheme-wrap
+            .project-item__scheme.wow.animate__zoomIn
+              img(src='./img/project-scheme-1-desktop.webp' alt='', title='').project-scheme__desktop
+              img(src='./img/project-scheme-1-tablet.webp' alt='', title='').project-scheme__tablet
+              img(src='./img/project-scheme-1-mobile.webp' alt='', title='').project-scheme__mobile
+            .project-item__scheme.wow.animate__fadeInLeft
+              img(src='./img/project-scheme-2-desktop.webp' alt='', title='').project-scheme__desktop
+              img(src='./img/project-scheme-2-tablet.webp' alt='', title='').project-scheme__tablet
+              img(src='./img/project-scheme-2-mobile.webp' alt='', title='').project-scheme__mobile
+            .project-item__scheme.wow.animate__fadeInRight
+              img(src='./img/project-scheme-3-desktop.webp' alt='', title='').project-scheme__desktop
+              img(src='./img/project-scheme-3-tablet.webp' alt='', title='').project-scheme__tablet
+              img(src='./img/project-scheme-3-mobile.webp' alt='', title='').project-scheme__mobile
+              
+    section.section
+      .section__head
+        .container
+          .row
+            .col-lg-6
+              .section__num.wow.animate__fadeInLeft 04
+            .col-lg-6
+              .section-h2__wrap
+                h2.h2.wow.animate__fadeInUp Итоги
+                .h2__color-text.wow.animate__fadeInRight Успешный оперативный запуск рекламной кампании на расширенную пользовательскую воронку.
+                .h2__subtitle Вместе с клиентом нам удалось в короткие сроки спланировать и реализовать масштабную рекламную кампанию, включая изменение в стратегии, тактике и даже на сайте. Использовали в рекламной кампании много новых инструментов, при этом нам удалось не только решить основную задачу клиента, но и снизить CPL в динамике!
+                .main-about__wrap
+                  .main-about__item
+                    .main-about__numbers CPL динамика
+                    .main-about__text было: 3810 руб.<br>стало: 2016 руб.
+                  .main-about__item
+                    .main-about__numbers +25%
+                    .main-about__text рост спроса на модели
+                a(href="/img/pdf/feedback-pdf.jpg" download).color-block.wow.animate__zoomIn
+                  .color-block__img
+                    img(src=`./img/icon-download.svg` alt='', title='')
+                  .color-block__text Скачать презентацию<span style="display: block; font-size: 16px; line-height: 24px; font-weight: 400;">PDF, 2.5 Мб</span>
+                .project-item__reviews.popup-gallery
+                  +reviews-previews-item({
+                    img: "client-logo-3.png",
+                    text: "Выражаеv благодарность агентству VBI за профессиональное и плодотворное в продвижении интернет-ресурсов Школ для английского языка для детей и подростков UFirst.",
+                    company: "Avilon"
+                  })  
+          
+    section.section
+      +section-head({
+        num: "05",
+        title: "Разрабатываем и поддерживаем проекты в разных нишах"
+      })
+      .section__block
+        .container
+          +cases-block
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы

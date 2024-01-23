@@ -8,23 +8,15 @@
     <link rel="stylesheet" href="css/plugins/bootstrap.css">
     <!--link(rel='stylesheet', href='css/plugins/jquery.formstyler.css')-->
     <!--link(rel='stylesheet', href='css/plugins/jquery.formstyler.theme.css')-->
-    <!--link(rel='stylesheet', href='css/plugins/slick.css')-->
-    <!--link(rel='stylesheet', href='css/plugins/slick-theme.css')-->
-    <link rel="stylesheet" href="css/plugins/magnific-popup.css">
-    <!--link(rel='stylesheet', href='css/plugins/photoswipe.css')-->
-    <!--link(rel='stylesheet', href='css/plugins/dropzone.min.css')-->
-    <!--link(rel='stylesheet', href='css/plugins/ion.rangeSlider.min.css')-->
-    <!--link(rel='stylesheet', href='css/plugins/nanoscroller.css')-->
-    <link rel="stylesheet" href="css/plugins/animate.min.css">
     <!--link(href='https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' rel='stylesheet')-->
+    <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="css/plugins/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css?v=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
   </head>
   <body class="body">
-    <!--#upbutton-->
-    <!--  img(src='../img/upbutton.svg' alt='', title='').upbutton-->
     <header class="header">
       <div class="header__wrap">
         <div class="container">
@@ -161,63 +153,65 @@
         </div>
       </div>
     </header>
-    <!--include ../_components/footer-menu-->
-    <!--include ../_components/menu-mob-->
     <div class="wrapper">
       <div class="menu-dropdown__bg"></div>
       <section class="section-project-top">
-        <div class="project-item__bg project-bg_desktop" style="background-image:url('./img/project-bg-desktop.jpg')"></div>
-        <div class="project-item__bg project-bg_tablet" style="background-image:url('./img/project-bg-tablet.jpg')"></div>
-        <div class="project-item__bg project-bg_mobile" style="background-image:url('./img/project-bg-tablet.jpg')"></div>
+        <div class="project-item__bg project-bg_desktop" style="background-image:url('./img/project-bg-desktop.webp')"></div>
+        <div class="project-item__bg project-bg_tablet" style="background-image:url('./img/project-bg-tablet.webp')"></div>
+        <div class="project-item__bg project-bg_mobile" style="background-image:url('./img/project-bg-tablet.webp')"></div>
         <div class="container h-100 d-flex flex-column justify-content-between">
-          <div class="row mb-lg-3">
-            <div class="col-lg-6">
-              <div class="project-item__date">2023</div>
+          <div class="row mb-lg-3 justify-content-between h-100">
+            <div class="col-12 col-sm-2">
+              <h5 class="project-item__date">2023</h5>
             </div>
-            <div class="col-lg-6">
+            <div class="col-12 col-sm-10 d-flex d-sm-block align-items-end">
               <div class="project-item__stickers">
                 <div class="sticker project-item__sticker wow animate__fadeInDown" data-wow-delay="0ms">Авто</div>
                 <div class="sticker project-item__sticker wow animate__fadeInDown" data-wow-delay="200ms">Brandformance</div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row d-none d-sm-flex">
             <div class="col-lg-5">
-              <div class="project-item__logo wow animate__zoomIn"><img src="./img/project-name-logo.png" alt="" title=""></div>
+              <div class="project-item__logo wow animate__zoomIn"><img src="./img/project-name-logo.webp" alt="" title=""></div>
               <h1 class="project-item__title wow animate__fadeInUp">Особенности продвижения ушедшего бренда через параллельный импорт</h1>
             </div>
           </div>
         </div>
       </section>
-      <div class="page-body">
-        <section class="section">
-            <div class="section__head">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="section__num wow animate__fadeInLeft">01</div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="section-h2__wrap">
-                      <h2 class="h2 wow animate__fadeInUp">О компании клиента</h2>
-                      <div class="h2__subtitle">Автомобильная группа АВИЛОН (avilon.ru) — лидирующая, динамично развивающаяся автомобильная компания в России. На сегодня АГ АВИЛОН имеет в своем портфеле 44 автомобильных бренда</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section class="section-project-mob d-block d-sm-none">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="project-item__logo wow animate__zoomIn"><img src="./img/project-name-logo.webp" alt="" title=""></div>
             </div>
-          <div class="section__block">
+            <div class="col-12">
+              <h1 class="project-item__title wow animate__fadeInUp">Особенности продвижения ушедшего бренда через параллельный импорт</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="page-body page-project-item">
+        <section class="section">
+          <div class="section__head">
             <div class="container">
               <div class="row">
-                <div class="col-lg-6 offset-lg-6">
-                  <div class="main-about__wrap">
-                    <div class="main-about__item">
-                      <div class="main-about__numbers">10 лет</div>
-                      <div class="main-about__text">на рынке авто</div>
-                    </div>
-                    <div class="main-about__item">
-                      <div class="main-about__numbers">500 000+</div>
-                      <div class="main-about__text">проданных авто</div>
+                <div class="col-lg-6">
+                  <div class="section__num wow animate__fadeInLeft">01</div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="section-h2__wrap">
+                    <h2 class="h2 wow animate__fadeInUp">О компании клиента</h2>
+                    <div class="h2__subtitle">Автомобильная группа АВИЛОН (avilon.ru) — лидирующая, динамично развивающаяся автомобильная компания в России. На сегодня АГ АВИЛОН имеет в своем портфеле 44 автомобильных бренда</div>
+                    <div class="main-about__wrap">
+                      <div class="main-about__item">
+                        <div class="main-about__numbers">10 лет</div>
+                        <div class="main-about__text">на рынке авто</div>
+                      </div>
+                      <div class="main-about__item">
+                        <div class="main-about__numbers">500 000+</div>
+                        <div class="main-about__text">проданных авто</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -230,20 +224,143 @@
               <div class="container">
                 <div class="row">
                   <div class="col-lg-6">
-                    <div class="section__num wow animate__fadeInLeft">01</div>
+                    <div class="section__num wow animate__fadeInLeft">02</div>
                   </div>
                   <div class="col-lg-6">
                     <div class="section-h2__wrap">
-                      <h2 class="h2 wow animate__fadeInUp">О компании клиента</h2>
-                      <div class="h2__color-text">Успешный оперативный запуск рекламной кампании на расширенную пользовательскую воронку.</div>
-                      <div class="h2__subtitle">Вместе с клиентом нам удалось в короткие сроки спланировать и реализовать масштабную рекламную кампанию, включая изменение в стратегии, тактике и даже на сайте. Использовали в рекламной кампании много новых инструментов, при этом нам удалось не только решить основную задачу клиента, но и снизить CPL в динамике!</div>
+                      <h2 class="h2 wow animate__fadeInUp">Задачи</h2>
+                      <div class="h2__color-text wow animate__fadeInRight">Запуск продажи автомобилей ушедшего бренда по параллельному импорту</div>
+                      <div class="h2__subtitle"><p>Проблема: отсутствие медийной поддержки со стороны Европейского партнёра-завода. Модель раньше не продавалась в РФ.</p><p>Наша задача: оперативно спланировать и запустить рекламную кампанию, под запуск параллельного импорта для бренда, который никогда не был представлен до этого на нашем рынке.</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section__head">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="section__num wow animate__fadeInLeft">03</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="section-h2__wrap">
+                      <h2 class="h2 wow animate__fadeInUp">Решение</h2>
+                      <div class="h2__color-text wow animate__fadeInRight">Переход на Brandformance стратегию. Расширение маркетинг-микса в стретегии</div>
+                      <div class="h2__subtitle"><p>С клиентом приняли решение расширять маркетинг-микс в рекламной стратегии. Добавить охватные каналы и инструменты, для повышения знания о новой модели от бренда.</p></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           <div class="section__block">
-            <div class="container"></div>
+            <div class="container">
+              <div class="project-item__scheme-wrap">
+                <div class="project-item__scheme wow animate__zoomIn"><img class="project-scheme__desktop" src="./img/project-scheme-1-desktop.webp" alt="" title=""><img class="project-scheme__tablet" src="./img/project-scheme-1-tablet.webp" alt="" title=""><img class="project-scheme__mobile" src="./img/project-scheme-1-mobile.webp" alt="" title=""></div>
+                <div class="project-item__scheme wow animate__fadeInLeft"><img class="project-scheme__desktop" src="./img/project-scheme-2-desktop.webp" alt="" title=""><img class="project-scheme__tablet" src="./img/project-scheme-2-tablet.webp" alt="" title=""><img class="project-scheme__mobile" src="./img/project-scheme-2-mobile.webp" alt="" title=""></div>
+                <div class="project-item__scheme wow animate__fadeInRight"><img class="project-scheme__desktop" src="./img/project-scheme-3-desktop.webp" alt="" title=""><img class="project-scheme__tablet" src="./img/project-scheme-3-tablet.webp" alt="" title=""><img class="project-scheme__mobile" src="./img/project-scheme-3-mobile.webp" alt="" title=""></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section__head">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="section__num wow animate__fadeInLeft">04</div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="section-h2__wrap">
+                    <h2 class="h2 wow animate__fadeInUp">Итоги</h2>
+                    <div class="h2__color-text wow animate__fadeInRight">Успешный оперативный запуск рекламной кампании на расширенную пользовательскую воронку.</div>
+                    <div class="h2__subtitle">Вместе с клиентом нам удалось в короткие сроки спланировать и реализовать масштабную рекламную кампанию, включая изменение в стратегии, тактике и даже на сайте. Использовали в рекламной кампании много новых инструментов, при этом нам удалось не только решить основную задачу клиента, но и снизить CPL в динамике!</div>
+                    <div class="main-about__wrap">
+                      <div class="main-about__item">
+                        <div class="main-about__numbers">CPL динамика</div>
+                        <div class="main-about__text">было: 3810 руб.<br>стало: 2016 руб.</div>
+                      </div>
+                      <div class="main-about__item">
+                        <div class="main-about__numbers">+25%</div>
+                        <div class="main-about__text">рост спроса на модели</div>
+                      </div>
+                    </div><a class="color-block wow animate__zoomIn" href="/img/pdf/feedback-pdf.jpg" download>
+                      <div class="color-block__img"><img src="./img/icon-download.svg" alt="" title=""></div>
+                      <div class="color-block__text">Скачать презентацию<span style="display: block; font-size: 16px; line-height: 24px; font-weight: 400;">PDF, 2.5 Мб</span></div></a>
+                    <div class="project-item__reviews popup-gallery"><a class="reviews-previews__item" href="./img/feedback-img.jpg" title="Avilon" target="_blank">
+                          <div class="reviews-previews__head">
+                            <div class="reviews-previews__img"><img src="./img/client-logo-3.png" alt="" title=""></div>
+                            <div class="reviews-previews__text">
+                              <p>Выражаеv благодарность агентству VBI за профессиональное и плодотворное в продвижении интернет-ресурсов Школ для английского языка для детей и подростков UFirst.</p>
+                            </div>
+                          </div>
+                          <div class="reviews-previews__bottom">
+                            <div class="reviews-previews__company">Avilon</div>
+                            <div class="reviews-previews__icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0664063 3C0.0664063 1.34315 1.40955 0 3.06641 0L9.87553 0C10.6377 0 11.3713 0.290101 11.9274 0.811386L13.9183 2.67785C14.5232 3.24499 14.8664 4.03724 14.8664 4.86647L14.8664 8H14.9998C15.5521 8 15.9998 8.44772 15.9998 9V12C15.9998 12.5523 15.5521 13 14.9998 13H14.8664C14.8664 14.6569 13.5233 16 11.8664 16L3.06641 16C1.40955 16 0.0664063 14.6569 0.0664063 13L0.0664063 3ZM12.8664 13H8.46642C7.91413 13 7.46642 12.5523 7.46642 12L7.46642 9C7.46642 8.44771 7.91413 8 8.46642 8L12.8664 8L12.8664 4.86647C12.8664 4.74242 12.8434 4.62086 12.7998 4.50745V6L8.53309 6H7.53309V5L7.53309 2L3.06641 2C2.51412 2 2.06641 2.44772 2.06641 3L2.06641 13C2.06641 13.5523 2.51412 14 3.06641 14L11.8664 14C12.4187 14 12.8664 13.5523 12.8664 13ZM10.5595 2.27046L12.4043 4H9.53309V2H9.87553C10.1296 2 10.3741 2.0967 10.5595 2.27046ZM9.46642 11V10H13.9998V11H9.46642Z" fill="#1F1F1F"></path>
+                              </svg>
+                            </div>
+                          </div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+            <div class="section__head">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="section__num wow animate__fadeInLeft">05</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="section-h2__wrap">
+                      <h2 class="h2 wow animate__fadeInUp">Разрабатываем и поддерживаем проекты в разных нишах</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="section__block">
+            <div class="container">
+                <div class="cases"><a class="case-preview__item wow animate__fadeInUp" href="javascript:void(0);" data-wow-delay="0ms">
+                      <div class="sticker case-preview__sticker">Медицина</div>
+                      <div class="case-preview__img" style="background-image:url('./img/case-preview-1.webp')"></div>
+                      <div class="case-preview__title">Снизили на 30% стоимость лидов за 3 месяца</div>
+                      <div class="case-preview__tags">
+                        <div class="case-preview__tag">Рerformance</div>
+                      </div></a><a class="case-preview__item wow animate__fadeInUp" href="javascript:void(0);" data-wow-delay="200ms">
+                      <div class="sticker case-preview__sticker">Недвижимость</div>
+                      <div class="case-preview__img" style="background-image:url('./img/case-preview-2.webp')"></div>
+                      <div class="case-preview__title">Увеличение трафика на сайт при улучшении поведенческих показателей</div>
+                      <div class="case-preview__tags">
+                        <div class="case-preview__tag">Рerformance</div>
+                        <div class="case-preview__tag">Разработка</div>
+                      </div></a><a class="case-preview__item wow animate__fadeInUp" href="javascript:void(0);" data-wow-delay="400ms">
+                      <div class="sticker case-preview__sticker">Услуги</div>
+                      <div class="case-preview__img" style="background-image:url('./img/case-preview-3.webp')"></div>
+                      <div class="case-preview__title">Увеличение целевого трафика на сайт, рост конверсии, поиск новых инструментов продвижения</div>
+                      <div class="case-preview__tags">
+                        <div class="case-preview__tag">Рerformance</div>
+                        <div class="case-preview__tag">Разработка</div>
+                      </div></a><a class="case-preview__item wow animate__fadeInUp" href="javascript:void(0);" data-wow-delay="600ms">
+                      <div class="sticker case-preview__sticker">Медицина</div>
+                      <div class="case-preview__img" style="background-image:url('./img/case-preview-4.webp')"></div>
+                      <div class="case-preview__title">Снизили на 30% стоимость лидов за 3 месяца</div>
+                      <div class="case-preview__tags">
+                        <div class="case-preview__tag">Рerformance</div>
+                      </div></a>
+                </div>
+            </div>
+          </div>
+          <div class="section__block">
+            <div class="container">
+              <div class="section-bottom"><a class="btn btn-tr" href="javascript:void(0);">Все кейсы</a></div>
+            </div>
           </div>
         </section>
       </div>
@@ -265,17 +382,20 @@
             </div>
             <div class="col-lg-6 offset-lg-2">
               <form class="contact-form" id="contact-form">
-                <div class="input__wrap">
+                <div class="input__wrap active">
                   <label class="input__label"> <span>Телефон</span></label>
                   <input class="input input-phone" type="tel" placeholder="+7">
+                  <div class="input__error">Error message</div>
                 </div>
-                <div class="input__wrap">
+                <div class="input__wrap invalid">
                   <label class="input__label">            <span>Ваше имя</span></label>
-                  <input class="input" type="text">
+                  <input class="input" type="text" value="jq">
+                  <div class="input__error">Error message</div>
                 </div>
                 <div class="input__wrap">
                   <label class="input__label"> <span>Ссылка на сайт</span></label>
                   <input class="input" type="url" placeholder="https://">
+                  <div class="input__error">Error message</div>
                 </div>
                 <button class="btn btn-yellow btn-form" type="submit">Отправить</button>
                 <div class="agreement">Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a></div>
@@ -364,23 +484,12 @@
       </div>
     </div>
     <script src="js/plugins/jquery-3.4.1.min.js"></script>
-    <!--script(src="js/plugins/popper.min.js")-->
     <script src="js/plugins/bootstrap.js"></script>
-    <!---->
     <!--script(src="js/plugins/jquery.formstyler.min.js")-->
-    <script src="js/plugins/jquery.maskedinput.js"></script>
-    <!--script(src="js/plugins/slick.js")-->
-    <script src="js/plugins/jquery.magnific-popup.js"></script>
-    <!--script(src="js/plugins/photoswipe-lightbox.esm.js")-->
-    <!--script(src="js/plugins/ion.rangeSlider.min.js")-->
-    <!--script(src="js/plugins/dropzone.min.js")-->
-    <!--script(src="js/plugins/jquery.nanoscroller.min.js")-->
-    <!--script(src="js/plugins/readmore.js")-->
-    <!--  -->
-    <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=103ba73d-586f-49f7-9662-c26f48f3fcee"  type="text/javascript")-->
-    <!--script(src="js/map.js" type="text/javascript")-->
-    <script src="js/plugins/wow.min.js"></script>
     <!--script(src='https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js')-->
+    <script src="js/plugins/jquery.maskedinput.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.js"></script>
+    <script src="js/plugins/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
