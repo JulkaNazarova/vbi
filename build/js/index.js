@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 jQuery(document).ready(function () {
+  
+  //плавный скролл страниц
+  
     
   //навешиваем модификатор на плавающий хедер
   let pageStartTop =$(window).scrollTop();
