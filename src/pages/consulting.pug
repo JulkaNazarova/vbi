@@ -1,0 +1,298 @@
+extends ../templates/template.pug
+block content
+
+  +section-top({
+    title: `Исследования <br>и консалтинг`,
+    slogan: "Окажем разовые услуги с часовой тарификаций",
+    subtitle: `Исследуем аудиторию, анализируем рекламные кампании, аудируем сайты <span class="text-pink">для повышения качества инвестиций в маркетинг</span>`,
+  })
+
+  +page-banner("3d-consulting.webp")
+
+  .page-body
+
+    section.section
+      +section-head({
+        num: "01",
+        title: "Услуги экспертов без обязательств платить ежемесячную комиссию",
+      })
+
+      .section__block
+        .container
+          .work-directions__wrap
+            +work-directions-item({
+              mod: "active",
+              style: "display: block;",
+              num: "01",
+              catIcon: "directions-category-icon-1.svg",
+              catTitle: "Реклама",
+              name: "Аудит Яндекс.Директ",
+              subtitle1: "Структурный",
+              text1: `
+              <ul>
+                 <li>404, работа редиректов.</li>
+                 <li>Удобство навигации: логичность в построении разделов: шапка, подвал, меню. Вывод цен, фильтрации, раскрытие таблиц.3 «шага» до нужной информации.</li>
+                 <li>Наличие CTA, работа форм.</li>
+              </ul>
+              `,
+              subtitle2: "Технический",
+              text2: `
+              <ul>
+                 <li>Скорость загрузки, адаптивность.</li>
+                 <li>Кнопки навигации, хлебные крошки, протокол, соответствие региона и номеров, капчи, скрытие всплывающих окон, поиск по сайту.</li>
+              </ul>
+              `,
+              subtitle3: "Контентный",
+              text3: `
+              <ul>
+                 <li>Релевантность заголовков контентаразделу, потребности пользователей.</li>
+                 <li>Полнота информации, отсутствие перекрывающих контент блоков (pop-up, ОЗ и  иных). Подписи элементов и откликна нажатие.</li>
+                 <li>Читабельность, стилистика. Отсутствие символов с ложной трактовкой, корректность отображения изображений.</li>
+              </ul>
+              `,
+              subtitle4: "Поведенческие факторы",
+              text4: `
+              <ul>
+                 <li>Аналитика и выводы по отказности разделов.</li>
+                 <li>Маршрут посетителя, глубина просмотра, воронка.</li>
+                 <li>Карты скроллинга, карта кликов.</li>
+              </ul>
+              `,
+              textColor: `Опционально добавим или удалим необходимые работы в рамках услуги.`
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "02",
+              catIcon: "directions-category-icon-1.svg",
+              catTitle: "Реклама",
+              name: "Аудит таргета (VK, MT, TG ADS, FB/IG)",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "03",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Аудит SEO",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "04",
+              catIcon: "directions-category-icon-1.svg",
+              catTitle: "Реклама",
+              name: "Настройка, веб-аналитика",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "05",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Конкуретный анализ",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "06",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "UX аудит",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "07",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "UX аудит",
+              subtitle1: "Структурный",
+              text1: `
+                            <ul>
+                               <li>404, работа редиректов.</li>
+                               <li>Удобство навигации: логичность в построении разделов: шапка, подвал, меню. Вывод цен, фильтрации, раскрытие таблиц.3 «шага» до нужной информации.</li>
+                               <li>Наличие CTA, работа форм.</li>
+                            </ul>
+                            `,
+              subtitle2: "Технический",
+              text2: `
+                            <ul>
+                               <li>Скорость загрузки, адаптивность.</li>
+                               <li>Кнопки навигации, хлебные крошки, протокол, соответствие региона и номеров, капчи, скрытие всплывающих окон, поиск по сайту.</li>
+                            </ul>
+                            `,
+              subtitle3: "Контентный",
+              text3: `
+                            <ul>
+                               <li>Релевантность заголовков контентаразделу, потребности пользователей.</li>
+                               <li>Полнота информации, отсутствие перекрывающих контент блоков (pop-up, ОЗ и  иных). Подписи элементов и откликна нажатие.</li>
+                               <li>Читабельность, стилистика. Отсутствие символов с ложной трактовкой, корректность отображения изображений.</li>
+                            </ul>
+                            `,
+              subtitle4: "Поведенческие факторы",
+              text4: `
+                            <ul>
+                               <li>Аналитика и выводы по отказности разделов.</li>
+                               <li>Маршрут посетителя, глубина просмотра, воронка.</li>
+                               <li>Карты скроллинга, карта кликов.</li>
+                            </ul>
+                            `,
+              textColor: `Опционально добавим или удалим необходимые работы в рамках услуги.`
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "08",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Конкуретный анализ",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "09",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Тайный покупатель",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "10",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Автоматизация отчётности",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+            +work-directions-item({
+              mod: "",
+              style: "",
+              num: "11",
+              catIcon: "directions-category-icon-2.svg",
+              catTitle: "Аналитика, UX/UI",
+              name: "Техподдержка",
+              subtitle1: "Что делаем",
+              text1: "Проанализируем текущие соцсети и конкурентов, определим аудиторию, подберем площадки, сформируем стратегию продвижения и KPI.",
+              subtitle2: "Что вы получаете",
+              text2: "Полное представление сегментов аудитории и ее потребности с разбором конкурентов. Описание целей и задачи продвижения, KPI. Воронку продаж с рекомендациями по продвижению и визуалу. Примеры оформления и референсы контента."
+            })
+          
+
+
+
+    section.section
+      +section-head({
+        num: "02",
+        title: "Работаем с крупными и небольшими брендами",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+
+            .col-lg-6
+              +main-rating-wrap
+
+      .section__block
+        +clients-slider
+
+        
+    section.section
+      +section-head({
+        num: "03",
+        title: "Получаем признание рынка"
+      })
+      .section__block
+        .container
+          .ratings__wrap
+            .tabs__overflow
+              .tabs-head.ratings__tabs
+                .tabs-head__item(data-tab='tab-1')._js-tabs-title.active Контекстная реклама
+                .tabs-head__item(data-tab='tab-2')._js-tabs-title Таргетированная реклама
+                .tabs-head__item(data-tab='tab-3')._js-tabs-title PR/SERM/ORM
+                .tabs-head__item(data-tab='tab-4')._js-tabs-title Нативная реклама
+                .tabs-head__item(data-tab='tab-5')._js-tabs-title SEO
+            .tabs-info__block
+              .tabs-info__item(data-tab='tab-1')._js-tabs-info.active
+                .ratings__list
+                  +rating-row("13", "по России", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "по Москве", "Рейтинг Рунета", "2023")
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "AdIndex", "2022")
+              .tabs-info__item(data-tab='tab-2')._js-tabs-info
+                .ratings__list
+                  +rating-row("09", "Интегральный рейтинг", "AdIndex", "2022")
+                  +rating-row("07", "Рейтинг сотрудничества", "Рейтинг Рунета", "2022")
+              .tabs-info__item(data-tab='tab-3')._js-tabs-info
+                .ratings__list
+                  | Lorem ipsum orci malesuada cursus quisque ligula maecenas vivamus sodales. Vitae lorem ligula sagittis, integer eget tellus bibendum porttitor massa odio nam sed: nibh elementum. Proin, maecenas sed magna vivamus adipiscing sem: sagittis fusce maecenas ligula, leo sit ultricies gravida proin adipiscing ultricies elementum et integer quisque, sem porta.
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-4')._js-tabs-info
+                .ratings__list
+                  | Lorem lectus orci gravida molestie proin metus porta mattis maecenas — proin arcu leo orci proin sit. Congue molestie et nec arcu — nibh eu mauris justo auctor molestie integer arcu congue ultricies sodales in vivamus cursus sodales sem. Mauris — diam nam nec morbi: elementum nam pharetra lorem vulputate sodales quam: amet nam bibendum ut duis proin morbi. Non arcu tellus integer, amet fusce quam mattis ultricies pharetra. Nulla sem quisque mauris fusce tempus arcu orci quisque pellentesque sem mauris diam, non cursus risus porta vulputate malesuada. Donec nec vitae: porttitor bibendum, mauris, leo sem rutrum integer, pellentesque donec cursus urna congue sed enim arcu et leo — vitae odio.
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+              .tabs-info__item(data-tab='tab-5')._js-tabs-info
+                .ratings__list
+                  | Justo gravida tempus: commodo cursus sapien eget, nulla vitae eu lectus odio porta leo massa risus duis tellus, malesuada proin. Integer morbi adipiscing, risus justo lectus mattis vitae cursus sapien sagittis sem risus eget tellus at tellus — arcu lorem rutrum proin amet mattis cursus enim. Tempus curabitur pharetra adipiscing, proin vulputate bibendum elementum duis arcu pharetra, at vitae mauris nibh ipsum eget sit eget auctor congue, in sagittis congue. Sodales adipiscing, congue: amet gravida eros ligula mauris rutrum, sit congue eget risus donec orci duis nec in: adipiscing.
+
+                  
+    section.section
+      +section-head({
+        num: "04",
+        title: "Достигаем результатов",
+      })
+      .section__block
+        .container
+          +cases-block
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Все кейсы

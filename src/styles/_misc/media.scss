@@ -1238,7 +1238,7 @@
   }
 
   .work-directions__item.active {
-    padding: 96px 24px 24px;
+    padding: 20px 24px 24px;
   }
 
   .work-directions__name {
@@ -1252,13 +1252,30 @@
     top: 18px;
   }
 
+  .work-directions__num-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .work-directions__category{
+    margin-left: 0;
+    margin-bottom: 8px;
+  }
+
   .work-directions__item.active .work-directions__btn {
     top: 24px;
   }
 
   .work-directions__item.active .work-directions__num-wrap {
-    top: 20px;
-    left: 24px;
+    position: static;
+    top: 0;
+    left: 0;
+    padding: 0;
+    //padding: 20px 60px 0 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 
   .work-directions__item.active .work-directions__num {
@@ -1276,6 +1293,10 @@
     &:before {
       width: 32px;
     }
+  }
+
+  .work-directions__item.active .work-directions__category {
+    margin-left: 0;
   }
 
   .work-directions__subtitle {
@@ -1297,6 +1318,11 @@
   .work-directions__item.active .work-directions__block .work-directions__name {
     font-size: 32px;
     line-height: 36px;
+  }
+  
+  .work-directions__text-color{
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .section-color {

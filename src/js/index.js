@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //вычисляем ширину экрана
   const windowWidth = window.screen.width;
-  //console.log("ширина окна " + windowWidth);
   
   // вычисление переменных ширины контейнера и экрана, передача их в css
   const container = document.querySelector('.container');
@@ -12,8 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const wrapperWidth = wrapper.offsetWidth;
     document.documentElement.style.setProperty('--js-container-width', containerWidth + "px");
     document.documentElement.style.setProperty('--js-wrapper-width', wrapperWidth + "px");
-    //console.log("Шириина .container: " + containerWidth + " пикселей");
-    //console.log("Шириина .wrapper: " + wrapperWidth + " пикселей");
   }
 
   // вычисление высоты фото в Мероприятиях, передача ее в css 
@@ -21,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (imgEvent) {
     const imgEventHeight = imgEvent.offsetHeight;
     document.documentElement.style.setProperty('--js-img-event-height', imgEventHeight + "px");
-    //console.log("Высота картинки " + imgEventHeight + " пикселей");
   }
 });
 
@@ -29,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 jQuery(document).ready(function () {
   
   //плавный скролл страниц
-  
+  //$.scrollSpeed(1000, 80000, 'easeOutCubic');
     
   //навешиваем модификатор на плавающий хедер
   let pageStartTop =$(window).scrollTop();
@@ -40,7 +36,6 @@ jQuery(document).ready(function () {
   // Header fixed animated
   $(window).on("scroll", function () {
     let scrolled = $(this).scrollTop();
-    console.log("виндовс топ " + scrolled);
     if( scrolled > 50 ) {
       $(".header").addClass("active");
     }
@@ -234,7 +229,7 @@ jQuery(document).ready(function () {
   // слайдер Растим экспертизу в digital
   const swiperSert = new Swiper(".digital-big__slider", {
     grabCursor: true,
-    effect: "creative",
+    effect: "fade",
     loop: true,
     speed: 1000,
     autoplay: {
@@ -242,15 +237,6 @@ jQuery(document).ready(function () {
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
       reverseDirection: true
-    },
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-120%", 0, -400],
-      },
-      next: {
-        translate: [0, 0, -400],
-      },
     },
   });
 
@@ -344,21 +330,15 @@ jQuery(document).ready(function () {
         return;
       }
       let xUp = e.touches[0].clientX;
-      //console.log(xUp);
       let yUp = e.touches[0].clientY;
-      //console.log(yUp);
       let xDiff = xDown - xUp;
-      console.log(xDiff);
       let yDiff = yDown - yUp;
-      console.log(yDiff);
       if (Math.abs(xDiff) + Math.abs(yDiff) > 15)
         if (Math.abs(xDiff) > Math.abs(yDiff)) {
           if (xDiff > 0) {
             $('.mfp-arrow-right').click();
-            console.log('лево');
           } else {
             $('.mfp-arrow-left').click();
-            console.log('право');
           }
         } else {
           if (yDiff > 0)
