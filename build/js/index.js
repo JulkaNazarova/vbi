@@ -44,12 +44,16 @@ jQuery(document).ready(function () {
     }
     
     // растяжка видео на главной
-    if( scrolled > 400 &&  scrolled < 1000) {
+    if( scrolled > 350 &&  scrolled < 1200) {
       $("#mainBanner").addClass("active");
+    } else {
+      $("#mainBanner").removeClass("active");
     }
     // растяжка баннера на странице Сегмент
-    if( scrolled > 400 &&  scrolled < 1000) {
+    if( scrolled > 350 &&  scrolled < 1200) {
       $(".main-banner_segment").addClass("active");
+    } else {
+      $(".main-banner_segment").removeClass("active");
     }
     
   });

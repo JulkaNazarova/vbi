@@ -544,6 +544,20 @@
     height: 375px;
   }
 
+  .about-gallery__wrap{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-gallery__item{
+    &:first-child{
+      aspect-ratio: 1/1;
+      grid-column: span 2;
+    }
+    &:last-child{
+      grid-row: auto;
+    }
+  }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -633,6 +647,10 @@
 
   .main-banner__scroll {
     display: none;
+  }
+
+  .main-banner.active {
+    height: 350px;
   }
 
   .page-body {
@@ -1553,6 +1571,83 @@
     bottom: 20px;
   }
 
+  .blog-detail__head{
+    padding: 27px 31px 56px;
+  }
+
+  .blog-detail__structure .dropdown-item {
+    white-space: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .blog-detail__stickers{
+    margin-bottom: 30px;
+  }
+
+  .blog-detail__title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  
+  .blog-detail__desc{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+
+  .btn-read{
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 90px;
+    gap: 16px;
+    &:after{
+      @include width-flex(12px);
+      height: 12px;
+      
+    }
+  }
+
+  .blog-detail__structure {
+    margin-top: 40px;
+  }
+
+  .blog-detail__structure .btn{
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .blog-detail__structure .dropdown-toggle::after{
+    @include width-flex(14px);
+    height: 14px;
+  }
+
+  .blog-detail__text {
+    h2 {
+      font-size: 26px;
+      line-height: 31px;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    ul,ol{
+      padding-left: 30px;
+    }
+    ul li,
+    ol li{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    
+  }
+
+  .blog-detail__text-color{
+    padding: 20px 24px;
+  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -1789,6 +1884,27 @@
 
   .main-banner_segment.active {
     height: 200px;
+  }
+
+  .about-gallery__wrap{
+    grid-template-columns: 1fr;
+  }
+
+  .about-gallery__item{
+    &:first-child{
+      grid-column: auto;
+    }
+    &:nth-child(3){
+      grid-row: auto;
+    }
+    &:nth-child(4) {
+      aspect-ratio: 1/1;
+      grid-row: auto;
+    }
+    &:last-child{
+      grid-column: auto;
+      grid-row: auto;
+    }
   }
 
 }
