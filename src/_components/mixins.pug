@@ -211,7 +211,7 @@ mixin stage-title(num, name)
 mixin step-preparation(delay, num, title, text)
   .steps-preparation__item(data-wow-delay=`${delay}ms`).wow.animate__fadeInUp
     .steps-preparation__top
-      .steps-preparation__title=title
+      .steps-preparation__title !{title}
       .steps-preparation__text=text
     .steps-preparation__bottom
       .steps-preparation__num=num

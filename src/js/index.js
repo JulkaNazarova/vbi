@@ -379,6 +379,33 @@ jQuery(document).ready(function () {
     modal.find("#modalMoreInfoList").html(modalContent);
   });
 
+  //динамическое формирование модалки для вакансии
+  $('.vacancy-modal-btn').on('click', function () {
+    const modal = $("#modalVacancy");
+    const modalTitle = $(this).attr("data-title");
+    modal.find("#modalVacancyTitle").html(modalTitle);
+    modal.find("#vacancyName").val(modalTitle);
+  });
+
+  // слайдер Растим экспертизу в digital
+  const swiperBonuses = new Swiper(".bonuses-slider", {
+    grabCursor: true,
+    effect: "fade",
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    //autoHeight: true,
+    //speed: 1000,
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
+    //   reverseDirection: true
+    // },
+  });
+
   
   // обработка инпутов
   // $(".input").on('focus', function () {
@@ -389,12 +416,46 @@ jQuery(document).ready(function () {
   //   $(this).closest(".input__wrap").removeClass('active');
   //  
   // });
-  
+
+  let mql = window.matchMedia('(max-width: 767px)');
+  function screenTest(e) {
+    if (e.matches) {
+      // слайдер Карточки (инициализируется только на мобильном)
+      let cardsItems = new Swiper(".cards-items__slider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          480: {
+            spaceBetween: 20,
+            slidesPerView: 1.5
+          },
+          576: {
+            spaceBetween: 20,
+            slidesPerView: 1.8
+          }
+        }
+      });
+    }
+  }
+  mql.addListener(screenTest);
+  screenTest(mql);
 
 });
 
 
+Dropzone.options.dropzone = {
+  paramName: "file",
+  maxFiles: 1,
+  maxFilesize: 2, // MB
+  acceptedFiles: ".pdf,.docx,.pptx",
+};
 
+Dropzone.options.dropzoneModal = {
+  paramName: "file",
+  maxFiles: 1,
+  maxFilesize: 2, // MB
+  acceptedFiles: ".pdf,.docx,.pptx",
+};
 
 
 

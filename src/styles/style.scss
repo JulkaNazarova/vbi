@@ -188,6 +188,7 @@
 }
 
 .header-menu__item {
+  position: relative;
   margin-right: rem(24px);
   @include last-mr-0
 }
@@ -210,6 +211,29 @@
     text-decoration: none;
     color: $color-yellow-base;
   }
+}
+
+.header-menu__count{
+  position: absolute;
+  top: rem(-4px);
+  right: rem(-14px);
+  width: rem(18px);
+  height: rem(18px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-brown;
+  color: $color-white;
+  font-size: rem(12px);
+  line-height: rem(12px);
+  font-family: $TTHovesProTrialMd;
+}
+
+.header.active .header-menu__count {
+  color: $color-black-100;
+  background: $color-yellow-base;
+  font-family: $TTHovesProTrialDmBd;
 }
 
 .menu-humb {
@@ -265,6 +289,10 @@
     svg path {
       fill: #FF9000;
     }
+  }
+  
+  span{
+    position: relative;
   }
 
 }
@@ -1571,6 +1599,13 @@
 }
 
 .block-cards-slider__items {
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
+  //gap: rem(16px);
+}
+
+
+.block-cards-slider__items .swiper-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: rem(16px);
@@ -3080,6 +3115,237 @@ a.color-block:hover {
     margin-top: rem(20px);
   }
 }
+
+.page-head__color{
+  background: $color-brown;
+  color: $color-white;
+  padding: rem(36px) 0;
+  margin-top: rem(114px);
+  min-width: 0;
+}
+
+.vacancies__wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: rem(16px);
+}
+
+.vacancies-item{
+  display: grid;
+  grid-template-columns: 1fr rem(420px);
+  gap: rem(16px);
+  border: 1px solid #D7D7D7;
+  border-radius: rem(40px);
+  grid-column: span 2;
+}
+
+.vacancies-item:nth-child(3n+1){
+  grid-column: span 1;
+  grid-row: span 2;
+  grid-template-columns: 1fr;
+  
+  .vacancies-item__img{
+    aspect-ratio: 1/1;
+    align-self: end;
+  }
+  .vacancies-item__info{
+    padding: rem(30px) rem(30px) 0 rem(30px);
+  }
+}
+
+.vacancies-item__info{
+  padding: rem(30px) 0 rem(30px) rem(30px);
+  
+}
+
+.vacancies-item__head{
+  display: flex;
+  margin-bottom: rem(32px);
+  gap: rem(8px);
+  align-items: flex-end;
+}
+
+.vacancies-item__location{
+  display: inline-flex;
+  justify-content: center;
+  border: 1px solid $color-pink-base;
+  border-radius: rem(24px);
+  padding: rem(7px) rem(40px);
+  min-width: rem(190px);
+  font-size: rem(25px);
+  line-height: rem(29px);
+  color: $color-pink-base;
+}
+
+.vacancies-item__experience{
+  background: $color-pink-base;
+  color: $color-white;
+  font-size: rem(14px);
+  line-height: normal;
+  font-family: $TTHovesProTrialMd;
+  border-radius: rem(24px);
+  padding: rem(5px) rem(10px);
+}
+
+.vacancies-item__title{
+  font-family: $TTHovesProTrialMd;
+  font-size: rem(50px);
+  line-height: rem(50px);
+  margin-bottom: rem(20px);
+}
+
+.vacancies-item__salary{
+  color: $color-pink-base;
+  font-family: $TTHovesProTrialMd;
+  font-size: rem(30px);
+  line-height: rem(30px);
+  margin-bottom: rem(16px);
+}
+
+.vacancies-item__text{
+  font-size: rem(16px);
+  line-height: rem(23px);
+}
+
+
+
+.vacancies-item__img{
+  width: 100%;
+  min-height: rem(404px);
+  position: relative;
+
+  border-radius: rem(40px);
+  overflow: hidden;
+  
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+}
+
+.vacancies-item__btn{
+  position: absolute;
+  left: rem(30px);
+  bottom: rem(30px);
+}
+
+.vacancy-modal-btn{
+  display: inline-flex;
+  gap: rem(12px);
+  align-items: center;
+  background: $color-white;
+  color: $color-pink-base;
+  border-radius: rem(24px);
+  border: none;
+  outline: none;
+  padding: rem(5px) rem(32px);
+  font-size: rem(20px);
+  line-height: rem(32px);
+  transition: 0.3s;
+  &:hover{
+    background: $color-yellow-base;
+    color: $color-black-100;
+    svg path{
+      fill: $color-black-100;
+    }
+  }
+}
+
+.modal-vacancy {
+  .modal-dialog {
+    max-width: 90rem;
+  }
+  .modal-content {
+    border-radius: rem(40px);
+    background: #F3F3F3;
+  }
+}
+
+.dropzone .dz-message{
+  margin: 0;
+  .text-color-pink{
+    color: $color-pink-base;
+  }
+}
+
+.dropzone{
+  min-height: 0;
+  border: 1px dashed $color-pink-base;
+  border-radius: 1rem;
+}
+
+.load-file__note{
+  margin-top: rem(7px);
+  color: #ACACAC;
+}
+
+.agreement {
+  color: #8F8F8F;
+  a{
+    color: #1F1F1F;
+  }
+}
+
+.bonuses-head{
+  border-right: 2px solid $color-black-50;
+  padding: rem(52px) rem(50px) rem(52px) 0;
+  margin-top: rem(26px);
+}
+
+.bonuses-head__title{
+  font-family: $TTHovesProTrialMd;
+  font-size: rem(44px);
+  line-height: rem(48px);
+
+}
+
+.bonuses-slider__item{
+  background: $color-black-05;
+  border-radius: rem(40px);
+  padding: rem(55px) rem(80px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: rem(40px);
+  height: 100%;
+}
+
+.bonuses-slider__arrows{
+  display: flex;
+  gap: rem(10px);
+  margin-top: rem(44px);
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    border: 1px solid $color-black-20;
+  }
+}
+
+.bonuses-slider__title{
+  font-family: $TTHovesProTrialMd;
+  font-size: rem(28px);
+  line-height: rem(32px);
+
+}
+
+.bonuses-slider__text{
+  font-size: rem(16px);
+  line-height: rem(24px);
+  color: $color-black-60;
+}
+
+.bonuses-slider .swiper-slide{
+  height: auto;
+  background: $color-black-05;
+  border-radius: rem(40px);
+}
+
+.about-group__wrap img{
+  width: 100%;
+}
+
 
 
 @import '_misc/media';

@@ -1,0 +1,323 @@
+extends ../templates/template.pug
+block content
+  
+  section.section-top
+    .h1__wrap
+      .container
+        h1.h1.wow.animate__fadeInDown Карьера в VBI
+    .page-head
+      .container
+        .row
+          .col-12.col-md-4.col-lg-2.mb-3.mb-lg-0
+            .page-slogan.wow.animate__fadeInLeft Digital-агентство со стратегическим подходом
+          .col-lg-6.offset-lg-4
+            .page-subtitle__wrap
+              h2.h2.page-subtitle.wow.animate__fadeInUp Развивайтесь вместе с нами. Мы&nbsp;предоставляем лучшие и актуальные условия: <span class="text-pink">интересные задачи, ТОПовых клиентов, обучение и достойную зарплату</span>
+              .page-head__buttons
+                a(href="javascript:void(0);").btn.btn-yellow.btn-arrow.scroll-to Посмотреть все вакансии
+                
+
+    .page-head__color.position-relative
+      .section-color__bg
+        img(src='./img/section-color-bg.webp' alt='', title='')
+      .container
+        .row
+          .col-lg-6
+          .col-lg-6
+            h3.h3__subtitle Наши ценности
+        .row
+          .worth-slider__wrap
+            .swiper.worth-slider
+              .swiper-wrapper
+                -for(var i=0; i<3; i++)
+                  +worth-slide('worth-icon-1.svg', 'Люди и искренность')
+                  +worth-slide('worth-icon-2.svg', 'Клиент и отношения')
+                  +worth-slide('worth-icon-1.svg', 'Дела и результат')
+
+
+  .page-body
+
+    section.section
+      +section-head({
+        num: "01",
+        title: "Открытые вакансии"
+      })
+      .section__block
+        .container
+          .vacancies__wrap
+            -for(var i=0; i<1; i++)
+              .vacancies-item
+                .vacancies-item__info
+                  .vacancies-item__head
+                    .vacancies-item__location г. Москва
+                  .vacancies-item__title Менеджер <br>по продажам
+                  .vacancies-item__salary от <span>100 000</span>₽
+                  .vacancies-item__text Общаться  с текущей базой клиентов по телефону и в чатах, использовать различные  источники для поиска новых клиентов с целью продажи услуг агентства
+                .vacancies-item__img
+                  img(src='./img/vacancies-img-1.webp' alt='Менеджер по продажам')
+                  .vacancies-item__btn
+                    button(class="vacancy-modal-btn" type="button" data-toggle="modal" data-target="#modalVacancy" data-title="Менеджер по продажам") Оставить отклик
+                      svg(width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M8.64463 1.70984C8.2526 1.32084 8.25014 0.687676 8.63915 0.29564C9.02815 -0.0963953 9.66132 -0.0988503 10.0534 0.290157L16.1001 6.29016L16.8154 7L16.1001 7.70984L10.0534 13.7098C9.66132 14.0989 9.02815 14.0964 8.63915 13.7044C8.25014 13.3123 8.2526 12.6792 8.64463 12.2902L12.9682 8L1.79028 8C1.238 8 0.790279 7.55228 0.790279 7C0.790279 6.44772 1.23799 6 1.79028 6L12.9682 6L8.64463 1.70984Z' fill='#FF0099')
+
+              .vacancies-item
+                .vacancies-item__info
+                  .vacancies-item__head
+                    .vacancies-item__location Удалённо
+                  .vacancies-item__title SEO <br>специалист
+                  .vacancies-item__salary от <span>45 000</span>₽
+                  .vacancies-item__text Проводить внешнюю и внутреннюю оптимизацию сайтов клиентов для достижения целевого ранжирования поисковой выдачи
+                .vacancies-item__img
+                  img(src='./img/vacancies-img-2.webp' alt='SEO специалист')
+                  .vacancies-item__btn
+                    button(class="vacancy-modal-btn" type="button" data-toggle="modal" data-target="#modalVacancy" data-title="SEO специалист") Оставить отклик
+                      svg(width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M8.64463 1.70984C8.2526 1.32084 8.25014 0.687676 8.63915 0.29564C9.02815 -0.0963953 9.66132 -0.0988503 10.0534 0.290157L16.1001 6.29016L16.8154 7L16.1001 7.70984L10.0534 13.7098C9.66132 14.0989 9.02815 14.0964 8.63915 13.7044C8.25014 13.3123 8.2526 12.6792 8.64463 12.2902L12.9682 8L1.79028 8C1.238 8 0.790279 7.55228 0.790279 7C0.790279 6.44772 1.23799 6 1.79028 6L12.9682 6L8.64463 1.70984Z' fill='#FF0099')
+
+              .vacancies-item
+                .vacancies-item__info
+                  .vacancies-item__head
+                    .vacancies-item__location г. Москва
+                    .vacancies-item__experience опыт от 6 мес
+                  .vacancies-item__title Специалист по&nbsp;контекстной рекламе
+                  .vacancies-item__salary до <span>70 000</span>₽
+                  .vacancies-item__text Настраивать рекламные компании в Google и Яндекс, собирать семантические ядра, прогнозировать KPI и создавать стратегию размещения
+                .vacancies-item__img
+                  img(src='./img/vacancies-img-3.webp' alt='Специалист по&nbsp;контекстной рекламе')
+                  .vacancies-item__btn
+                    button(class="vacancy-modal-btn" type="button" data-toggle="modal" data-target="#modalVacancy" data-title="Специалист по&nbsp;контекстной рекламе") Оставить отклик
+                      svg(width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' clip-rule='evenodd' d='M8.64463 1.70984C8.2526 1.32084 8.25014 0.687676 8.63915 0.29564C9.02815 -0.0963953 9.66132 -0.0988503 10.0534 0.290157L16.1001 6.29016L16.8154 7L16.1001 7.70984L10.0534 13.7098C9.66132 14.0989 9.02815 14.0964 8.63915 13.7044C8.25014 13.3123 8.2526 12.6792 8.64463 12.2902L12.9682 8L1.79028 8C1.238 8 0.790279 7.55228 0.790279 7C0.790279 6.44772 1.23799 6 1.79028 6L12.9682 6L8.64463 1.70984Z' fill='#FF0099')
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="https://hh.ru/search/vacancy?from=employerPage&employer_id=1835132" target="_blank").btn.btn-tr Посмотреть все вакансии
+              
+    section.section
+      +section-head({
+        num: "02",
+        title: "Процесс собеседования"
+      })
+      .section__block
+        .container
+          .steps-preparation__wrap
+            +step-preparation(`0`, '01',`Общение с&nbsp;HR`,'Представим компанию и расскажем о будущей работе')
+            +step-preparation(`200`, '02','Тестовое задание','Предложим решить технический кейс')
+            +step-preparation(`400`, '03',`Общение с&nbsp;руководителем`,'Обсудим ваши сильные стороны и решим, как их можно применить у нас')
+            +step-preparation(`600`, '04','Итоговая встреча','Ответим на ваши вопросы и дадим итоговое решение')
+            
+          
+          
+    section.section
+      +section-head({
+        num: "03",
+        title: "Наши преимущества"
+      })
+      .section__block
+        .container
+          .row
+            .col-lg-3.d-none.d-lg-block
+              .bonuses-head
+                .bonuses-head__title Мы предлагаем
+              
+            .col-lg-8.offset-lg-1
+              .bonuses-slider__wrap
+                .swiper.bonuses-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      .bonuses-slider__item
+                        .bonuses-slider__title Профессиональный коллектив
+                        .bonuses-slider__text 
+                          p Сотрудничество бок о бок с профессионалами, сертифицированными экспертами, спикерами мероприятий отрасли, призерами хакатонов от Яндекс.
+                          p У тебя всегда будут экспертные товарищи, готовые подставить плечо! 
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Работу с известными брендами
+                        .bonuses-slider__text 
+                          p Мы сотрудничаем со средним и крупным бизнесом, среди наших клиентов Avilon, Грузовичкоф, Альфастрахование, Газпромбанк Лизинг, Genotek, ЛСР, УРАЛАЗ, Anextour, РЖД “Медицина”, Calltouch, Ufirst
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Профессиональное развитие
+                        .bonuses-slider__text 
+                          p Возможность выступать на конференциях в качестве спикера и готовить кейсы с крупнейшими российскими и международными рекламодателями
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Экологичная атмосфера
+                        .bonuses-slider__text 
+                          p Эмпатичный коллектив, в котором комфортно расти, развиваться, а еще играть в настолки на пикнике и Sup серфить
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Свобода действовать
+                        .bonuses-slider__text 
+                          p Наши руководители открыты к обсуждению инициатив и дают поле для собственных экспериментов
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Карьерный рост
+                        .bonuses-slider__text 
+                          p Наставничество, удобные и понятные карьерные треки, повышение в должности зависит не от стажа работы, а от масштабов успешных кейсов.
+                    .swiper-slide  
+                      .bonuses-slider__item
+                        .bonuses-slider__title Комфортные условия
+                        .bonuses-slider__text 
+                          p Лофт-офис в креативном пространстве БЦ Красный октябрь, уютный офис в центре г. Тамбова или удалённый формат работы
+                  .bonuses-slider__arrows
+                    .swiper-button-prev
+                    .swiper-button-next
+              
+    section.section
+      +section-head({
+        num: "04",
+        title: "Работаем с крупными и небольшими брендами",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+  
+            .col-lg-6
+              +main-rating-wrap
+  
+      .section__block
+        +clients-slider       
+          
+          
+    section.section
+      +section-head({
+        num: "05",
+        title: "Команда"
+      })
+      .section__block
+        .container
+          .team__wrap
+            +team-item(`0`, `Вадим<br>Юдин`, 'Генеральный директор', 'team-img-1.webp')
+            +team-item(`200`, `Владислав<br>Лашин`, 'Генеральный директор', 'team-img-2.webp')
+            +team-item(`400`, `Елизавета<br>Елизарова`, 'Директор по работе с клиентами', 'team-img-3.webp')
+            +team-item(`600`, `Петр<br>Вельяминов`, 'Управляющий партнер', 'team-img-4.webp')
+            +team-item(`0`, `Иван<br>Гладков`, 'Управляющий партнер', 'team-img-5.webp')
+            +team-item(`200`, `Ирина<br>Петрова`, 'Управляющий партнер', 'team-img-6.webp')
+            +team-item(`400`, `Ангелина<br>Иванова`, 'Управляющий партнер', 'team-img-7.webp')
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Показать еще
+
+
+
+      .section__block
+        .container
+          .about-gallery__wrap
+            .about-gallery__item(style="background-image:url('../img/about-gallery-1.jpg')")
+            .about-gallery__item(style="background-image:url('../img/about-gallery-2.jpg')")
+            .about-gallery__item(style="background-image:url('../img/about-gallery-3.jpg')")
+            .about-gallery__item(style="background-image:url('../img/about-gallery-4.jpg')")
+            .about-gallery__item(style="background-image:url('../img/about-gallery-5.jpg')")
+
+      .section__block
+        .about-group__wrap
+          img(src='./img/about-group.webp' alt='')
+
+      .section__block
+        .container
+          .section-bottom
+            a(href="javascript:void(0);").btn.btn-tr Подробнее о компании
+
+  #section-form.section-form
+    .container
+      .section-form__wrap
+        .row
+          .mb-4.col-lg-1.mb-lg-0
+            .contact-form__icon
+              svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+                path(fill-rule='evenodd' clip-rule='evenodd' d='M2 1C0.895431 1 0 1.89543 0 3V3.41355L7.51436 7.58819C7.81638 7.75598 8.18362 7.75598 8.48564 7.58819L16 3.41355V3C16 1.89543 15.1046 1 14 1H2ZM16 5.70147L9.45693 9.33651C8.55086 9.83988 7.44914 9.83988 6.54307 9.33651L0 5.70147V13C0 14.1046 0.895431 15 2 15H14C15.1046 15 16 14.1046 16 13V5.70147ZM2 12C2 11.4477 2.44772 11 3 11C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13C2.44772 13 2 12.5523 2 12Z' fill='white')
+
+          .col-lg-3
+            .contact-form__title Нет нужной вакансии?
+            .contact-form__subtitle Расскажите о себе — мы ответим в течение 8 часов и предложим время встречи.
+
+          .col-lg-6.offset-lg-2
+            form#contact-form.contact-form
+              .input__wrap
+                label.input__label
+                  span Телефон
+                input(type='tel' placeholder='+7').input.input-phone
+                .input__error Error message
+              .input__wrap
+                label.input__label
+                  span Ваше имя
+                input(type='text' value="jq").input
+                .input__error Error message
+              .load-file
+                #dropzone.dropzone(action='/upload')
+                  .fallback
+                    input(name='file' type='file').drop-file
+                  .dz-message(data-dz-message='') <span class="text-color-pink">Выберите резюме/портфолио</span> <span class="text-mob-dn">или перетащите их сюда
+                .load-file__note Прикрепите файл в формате PDF, DOCX или PPTX
+
+              button(type="submit").btn.btn-yellow.btn-form Отправить
+              .agreement Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a>
+
+
+
+
+  #modalVacancy.modal-vacancy.modal.fade(tabindex='-1', role='dialog' aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          .modal-title
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          .modal-container
+            .modal-vacancy__wrap
+              .row
+                .mb-4.col-lg-1.mb-lg-0
+                  .contact-form__icon
+                    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2 1C0.895431 1 0 1.89543 0 3V3.41355L7.51436 7.58819C7.81638 7.75598 8.18362 7.75598 8.48564 7.58819L16 3.41355V3C16 1.89543 15.1046 1 14 1H2ZM16 5.70147L9.45693 9.33651C8.55086 9.83988 7.44914 9.83988 6.54307 9.33651L0 5.70147V13C0 14.1046 0.895431 15 2 15H14C15.1046 15 16 14.1046 16 13V5.70147ZM2 12C2 11.4477 2.44772 11 3 11C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13C2.44772 13 2 12.5523 2 12Z' fill='white')
+
+                .col-lg-4
+                  #modalVacancyTitle.contact-form__title
+                  .contact-form__subtitle Расскажите о себе — мы ответим в течение 8 часов и предложим время встречи.
+
+                .col-lg-6.offset-lg-1
+                  form.contact-form
+                    input#vacancyName(type='hidden' value="")
+                    .input__wrap.input
+                      label.input__label
+                        span Телефон
+                      input(type='tel' placeholder='+7').input.input-phone
+                      .input__error Error message
+                    .input__wrap
+                      label.input__label
+                        span Ваше имя
+                      input(type='text' value="").input
+                      .input__error Error message
+                    .load-file
+                      #dropzoneModal.dropzone(action='/upload')
+                        .fallback
+                          input(name='file' type='file').drop-file
+                        .dz-message(data-dz-message='') <span class="text-color-pink">Выберите резюме/портфолио</span> <span class="text-mob-dn">или перетащите их сюда
+                      .load-file__note Прикрепите файл в формате PDF, DOCX или PPTX
+                    button(type="submit").btn.btn-yellow.btn-form Отправить
+                    .agreement Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a>
+
+
+
+
+
+  

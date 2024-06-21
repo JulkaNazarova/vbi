@@ -266,6 +266,7 @@ body, html {
           align-items: center; }
 
 .header-menu__item {
+  position: relative;
   margin-right: 1.5rem; }
   .header-menu__item:last-child {
     margin-right: 0; }
@@ -284,6 +285,33 @@ body, html {
   .header-menu__link:hover {
     text-decoration: none;
     color: var(--color-yellow-base); }
+
+.header-menu__count {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--color-brown);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  font-family: "TTHovesProTrial-Md"; }
+
+.header.active .header-menu__count {
+  color: var(--color-black-100);
+  background: var(--color-yellow-base);
+  font-family: "TTHovesProTrial-DmBd"; }
 
 .menu-humb {
   display: none; }
@@ -344,6 +372,8 @@ body, html {
     color: #FF9000; }
     .menu-dropdown__title:hover svg path {
       fill: #FF9000; }
+  .menu-dropdown__title span {
+    position: relative; }
 
 .menu-dropdown__title svg {
   margin-top: 0.5rem;
@@ -1636,7 +1666,7 @@ body, html {
 .format-slider .number-slider__item {
   padding-bottom: 100%; }
 
-.block-cards-slider__items {
+.block-cards-slider__items .swiper-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem; }
@@ -3143,6 +3173,210 @@ a.color-block:hover {
   .blog-detail__text-color h2 {
     margin-top: 1.25rem; }
 
+.page-head__color {
+  background: var(--color-brown);
+  color: var(--color-white);
+  padding: 2.25rem 0;
+  margin-top: 7.125rem;
+  min-width: 0; }
+
+.vacancies__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem; }
+
+.vacancies-item {
+  display: grid;
+  grid-template-columns: 1fr 26.25rem;
+  gap: 1rem;
+  border: 1px solid #D7D7D7;
+  border-radius: 2.5rem;
+  grid-column: span 2; }
+
+.vacancies-item:nth-child(3n+1) {
+  grid-column: span 1;
+  grid-row: span 2;
+  grid-template-columns: 1fr; }
+  .vacancies-item:nth-child(3n+1) .vacancies-item__img {
+    aspect-ratio: 1/1;
+    -ms-flex-item-align: end;
+        align-self: end; }
+  .vacancies-item:nth-child(3n+1) .vacancies-item__info {
+    padding: 1.875rem 1.875rem 0 1.875rem; }
+
+.vacancies-item__info {
+  padding: 1.875rem 0 1.875rem 1.875rem; }
+
+.vacancies-item__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.vacancies-item__location {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid var(--color-pink-base);
+  border-radius: 1.5rem;
+  padding: 0.4375rem 2.5rem;
+  min-width: 11.875rem;
+  font-size: 1.5625rem;
+  line-height: 1.8125rem;
+  color: var(--color-pink-base); }
+
+.vacancies-item__experience {
+  background: var(--color-pink-base);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  line-height: normal;
+  font-family: "TTHovesProTrial-Md";
+  border-radius: 1.5rem;
+  padding: 0.3125rem 0.625rem; }
+
+.vacancies-item__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  margin-bottom: 1.25rem; }
+
+.vacancies-item__salary {
+  color: var(--color-pink-base);
+  font-family: "TTHovesProTrial-Md";
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  margin-bottom: 1rem; }
+
+.vacancies-item__text {
+  font-size: 1rem;
+  line-height: 1.4375rem; }
+
+.vacancies-item__img {
+  width: 100%;
+  min-height: 25.25rem;
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden; }
+  .vacancies-item__img img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.vacancies-item__btn {
+  position: absolute;
+  left: 1.875rem;
+  bottom: 1.875rem; }
+
+.vacancy-modal-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 0.75rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--color-white);
+  color: var(--color-pink-base);
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 0.3125rem 2rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .vacancy-modal-btn:hover {
+    background: var(--color-yellow-base);
+    color: var(--color-black-100); }
+    .vacancy-modal-btn:hover svg path {
+      fill: var(--color-black-100); }
+
+.modal-vacancy .modal-dialog {
+  max-width: 90rem; }
+
+.modal-vacancy .modal-content {
+  border-radius: 2.5rem;
+  background: #F3F3F3; }
+
+.dropzone .dz-message {
+  margin: 0; }
+  .dropzone .dz-message .text-color-pink {
+    color: var(--color-pink-base); }
+
+.dropzone {
+  min-height: 0;
+  border: 1px dashed var(--color-pink-base);
+  border-radius: 1rem; }
+
+.load-file__note {
+  margin-top: 0.4375rem;
+  color: #ACACAC; }
+
+.agreement {
+  color: #8F8F8F; }
+  .agreement a {
+    color: #1F1F1F; }
+
+.bonuses-head {
+  border-right: 2px solid var(--color-black-50);
+  padding: 3.25rem 3.125rem 3.25rem 0;
+  margin-top: 1.625rem; }
+
+.bonuses-head__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 2.75rem;
+  line-height: 3rem; }
+
+.bonuses-slider__item {
+  background: var(--color-black-05);
+  border-radius: 2.5rem;
+  padding: 3.4375rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+  height: 100%; }
+
+.bonuses-slider__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 2.75rem; }
+  .bonuses-slider__arrows .swiper-button-prev,
+  .bonuses-slider__arrows .swiper-button-next {
+    position: static;
+    border: 1px solid var(--color-black-20); }
+
+.bonuses-slider__title {
+  font-family: "TTHovesProTrial-Md";
+  font-size: 1.75rem;
+  line-height: 2rem; }
+
+.bonuses-slider__text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color-black-60); }
+
+.bonuses-slider .swiper-slide {
+  height: auto;
+  background: var(--color-black-05);
+  border-radius: 2.5rem; }
+
+.about-group__wrap img {
+  width: 100%; }
+
 @media screen and (max-width: 1450px) {
   html {
     font-size: 15px; } }
@@ -3512,7 +3746,54 @@ a.color-block:hover {
     aspect-ratio: 1/1;
     grid-column: span 2; }
   .about-gallery__item:last-child {
-    grid-row: auto; } }
+    grid-row: auto; }
+  .page-head__color {
+    padding: 30px 0 42px;
+    margin-top: 273px; }
+    .page-head__color .section-color__bg {
+      right: 24%;
+      bottom: 0; }
+  .vacancies__wrap {
+    grid-template-columns: 1fr; }
+  .vacancies-item:nth-child(3n+1) {
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 1fr 360px; }
+  .vacancies-item {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-column: auto; }
+  .vacancies-item:nth-child(3n+1) .vacancies-item__img {
+    aspect-ratio: auto;
+    -ms-flex-item-align: stretch;
+        align-self: stretch; }
+  .vacancies-item__title {
+    font-size: 32px;
+    line-height: 33px; }
+  .vacancies-item:nth-child(3n+1) .vacancies-item__info {
+    padding: 24px 0 24px 24px; }
+  .vacancies-item__info {
+    padding: 24px 0 24px 24px; }
+  .vacancies-item__head {
+    margin-bottom: 16px; }
+  .vacancies-item__location {
+    border-radius: 18px;
+    padding: 5px 10px;
+    min-width: 140px;
+    font-size: 16px;
+    line-height: 22px; }
+  .vacancies-item__img {
+    min-height: 376px; }
+  .vacancy-modal-btn {
+    font-size: 16px; }
+  .bonuses-slider__item {
+    padding: 48px; }
+  .modal-vacancy .modal-dialog {
+    max-width: 700px; }
+  .modal-vacancy .modal-header {
+    padding: 24px 36px 8px; }
+  .header-menu__count {
+    right: -20px; } }
 
 @media screen and (max-width: 767px) {
   .container {
@@ -3873,9 +4154,15 @@ a.color-block:hover {
   .block-cards-slider__item {
     border-radius: 24px;
     padding: 24px;
-    min-height: 272px; }
-  .block-cards-slider__items {
-    grid-template-columns: 1fr; }
+    min-height: 272px;
+    gap: 10px; }
+  .swiper.cards-items__slider {
+    overflow: visible; }
+  .block-cards-slider__items .swiper-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0; }
   .block-cards-slider__title {
     font-size: 22px;
     line-height: 24px; }
@@ -4201,7 +4488,48 @@ a.color-block:hover {
     font-size: 18px;
     line-height: 24px; }
   .blog-detail__text-color {
-    padding: 20px 24px; } }
+    padding: 20px 24px; }
+  .vacancies-item:nth-child(3n+1),
+  .vacancies-item {
+    grid-template-columns: 1fr;
+    border-radius: 24px; }
+  .page-head__color .section-color__bg {
+    right: 7%; }
+  .page-head__color {
+    padding: 17px 0 18px;
+    margin-top: 207px; }
+  .vacancies-item__head {
+    margin-bottom: 8px; }
+  .vacancies-item__location {
+    padding: 4px 10px;
+    min-width: 124px; }
+  .vacancies-item__experience {
+    font-size: 12px; }
+  .vacancies-item__salary {
+    font-size: 20px;
+    line-height: 24px; }
+  .vacancies-item__title {
+    margin-bottom: 8px; }
+  .vacancies-item__img {
+    border-radius: 24px;
+    min-height: 0;
+    aspect-ratio: 1/1; }
+  .vacancies-item:nth-child(3n+1) .vacancies-item__img {
+    aspect-ratio: 1/1; }
+  .bonuses-slider__item {
+    padding: 42px 24px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    height: auto; }
+  .bonuses-slider__title {
+    font-size: 22px;
+    line-height: 26px; }
+  .modal-vacancy .modal-dialog {
+    max-width: 90%; }
+  .dropzone .dz-message .text-mob-dn {
+    display: none; }
+  .modal-vacancy .modal-content {
+    border-radius: 16px; } }
 
 @media screen and (max-width: 575px) {
   .tabs__overflow {
@@ -4358,7 +4686,9 @@ a.color-block:hover {
     grid-row: auto; }
   .about-gallery__item:last-child {
     grid-column: auto;
-    grid-row: auto; } }
+    grid-row: auto; }
+  .modal-vacancy .modal-dialog {
+    max-width: 100%; } }
 
 @media screen and (max-width: 360px) {
   .directions-item.active .directions-item__bg.directions-bg_mobile {

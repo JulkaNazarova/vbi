@@ -558,6 +558,90 @@
     }
   }
 
+  .page-head__color {
+    padding: 30px 0 42px;
+    margin-top: 273px;
+
+    .section-color__bg {
+      right: 24%;
+      bottom: 0;
+    }
+  }
+
+  .vacancies__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .vacancies-item:nth-child(3n+1) {
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 1fr 360px;
+  }
+
+  .vacancies-item {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-column: auto;
+  }
+
+  .vacancies-item:nth-child(3n+1) .vacancies-item__img {
+    aspect-ratio: auto;
+    align-self: stretch;
+  }
+
+
+  .vacancies-item__title {
+    font-size: 32px;
+    line-height: 33px;
+  }
+
+  .vacancies-item:nth-child(3n+1) .vacancies-item__info {
+    padding: 24px 0 24px 24px;
+  }
+
+  .vacancies-item__info {
+    padding: 24px 0 24px 24px;
+  }
+
+  .vacancies-item__head{
+    margin-bottom: 16px;
+  }
+
+  .vacancies-item__location {
+    border-radius: 18px;
+    padding: 5px 10px;
+    min-width: 140px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .vacancies-item__img {
+    min-height: 376px;
+    
+  }
+
+  .vacancy-modal-btn{
+    font-size: 16px;
+  }
+
+  .bonuses-slider__item{
+    padding: 48px;
+  }
+
+  .modal-vacancy {
+    .modal-dialog {
+      max-width: 700px;
+    }
+    .modal-header {
+      padding: 24px 36px 8px;
+    }
+  }
+
+  .header-menu__count {
+    right: -20px;
+  }
+  
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1128,10 +1212,21 @@
     border-radius: 24px;
     padding: 24px;
     min-height: 272px;
+    gap: 10px;
   }
 
   .block-cards-slider__items {
-    grid-template-columns: 1fr;
+    //grid-template-columns: 1fr;
+  }
+
+  .swiper.cards-items__slider{
+    overflow: visible;
+  }
+
+  .block-cards-slider__items .swiper-wrapper{
+    display: flex;
+    //grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
 
   .block-cards-slider__title {
@@ -1648,6 +1743,82 @@
     padding: 20px 24px;
   }
 
+  .vacancies-item:nth-child(3n+1),
+  .vacancies-item{
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+
+  .page-head__color .section-color__bg {
+    right: 7%;
+  }
+
+  .page-head__color {
+    padding: 17px 0 18px;
+    margin-top: 207px;
+  }
+
+  .vacancies-item__head {
+    margin-bottom: 8px;
+  }
+
+  .vacancies-item__location {
+    padding: 4px 10px;
+    min-width: 124px;
+  }
+  
+  .vacancies-item__experience{
+    font-size: 12px;
+  }
+
+  .vacancies-item__salary {
+    font-size: 20px;
+    line-height: 24px;
+    
+  }
+
+  .vacancies-item__title {
+    margin-bottom: 8px;
+  }
+
+  .vacancies-item__img{
+    border-radius: 24px;
+    min-height: 0;
+    aspect-ratio: 1/1;
+  }
+
+  .vacancies-item:nth-child(3n+1) .vacancies-item__img {
+    aspect-ratio: 1/1;
+  }
+
+  .bonuses-slider__item {
+    padding: 42px 24px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    height: auto;
+  }
+
+  .bonuses-slider__title{
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .modal-vacancy {
+    .modal-dialog {
+      max-width: 90%;
+    }
+  }
+
+  .dropzone .dz-message{
+    .text-mob-dn{
+      display: none;
+    }
+  }
+
+  .modal-vacancy .modal-content {
+    border-radius: 16px;
+  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -1904,6 +2075,12 @@
     &:last-child{
       grid-column: auto;
       grid-row: auto;
+    }
+  }
+
+  .modal-vacancy {
+    .modal-dialog {
+      max-width: 100%;
     }
   }
 
