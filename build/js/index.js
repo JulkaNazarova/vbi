@@ -55,6 +55,14 @@ jQuery(document).ready(function () {
     } else {
       $(".main-banner_segment").removeClass("active");
     }
+
+    // fixed кнопка "Выбрать тариф"
+    if( scrolled > 450 ) {
+      $(".page-head__btn-tariff").addClass("btn-fixed");
+    } else {
+      $(".page-head__btn-tariff").removeClass("btn-fixed");
+    }
+    
     
   });
   
@@ -387,6 +395,16 @@ jQuery(document).ready(function () {
     modal.find("#vacancyName").val(modalTitle);
   });
 
+  //динамическое формирование модалки для тарифа техподдержки
+  $('.support-tariffs__btn').on('click', function () {
+    const modal = $("#modalTariff");
+    const modalTitle = $(this).attr("data-title");
+    const modalText = $(this).closest(".support-tariffs__item").find(".support-tariffs__desc").html();
+    modal.find("#modalTariffTitle").html(modalTitle);
+    modal.find("#modalTariffText").html(modalText);
+    modal.find("#tariffName").val(modalTitle);
+  });
+
   // слайдер Растим экспертизу в digital
   const swiperBonuses = new Swiper(".bonuses-slider", {
     grabCursor: true,
@@ -439,6 +457,46 @@ jQuery(document).ready(function () {
   }
   mql.addListener(screenTest);
   screenTest(mql);
+
+
+  // слайдер ПО
+  const swiperSoft = new Swiper(".soft-slider", {
+    slidesPerView: "auto",
+    slidesPerGroup: 1,
+    spaceBetween: 40,
+    loop: true,
+    freeMode: true,
+    speed: 3000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    },
+  });
+
+  // слайдер Тарифы
+  const swiperTariffs = new Swiper(".tariffs-slider", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+    }
+  });
 
 });
 

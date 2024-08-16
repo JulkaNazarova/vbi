@@ -1,0 +1,632 @@
+extends ../templates/template.pug
+block content
+
+  
+  section.section-top
+    .h1__wrap
+      .container
+        h1.h1.wow.animate__fadeInDown Техническая<br>поддержка сайтов
+    .page-head
+      .container
+        .row
+          .col-12.col-md-4.col-lg-2.mb-3.mb-lg-0.d-none.d-flex.flex-column.justify-content-between
+            .page-slogan.wow.animate__fadeInLeft Позаботимся о вашем проекте, как о своём
+            .page-head__btn-tariff
+              a(href="#sectionTariffs").btn.btn-yellow.btn-arrow.scroll-to Выбрать тариф
+          .col-lg-6.offset-lg-4
+            .page-subtitle__wrap
+              h2.h2.page-subtitle.wow.animate__fadeInUp <span class="text-pink">Сопровождаем сайты, дополним или заменим штатный отдел программистов.</span> Работаем со всеми популярными CMS и фреймворками.
+
+
+
+  +page-banner("3d-support.webp")
+
+  .page-body
+
+    section.section
+      +section-head({
+        num: "01",
+        title: "Наши преимущества",
+        subtitle: "Отдел разработки и поддержки VBI (DEV отдел) оказывает услуги:"
+      })
+
+      .section__block
+        .container
+          .dev-services__wrap.mb-5.mb-md-3
+            .dev-services__item
+              .dev-services__icon
+                img(src='./img/motive-icon-2.svg' alt='', title='').motives-slide__icon
+              .dev-services__text <span style="font-family: 'TTHovesProTrial-Bd'">Для владельцев сайтов на всех популярных CMS:</span><br>1C Битрикс, Wordpress, ModX, OpenCart. 
+            .dev-services__item
+              .dev-services__icon
+                img(src='./img/motive-icon-2.svg' alt='', title='').motives-slide__icon
+              .dev-services__text <span style="font-family: 'TTHovesProTrial-Bd'">Для маркетологов</span> 
+            .dev-services__item
+              .dev-services__icon
+                img(src='./img/motive-icon-2.svg' alt='', title='').motives-slide__icon
+              .dev-services__text <span style="font-family: 'TTHovesProTrial-Bd'">Для разработчиков</span> 
+            .dev-services__item
+              .dev-services__icon
+                img(src='./img/motive-icon-3.svg' alt='', title='').motives-slide__icon
+              .dev-services__text <span style="font-family: 'TTHovesProTrial-Bd'">Для партнёров</span>
+              
+                
+                
+          .steps-preparation__wrap
+            .steps-preparation__item.support-preparation(data-wow-delay=`0ms`).wow.animate__fadeInUp
+              .steps-preparation__top
+                .steps-preparation__text Мгновенно «поднимаем» сайт в случае возникновения проблем. <br><br><span style="font-weight: bold;">Тариф «Мониторинг»</span>
+              .steps-preparation__bottom
+                .steps-preparation__num 01
+                .steps-preparation__arrow
+            .steps-preparation__item.support-preparation(data-wow-delay=`200ms`).wow.animate__fadeInUp
+              .steps-preparation__top
+                .steps-preparation__text Абонентская техподдержка и обслуживание - нет необходимости оплачивать штатного программиста  фуллтайм.
+              .steps-preparation__bottom
+                .steps-preparation__num 02
+                .steps-preparation__arrow
+            .steps-preparation__item.support-preparation(data-wow-delay=`400ms`).wow.animate__fadeInUp
+              .steps-preparation__top
+                .steps-preparation__text Доработка, услуги любой сложности - интеграции, разработка, программирование, вёрстка, прототипирование, хостинг, мониторинг и т.д.
+              .steps-preparation__bottom
+                .steps-preparation__num 03
+                .steps-preparation__arrow
+            .steps-preparation__item.support-preparation(data-wow-delay=`600ms`).wow.animate__fadeInUp
+              .steps-preparation__top
+                .steps-preparation__text Устранение технических ошибок: ошибки в коде, лечение вирусов, настройка сервера и т.п.
+              .steps-preparation__bottom
+                .steps-preparation__num 04
+                .steps-preparation__arrow
+      
+      .section__block
+        .soft-slider__wrap
+          .swiper.soft-slider
+            .swiper-wrapper
+              - for(var i=0; i<2; i++)
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/soft-img.webp' alt='')
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/logo-lara.png' alt='')
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/logo-modx.png' alt='')
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/logo-vue.png' alt='')
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/logo-openkart.png' alt='')
+                .swiper-slide
+                  .soft-slider__item
+                    img(src='./img/logo-wp.png' alt='')
+
+    section#sectionTariffs.section
+      +section-head({
+        num: "02",
+        title: "4 тарифа технической поддержки",
+      })
+
+      .section__block
+        .container
+          .tariffs-slider__wrap
+            .swiper.tariffs-slider
+              .swiper-wrapper
+                .swiper-slide
+                  .support-tariffs__item
+                    .support-tariffs__head
+                      .support-tariffs__title
+                        .support-tariffs__label Тариф
+                        .support-tariffs__name Мониторинг
+                      .support-tariffs__desc 
+                        p <span style="font-family: TTHovesProTrial-DmBd; display: block;">Мгновенно</span> «поднимаем» сайт в&nbsp;случае возникновения проблем
+                        
+                    .support-tariffs__bottom
+                      .support-tariffs__price Стоимость<br><span>10 000 ₽</span>
+                      button(type="button" data-toggle="modal" data-target="#modalTariff" data-title="Тариф Мониторинг").support-tariffs__btn Выбрать тариф
+                .swiper-slide
+                  .support-tariffs__item
+                    .support-tariffs__head
+                      .support-tariffs__title
+                        .support-tariffs__label Тариф
+                        .support-tariffs__name Стандарт
+                      .support-tariffs__desc 
+                        p <span style="font-family: TTHovesProTrial-DmBd; display: block;">10 часов</span> работ по сайту
+                        ul
+                          li + «Мониторинг»
+                    .support-tariffs__bottom
+                      .support-tariffs__price Стоимость<br><span>26 000 ₽</span>
+                      button(type="button" data-toggle="modal" data-target="#modalTariff" data-title="Тариф Стандарт").support-tariffs__btn Выбрать тариф
+                .swiper-slide
+                  .support-tariffs__item.tariffs-item__best
+                    .support-tariffs__head
+                      .support-tariffs__title
+                        .support-tariffs__label Тариф
+                        .support-tariffs__name Оптимальный
+                      .support-tariffs__desc 
+                        p <span style="font-family: TTHovesProTrial-DmBd; display: block;">15 часов</span> работ по сайту
+                        ul
+                          li + «Мониторинг»
+                          li + дополнительные услуги по сайту
+                    .support-tariffs__bottom
+                      .support-tariffs__price Стоимость<br><span>36 000 ₽</span>
+                      button(type="button" data-toggle="modal" data-target="#modalTariff" data-title="Тариф Стандарт").support-tariffs__btn Выбрать тариф
+                .swiper-slide
+                  .support-tariffs__item
+                    .support-tariffs__head
+                      .support-tariffs__title
+                        .support-tariffs__label Тариф
+                        .support-tariffs__name Премиум
+                      .support-tariffs__desc 
+                        p <span style="font-family: TTHovesProTrial-DmBd; display: block;">20 часов</span> работ по сайту
+                        ul
+                          li + «Мониторинг»
+                          li + дополнительные услуги по сайту
+                    .support-tariffs__bottom
+                      .support-tariffs__price Стоимость<br><span>44 000 ₽</span>
+                      button(type="button" data-toggle="modal" data-target="#modalTariff" data-title="Тариф Стандарт").support-tariffs__btn Выбрать тариф
+                        
+                      
+                
+
+
+              .swiper-pagination
+              .swiper-button-prev  
+              .swiper-button-next
+            
+    section.section
+      +section-head({
+        num: "03",
+        title: "Сравнение тарифов",
+      })
+      .section__block
+        .container
+          .comparison__wrap
+            .comparison__wrap
+              .comparison__row.row-head
+                .comparison__title Параметры тарифа
+                .comparison__table  
+                  .comparison__head Мониторинг
+                  .comparison__head Стандарт
+                  .comparison__head Оптимальный
+                  .comparison__head Премиум
+              .comparison__row
+                .comparison__param
+                  span Количество часов разработки
+                .comparison__table
+                  .comparison__cell.comparison__val 
+                    span -
+                  .comparison__cell.comparison__val
+                    span 10 часов
+                  .comparison__cell.comparison__val
+                    span 15 часов
+                  .comparison__cell.comparison__val
+                    span 20 часов
+              .comparison__row
+                .comparison__param 
+                  span Подключение к системе “Мониторинг”. Круглосуточный мониторинг VBI за сайтом. 
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Ежемесячные / Еженедельные отчеты о работе сайта. 
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Оперативное исправление ошибок в работе сайта, выявленных мониторингом
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Резервное копирование содержимого сайта и его восстановление в случае сбоя в течение суток 
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Помощь в общении с компанией хостинг-провайдером или др. подрядчиками Заказчика
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Работы по запросу клиента: Контент, Верстка, Программирование
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Разворачивание тестового сайта 
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Мониторинг своевременной оплаты хостинга и домена
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Мониторинг лимита хостинга
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__param
+                  span Мониторинг сайта встроенными инструментами и исправление ошибок, обновление системы*
+                .comparison__table
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#B7B7B7"/>
+                      <path d="M6 11H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                  .comparison__cell.comparison__val
+                    span.comparison__icon
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="11" fill="#C70077"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6051 6.76984C16.9887 7.15338 16.9887 7.77524 16.6051 8.15879L8.91441 15.8497L5.19831 12.1335C4.81476 11.75 4.81476 11.1281 5.19831 10.7446C5.58186 10.361 6.20372 10.361 6.58727 10.7446L8.9144 13.0717L15.2162 6.76985C15.5997 6.38629 16.2216 6.38629 16.6051 6.76984Z" fill="white"/>
+                      </svg>
+              .comparison__row
+                .comparison__title Стоимость
+                .comparison__table
+                  .comparison__cell.comparison__price
+                    span 10 000 ₽/мес.
+                  .comparison__cell.comparison__price
+                    span 26 000 ₽/мес.
+                  .comparison__cell.comparison__price
+                    span 36 000 ₽/мес.
+                  .comparison__cell.comparison__price
+                    span 44 000 ₽/мес.
+
+
+
+    section.section
+      +section-head({
+        num: "04",
+        title: "Мониторинг сайтов от VBI",
+      })
+      .section__block
+        .container
+          .monitoring__wrap
+            .row
+              .col-lg-6
+                .monitoring-img__wrap
+                  .monitoring-img
+                    .monitoring-demo Доступна DEMO версия бесплатно!
+                    .monitoring-label 
+                      p Автор: Сергей&nbsp;Музыка
+                      p Руководитель DEV&nbsp;отдела&nbsp;VBI
+                    img(src='./img/monitoring-img.png' alt='', title='')
+    
+              .col-lg-6
+                .monitoring-desc__wrap
+                  .monitoring-desc
+                    p <span class="text-pink" style="font-family: 'TTHovesProTrial-Bd'">Система онлайн мониторинга – собственная разработка VBI.</span> Необходима для мгновенного отлавливания сбоев на сайте и предотвращения сопутствующих проблем:
+                    ul 
+                      li Неожиданно закончился сертификат
+                      li Не оплачен домен
+                      li Переходы пользователей на неработающий сайт с рекламы
+                      li Потерянный впустую бюджет
+                      li Снижение конверсии сайта
+                  .monitoring-cms__wrap
+                    h3 Поддерживаемые CMS:
+                    .monitoring-cms
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-1.png' alt='', title='')
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-2.png' alt='', title='')
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-3.png' alt='', title='')
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-4.png' alt='', title='')
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-5.png' alt='', title='')
+                      .monitoring-cms__item 
+                        img(src='./img/monitoring-cms-6.png' alt='', title='')
+                    
+                
+    
+    
+    .section.section-callback
+      .container
+        .callback-block
+          .row
+            .col-lg-6.offset-lg-3.text-center
+              .callback-block__title Какой тариф<br>подойдет вам?
+              a(href="#section-form").btn.btn-yellow.scroll-to Бесплатная консультация
+
+
+    section.section
+      +section-head({
+        num: "05",
+        title: "Работаем с крупными и небольшими брендами",
+        subtitle: "За 10 лет изучили специфику многих бизнес-направлений. Это помогает нам говорить с бизнесом на одном языке — быстрее понимать задачи"
+      })
+      .section__block
+        .container
+          .row
+            .mb-3.col-lg-6.mb-lg-0
+              .main-about__wrap
+                .main-about__item
+                  .main-about__numbers 10 лет
+                  .main-about__text опыта и экспертизы в интернет-маркетинге
+                .main-about__item
+                  .main-about__numbers 2 офиса
+                  .main-about__text в Москве и Тамбове
+                .main-about__item
+                  .main-about__numbers 900+
+                  .main-about__text успешно выполненных проектов
+                .main-about__item
+                  .main-about__numbers 80+
+                  .main-about__text сертифицированных специалистов
+
+            .col-lg-6
+              +main-rating-wrap
+
+      .section__block
+        .container
+          .row
+            .col-12.offset-0.col-md-8.offset-md-2.col-lg-12.offset-lg-0
+              +clients-slider
+
+
+
+
+
+  #modalTariff.modal-vacancy.modal.fade(tabindex='-1', role='dialog' aria-hidden="true")
+    .modal-dialog.modal-dialog-centered(role='document')
+      .modal-content
+        .modal-header
+          .modal-title
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          .modal-container
+            .modal-vacancy__wrap
+              .row
+                .mb-4.col-lg-1.mb-lg-0
+                  .contact-form__icon
+                    svg(xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none')
+                      path(fill-rule='evenodd' clip-rule='evenodd' d='M2 1C0.895431 1 0 1.89543 0 3V3.41355L7.51436 7.58819C7.81638 7.75598 8.18362 7.75598 8.48564 7.58819L16 3.41355V3C16 1.89543 15.1046 1 14 1H2ZM16 5.70147L9.45693 9.33651C8.55086 9.83988 7.44914 9.83988 6.54307 9.33651L0 5.70147V13C0 14.1046 0.895431 15 2 15H14C15.1046 15 16 14.1046 16 13V5.70147ZM2 12C2 11.4477 2.44772 11 3 11C3.55228 11 4 11.4477 4 12C4 12.5523 3.55228 13 3 13C2.44772 13 2 12.5523 2 12Z' fill='white')
+
+                .col-lg-4
+                  #modalTariffTitle.contact-form__title
+                  #modalTariffText.contact-form__subtitle 
+
+                .col-lg-6.offset-lg-1
+                  form.contact-form
+                    input#tariffName(type='hidden' value="")
+                    .input__wrap.input
+                      label.input__label
+                        span Телефон
+                      input(type='tel' placeholder='+7').input.input-phone
+                      .input__error Error message
+                    .input__wrap
+                      label.input__label
+                        span Ваше имя
+                      input(type='text' value="").input
+                      .input__error Error message
+                    
+                    button(type="submit").btn.btn-yellow.btn-form Отправить
+                    .agreement Нажимая на кнопку, вы соглашаетесь с <a href="javascript:void(0);">политикой обработки персональных данных</a>
+  
+  
+  
+  

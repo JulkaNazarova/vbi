@@ -640,6 +640,13 @@
   .header-menu__count {
     right: -20px;
   }
+
+  .swiper-pagination-bullet {
+    background: $color-yellow-base;
+    width: 10px;
+    min-width: 10px;
+    height: 10px;
+  }
   
 
 }
@@ -1021,18 +1028,15 @@
     justify-content: flex-start;
   }
 
-  .swiper-pagination-bullet {
-    background: $color-yellow-base;
-    width: 10px;
-    min-width: 10px;
-    height: 10px;
-  }
-
   .number-slider__nav {
     left: 24px;
     right: auto;
     bottom: auto;
     top: calc(var(--js-img-event-height) - 34px);
+  }
+
+  .number-slider.events-slider .swiper-pagination {
+    background: transparent;
   }
 
   .number-slider_border{
